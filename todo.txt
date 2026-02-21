@@ -1,0 +1,1 @@
+work on gui and then login for ./claude to parse parse.txt

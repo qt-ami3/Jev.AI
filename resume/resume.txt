@@ -1,0 +1,93 @@
+{
+  "name": "River Knuuttila",
+  "email": "riverknuuttila2@outlook.com",
+  "phone": "(808) 223 4780",
+  "linkedin": "https://www.linkedin.com/in/river-knuuttila-96678636b",
+  "github": "https://github.com/qt-ami3",
+  "education": [
+    {
+      "school": "West Hawaii Explorations Academy",
+      "degree": "High School Diploma",
+      "date": "May 2023"
+    },
+    {
+      "school": "Mount Wachusett Community College",
+      "degree": "",
+      "date": "Sep 2025 - Current"
+    }
+  ],
+  "projects": [
+    {
+      "name": "ClaudeAPI JSON to DB Tool",
+      "dates": "",
+      "highlights": [
+        "Calls ClaudeAPI to intelligently match data sets from JSONs to SQL",
+        "Error handling and scalability for future projects",
+        "Learned SQL \u0026 JSON integration in GO for backend development",
+        "Understanding of ClaudeAPI \u0026 its documentation to effectively utilize in project scope"
+      ]
+    },
+    {
+      "name": "Sorting Algorithm Visualizer",
+      "dates": "Dec 18 – Dec 28, 2025",
+      "highlights": [
+        "Understanding and use cases of sorting algorithms",
+        "Implementing efficient and light-weight graphical solutions from scratch"
+      ]
+    },
+    {
+      "name": "Personal Website",
+      "dates": "Nov 13, 2025 – Current",
+      "highlights": [
+        "AWS \u0026 load time optimizations",
+        "In depth vanilla CSS/HTML styling \u0026 animations",
+        "Fundamentals \u0026 utilization of JavaScript for improved functionality in HTML \u0026 CSS"
+      ]
+    },
+    {
+      "name": "2048py",
+      "dates": "Dec 26, 2025 – Current",
+      "highlights": [
+        "Animations and VCR effects",
+        "Graphical optimizations for ModernGL",
+        "Implementation of low level features for advanced game logic"
+      ]
+    },
+    {
+      "name": "Chaos Crashers game",
+      "dates": "Dec 11, 2025 – Current",
+      "highlights": [
+        "Using OOP to run game logic, track progress/stats, drive enemy AI",
+        "Use \u0026 knowledge of the Ebitengine framework and its documentation",
+        "Documenting and maintaining codebase to be legible and easy to understand",
+        "Utilizing the Ebitengine framework to implement higher level game engine features"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Github",
+      "Ebitengine"
+    ],
+    "backend": [
+      "Python",
+      "Golang",
+      "C++",
+      "git",
+      "Linux",
+      "MariaDB",
+      "SQL",
+      "APIs",
+      "JSON"
+    ],
+    "soft": [
+      "Understanding \u0026 approachable",
+      "Enjoys organizing and optimizing daily tasks",
+      "Eager to learn",
+      "Asks for direction not answers when stuck"
+    ]
+  }
+}

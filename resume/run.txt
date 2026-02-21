@@ -1,0 +1,3 @@
+set -x ANTHROPIC_API_KEY keyhere
+
+go run -tags claude resumeParse_Claude.go

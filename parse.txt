@@ -1,0 +1,1303 @@
+{
+  "name": "River Knuuttila",
+  "email": "riverknuuttila2@outlook.com",
+  "phone": "(808) 223 4780",
+  "linkedin": "https://www.linkedin.com/in/river-knuuttila-96678636b",
+  "github": "https://github.com/qt-ami3",
+  "education": [
+    {
+      "school": "West Hawaii Explorations Academy",
+      "degree": "High School Diploma",
+      "date": "May 2023"
+    },
+    {
+      "school": "Mount Wachusett Community College",
+      "degree": "",
+      "date": "Sep 2025 - Current"
+    }
+  ],
+  "projects": [
+    {
+      "name": "ClaudeAPI JSON to DB Tool",
+      "dates": "",
+      "highlights": [
+        "Calls ClaudeAPI to intelligently match data sets from JSONs to SQL",
+        "Error handling and scalability for future projects",
+        "Learned SQL \u0026 JSON integration in GO for backend development",
+        "Understanding of ClaudeAPI \u0026 its documentation to effectively utilize in project scope"
+      ]
+    },
+    {
+      "name": "Sorting Algorithm Visualizer",
+      "dates": "Dec 18 – Dec 28, 2025",
+      "highlights": [
+        "Understanding and use cases of sorting algorithms",
+        "Implementing efficient and light-weight graphical solutions from scratch"
+      ]
+    },
+    {
+      "name": "Personal Website",
+      "dates": "Nov 13, 2025 – Current",
+      "highlights": [
+        "AWS \u0026 load time optimizations",
+        "In depth vanilla CSS/HTML styling \u0026 animations",
+        "Fundamentals \u0026 utilization of JavaScript for improved functionality in HTML \u0026 CSS"
+      ]
+    },
+    {
+      "name": "2048py",
+      "dates": "Dec 26, 2025 – Current",
+      "highlights": [
+        "Animations and VCR effects",
+        "Graphical optimizations for ModernGL",
+        "Implementation of low level features for advanced game logic"
+      ]
+    },
+    {
+      "name": "Chaos Crashers game",
+      "dates": "Dec 11, 2025 – Current",
+      "highlights": [
+        "Using OOP to run game logic, track progress/stats, drive enemy AI",
+        "Use \u0026 knowledge of the Ebitengine framework and its documentation",
+        "Documenting and maintaining codebase to be legible and easy to understand",
+        "Utilizing the Ebitengine framework to implement higher level game engine features"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Github",
+      "Ebitengine"
+    ],
+    "backend": [
+      "Python",
+      "Golang",
+      "C++",
+      "git",
+      "Linux",
+      "MariaDB",
+      "SQL",
+      "APIs",
+      "JSON"
+    ],
+    "soft": [
+      "Understanding \u0026 approachable",
+      "Enjoys organizing and optimizing daily tasks",
+      "Eager to learn",
+      "Asks for direction not answers when stuck"
+    ]
+  }
+}
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineer Intern | https://www.linkedin.com/jobs/view/software-engineer-intern-at-lensa-4376137205
+
+Lensa is a career site that helps job seekers find great jobs in the US. We are not a staffing firm or agency. Lensa does not hire directly for these jobs, but promotes jobs on LinkedIn on behalf of its direct clients, recruitment ad agencies, and marketing partners. Lensa partners with DirectEmployers to promote this job for Red Hat. Clicking "Apply Now" or "Read more" on Lensa redirects you to the job board/employer site. Any information collected there is subject to their terms and privacy notice.
+
+Job Summary
+
+At Red Hat, our interns are an integral part of the team. They don’t get relegated to busywork or unimportant tasks, but participate in the day-to-day work and are active contributors to their team.
+
+We are currently looking for Software Engineering interns to join us in Boston, MA or Raleigh, NC. You will work closely with a senior mentor to gain technical knowledge and experience in your field, and cooperate with a broader international team both locally and globally.
+
+You will be part of a cohort of interns and have the opportunity to work on multiple projects within Global Engineering while also receiving learning and curriculum on different technologies. These projects and curriculum may include areas such as Ansible, RHEL, OpenShift, AI, and more. You’ll also have the chance to work with technologies like Python, GitHub, Java, Agile, JavaScript, etc.
+
+In this role, you will work in an environment where different perspectives are invited, the best ideas are valued, and people feel empowered to contribute. Freedom and courage are two of our core values, which is why you can practice taking risks and exploring the unknown and developing strengths. Yet being a Red Hatter isn't just about being brave; it's also about demonstrating commitment and sticking to it.
+
+The focus for Red Hat's Intern Program is a dual partnership between the Emerging Talent Team and our intern managers. We can offer you professional development, social engagement and networking, performance and development, and meaningful work throughout your time at Red Hat.
+
+Job Responsibilities
+
+
+Work closely with your mentor to design, develop, and maintain code in Python, Golang or similar programming language
+Add new features, debug, identify, and track issues in Red Hat products (RHEL, OpenShift or other)
+Collaborate with the wider team members and other departments such as Quality Engineering, Designers, Product Management or Documentation team throughout the product cycle
+Network with other talented interns in a workplace where you can be yourself and thrive
+
+
+Required Skills
+
+
+Working knowledge of written and spoken English
+Basic knowledge of and passion for Software Engineering, basic knowledge and willingness to use Python, Golang or similar programming language
+Passion, curiosity, and desire to create new things and examine how things work internally
+Willingness to learn and proactively work as a part of a wider team
+
+
+About Red Hat
+
+Red Hat (https://www.redhat.com/) is the world’s leading provider of enterprise open source (https://www.redhat.com/en/about/open-source) software solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. Spread across 40+ countries, our associates work flexibly across work environments, from in-office, to office-flex, to fully remote, depending on the requirements of their role. Red Hatters are encouraged to bring their best ideas, no matter their title or tenure. We're a leader in open source because of our open and inclusive environment. We hire creative, passionate people ready to contribute their ideas, help solve complex problems, and make an impact.
+
+Inclusion at Red Hat
+
+Red Hat’s culture is built on the open source principles of transparency, collaboration, and inclusion, where the best ideas can come from anywhere and anyone. When this is realized, it empowers people from different backgrounds, perspectives, and experiences to come together to share ideas, challenge the status quo, and drive innovation. Our aspiration is that everyone experiences this culture with equal opportunity and access, and that all voices are not only heard but also celebrated. We hope you will join our celebration, and we welcome and encourage applicants from all the beautiful dimensions that compose our global village.
+
+Equal Opportunity Policy (EEO)
+
+Red Hat is proud to be an equal opportunity workplace and an affirmative action employer. We review applications for employment without regard to their race, color, religion, sex, sexual orientation, gender identity, national origin, ancestry, citizenship, age, veteran status, genetic information, physical or mental disability, medical condition, marital status, or any other basis prohibited by law.
+
+Red Hat does not seek or accept unsolicited resumes or CVs from recruitment agencies. We are not responsible for, and will not pay, any fees, commissions, or any other payment related to unsolicited resumes or CVs except as required in a written contract between Red Hat and the recruitment agency or party requesting payment of a fee.
+
+Red Hat supports individuals with disabilities and provides reasonable accommodations to job applicants. If you need assistance completing our online job application, email application-assistance@redhat.com . General inquiries, such as those regarding the status of a job application, will not receive a reply.
+
+If you have questions about this posting, please contact support@lensa.com
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineer Intern / Summer 2026 (Teradyne, North Reading, MA) | https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2026-teradyne-north-reading-ma-at-teradyne-4373495454
+
+We are the global test and automation specialists, powering next-generation technologies through sophisticated solutions. Behind every electronic device you use, Teradyne's test technology ensures your device works right the first time, every time! Our portfolio of automation solutions help manufacturers to develop and deliver products quickly, efficiently and cost-effectively. Together, Teradyne companies deliver manufacturing automation across industries and applications around the world!
+
+We attract, develop, and retain a high-performance workforce, comprised of people with diverse backgrounds and a shared drive for excellence. We strive to foster a positive and inclusive work environment that helps employees, and communities, thrive.
+
+Our Purpose
+
+TERADYNE, where experience meets innovation and driving excellence in every connection. We are fueled by creativity and diversity of thought and in our workforce. Our employees are supported to innovate and learn something new every day.
+
+We cultivate a culture of inclusion for all employees that respects their individual strengths, views, and experiences. We believe that our differences enable us to be a better team – one that makes better decisions, drives innovation and delivers better business results.
+
+Opportunity Overview
+
+The IST (Integrated System Test) team is looking for an energetic, technically driven Software Engineer Co-Op or intern to focus on the development of software systems for products within the IST. This individual will report directly to the Software Engineering Manager, working with team members to design, implement and debug development issues.
+
+We are ideally looking for a full-time intern or co-op for summer and/or fall 2026. Flexible start and end date, 3–6-month duration, with opportunity to start this spring/summer and extend into the fall.
+
+The role is based in North Reading, MA and candidate will need to be on-site.
+
+Responsibilities
+
+
+Work on design, coding, debugging, integration, prototyping, testing and/or documenting software
+Work on developing and validating automation (robotics) and/or machine vision solutions
+Assist with testing new releases by working with the Quality Engineering group to help write and automate test
+Working under direction of experienced software engineers
+
+
+All About You
+
+We seek individuals who share our passion and determination. Our commitment to customer success drives us to go the extra mile. If you’re ready to join us in this mission, take a closer look at the minimum criteria for the position.
+
+
+Must be currently attending a college or university pursuing a bachelor’s degree in computer science or computer engineering
+Must have and maintain a 3.0 GPA or higher
+Experience with C# is a plus
+
+
+We are only considering candidates local to position location and are unable to provide relocation for this position.
+
+This position is not eligible for visa sponsorship
+
+Compensation
+
+The base hourly range for this role is $25.50-$47.00. This range is a good faith estimate, and the amount of base salary will correspond with experience and skill set. This range can also fluctuate depending on demand and location.
+
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Cyber Emulation Engineer Co-Op | https://www.linkedin.com/jobs/view/cyber-emulation-engineer-co-op-at-str-4358935009
+
+STR is hiring a Cyber Emulation Engineer Co-Op who will work as part of project teams with mentorship from experienced staff starting July 1st, 2026. Co-Ops will also collaborate with technical experts to solve problems related to emulation, reverse engineering, binary analysis, software development, vulnerability research and cyber defense. Additional duties will include providing support on all phases of projects, problem design, solution discovery, development of prototype algorithms and systems in software and/or hardware experimentation and data analysis and system implementation/integration for test and fielded systems.
+
+Our employees are the reason for STR’s continued success. You'll be paired with a mentor and have the opportunity to work on projects with our staff that involve solving hard problems that enhance our nation's security.
+
+Have you emulated GBA or other games on your computer and want to learn how emulation works and how it can be applied to vulnerability research? Are you someone who is motivated and excited by having the opportunity to learn and grow your skill set? Do you want to join forces with other researchers, scientists, and engineers in your field of study and apply your knowledge and skills working on projects that solve real problems? If you answered ‘yes' to any of these questions, then apply to our Co-Op role today!
+
+Basic Requirements:
+
+
+Strong academic record and interest in system emulation, virtualization or other security-related topics
+Hands on experience with or coursework in systems programming and the ability to read and write assembly
+Proficiency in Python for software development
+Background/experience in one of the following areas: emulation, reverse engineering, binary analysis, software development, vulnerability research and cyber defense.
+
+
+Preferred Qualifications:
+
+
+Experience with debugging and dynamic analysis of software/firmware
+Knowledge of additional programming languages: C, C++, non-x86 assembly
+Hands-on experience with or coursework in QEMU, virtualization, or reverse engineering tools
+
+
+Education:
+
+
+Enrollment in a BS, MS or PhD degree program in Cybersecurity, Computer Science, Computer Engineering or related technical discipline
+
+
+Pay Information
+
+Full-Time Salary Range: $52,000 - $79,000
+
+The salary range listed is based on external market data. Offers are based on factors, such as but not limited to, the candidate’s experience, education, training, key skills/critical skills, security clearances, and prevailing market and business conditions.
+
+
+
+
+
+STR is a growing technology company with locations near Boston, MA, Arlington, VA, near Dayton, OH, Melbourne, FL, and Carlsbad, CA. We specialize in advanced research and development for defense, intelligence, and national security in: cyber; next generation sensors, radar, sonar, communications, and electronic warfare; and artificial intelligence algorithms and analytics to make sense of the complexity that is exploding around us.
+
+STR is committed to creating a collaborative learning environment that supports deep technical understanding and recognizes the contributions and achievements of all team members. Our work is challenging, and we go home at night knowing that we pushed the envelope of technology and made the world safer.
+
+STR is not just any company. Our people, culture, and attitude along with their unique set of skills, experiences, and perspectives put us on a trajectory to change the world. We can't do it alone, though - we need fellow trailblazers. If you are one, join our team and help to keep our society safe! Visit us at www.str.us for more info.
+
+STR is an equal opportunity employer. We are fully dedicated to hiring the most qualified candidate regardless of race, color, religion, sex (including gender identity, sexual orientation and pregnancy), marital status, national origin, age, veteran status, disability, genetic information or any other characteristic protected by federal, state or local laws.
+
+If you need a reasonable accommodation for any portion of the employment process, email us at appassist@str.us and provide your contact info.
+
+Pursuant to applicable federal law and regulations, positions at STR require employees to obtain national security clearances and satisfy the requirements for compliance with export control and other applicable laws.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Intern - Research & Development | https://www.linkedin.com/jobs/view/intern-research-development-at-fresenius-kabi-usa-4376135264
+
+Job Summary
+
+We are seeking a motivated and enthusiastic engineering student to work on the test tools needed for manufacturing Ivenix life-saving medical infusion pumps. This internship offers a hands-on learning experience where the intern will gain practical, real-world exposure while supporting day-to-day operations and project-based work.
+
+The intern will work closely with experienced professionals, participate in meaningful assignments, and develop valuable skills in a collaborative and supportive environment. This role is ideal for students who are eager to learn, take initiative, and apply classroom knowledge to real business challenges.
+
+This internship is designed to provide meaningful learning opportunities while contributing to the success of the team.
+
+
+Must be authorized to work in the United States. The company will not sponsor work visas or other employment authorization (i.e., individuals on student visas are not eligible for an internship).
+
+
+Payrate is based on completed number of years in college:
+
+
+Completed freshman year by start of internship: $24.73 per hour
+Completed sophomore year by start of internship: $26.45 per hour
+Completed junior year by start of internship: $28.18 per hour
+
+
+Responsibilities
+
+PROJECT DETAILS:
+
+
+In this role you will be responsible for the validation and unit testing of a set of hardware and software tools used in the manufacturing and service of the Ivenix infusion pump.
+You will be challenged to identify areas for improvement in the tools, and to implement those improvements. Your efforts will help ensure that every pump is built efficiently and 100% correctly.
+This intern will utilize hardware and software tools for functional testing, calibration, and verification of a large volume pump in a manufacturing context.
+You will master FDA and quality system regulations and validate tools that meet those standards.
+You will become familiar with the systems used daily by software engineers.
+You will work closely with systems, Software, and Manufacturing engineers to achieve project objectives.
+
+
+Ideal Candidate
+
+
+The ideal candidate will be pursuing a bachelors degree in engineering
+Be familiar with command line interfaces, or a demonstrated desire to learn.
+Python and/or LabVIEW experience is a plus, but not required.
+
+
+Requirements
+
+
+Currently enrolled as a student in an accredited college or university program
+Pursuing a degree related to the position
+Be classified as a minimum of an entering sophomore or above
+Must be enrolled in school the semester following your internship
+Must commit to a minimum of 10 weeks of internship
+
+
+Additional Information
+
+We offer an excellent salary and benefits package including medical, dental and vision coverage, as well as life insurance, disability, 401K with company contribution, and wellness program.
+
+Fresenius Kabi is an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, citizenship, immigration status, disabilities, or protected veteran status.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Accounting & Finance Intern - Summer 2026 | https://www.linkedin.com/jobs/view/accounting-finance-intern-summer-2026-at-vulcanforms-inc-4359484171
+
+About Us
+
+Founded in 2015 to develop the world’s first industrially scalable laser metal additive manufacturing solution, VulcanForms is reshaping how the world manufactures critical products. We build and operate advanced digital infrastructure that enables innovation, accelerates growth, and supports sustainability across aerospace, defense, medical, and other essential industries. Through our vertically integrated capabilities, including scalable additive manufacturing and precision machining, we deliver true end-to-end production at scale by combining cutting-edge technology with a foundation of proven industrial craftsmanship. Our team brings deep expertise in manufacturing, materials science, software, automation, and operations, united by a shared commitment to quality, curiosity, and accountability. We foster an inclusive culture where people take ownership, solve meaningful problems, and continuously learn, because we believe diverse perspectives lead to better outcomes.
+
+Job Purpose
+
+As an Accounting & Finance Intern at VulcanForms, Devens, MA, your main objective will be to support the Accounting and Finance team in their day-to-day tasks. You will support the team by preparing documentation on policies and procedures, revenue recognition, as well as, doing account reviews, tracking audit requests, and creating other ad hoc analysis as needed.
+
+Key Responsibilities
+
+
+Support the documentation of standard policies and procedures surrounding financial reporting Support the analysis and documentation regarding revenue recognition under ASC 606 Assist with preparation and tie out of audited financial statements
+Track audit requests
+Support 1099 supplier review
+Assist with ad hoc financial accounting projects as needed
+
+
+Qualifications
+
+
+Current enrollment in an undergraduate or graduate degree program in either Accounting or Finance
+
+
+Additional Information
+
+
+This is a paid co-op/internship opportunity starting in May 2026 and will last for 3 months
+
+
+VulcanForms offers a competitive salary package. Actual compensation is based on factors such as the candidate's skills, qualifications, and experience.
+
+The hourly pay range for this position is $24–$27.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineering Intern I, Summer 2026 | https://www.linkedin.com/jobs/view/software-engineering-intern-i-summer-2026-at-bae-systems-inc-4320635019
+
+Job Description
+
+
+This posting is one of several for software summer interns in NH. The title of each posting corresponds to the years of college completed prior to joining us in the summer of 2026 (i.e., Software Engineering Intern I – completed 1st/freshman year of college, Software Engineering Intern II – completed 2nd/sophomore year of college, etc.). Please apply to the appropriate position.
+
+You don’t see it, but it’s there. Our employees work on the world’s most advanced electronics – from saving emissions in the City of Lights to powering the Mars Rover to protecting the F-35 fighter jet. At BAE Systems you’ll be among the brightest minds, working on the aerospace and defense industry’s most difficult problems. Drawing strength from our differences, we’re innovating for the future. And you can, too.
+
+We are seeking highly motivated and driven software interns who will be completing their freshman year of college, prior to starting this full-time internship in summer 2026, to join our Electronic Systems group in southern NH. As a software intern, you will join a team of engineers supporting software development opportunities that solve real world problems.
+
+
+
+Typical Tasking Includes Elements From The Following
+
+
+
+Designing, developing, and testing software solutions utilizing Agile methodologies and sound software engineering principles while conforming to existing code development strategies and processes.
+Assisting in other software engineering activities such as integration testing, algorithm & data analysis, software troubleshooting, and preparing documentation in accordance with established procedures.
+Utilizing a Windows PC or Linux based software development environment and either x86 or PowerPC target and test environment.
+
+
+In addition to your technical assignment, you will participate in BAE Systems' nationwide LEAP Internship & Co-op Program, where you will Learn, Engage, Apply, and Progress within the company. The LEAP Program will provide you with additional opportunities to engage in career development opportunities, and network with our business leaders and the other students in the program.
+
+This internship will be located onsite at one of our BAE System's facilities in southern New Hampshire including Nashua, Hudson, Manchester, and Merrimack.
+
+
+
+Please note that pursuant to a government contract, this specific position requires US citizenship status.
+
+
+
+
+Required Education, Experience, & Skills
+
+
+
+Must be currently enrolled in an undergraduate program for CS (Computer Science), CE (Computer Engineering), or a related field, and will complete your freshman year prior to summer 2026
+Programming experience in at least one or more of the following languages: C, C++, Java, Python.
+Strong interpersonal and written and verbal communication skills
+Experience with Microsoft Office Suite (e.g., Excel, PowerPoint, Word, etc.)
+Demonstrated self-motivation and ability to work independently
+Must be eligible for a US DoD security clearance
+
+
+
+
+Preferred Education, Experience, & Skills
+
+
+
+Knowledge of Data Structures and Object-Oriented Design/Development
+Knowledge of AGILE based development
+Experience with Windows and/or Linux Operating Systems
+Experience using common software version control tools such as Git
+Security clearance (secret or higher)
+
+
+
+Pay Information
+
+Full-Time Salary Range: $41963 - $58361
+
+Please note: This range is based on our market pay structures. However, individual salaries are determined by a variety of factors including, but not limited to: business considerations, local market conditions, and internal equity, as well as candidate qualifications, such as skills, education, and experience.
+
+Temporary employees generally are not eligible for BAE Systems benefits, but can elect to participate in the 401(k) savings plan. Temporary employees working 20+ hours per week are eligible for medical benefits, the employee assistance program, and business travel accident insurance.
+
+
+
+About BAE Systems Electronic Systems
+
+
+BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc, an international defense, aerospace and security company which delivers a full range of products and services for air, land and naval forces, as well as advanced electronics, security, information technology solutions and customer support services. Improving the future and protecting lives is an ambitious mission, but it’s what we do at BAE Systems. Working here means using your passion and ingenuity where it counts – defending national security with breakthrough technology, superior products, and intelligence solutions. As you develop the latest technology and defend national security, you will continually hone your skills on a team—making a big impact on a global scale. At BAE Systems, you’ll find a rewarding career that truly makes a difference. Electronic Systems (ES) is the global innovator behind BAE Systems’ game-changing defense and commercial electronics. Exploiting every electron, we push the limits of what is possible, giving our customers the edge and our employees opportunities to change the world. Our products and capabilities can be found everywhere – from the depths of the ocean to the far reaches of space. At our core are more than 14,000 highly talented Electronic Systems employees with the brightest minds in the industry, we make an impact – for our customers and the communities we serve.
+
+This position will be posted for at least 5 calendar days. The posting will remain active until the position is filled, or a qualified pool of candidates is identified.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineering Intern II, Summer 2026 | https://www.linkedin.com/jobs/view/software-engineering-intern-ii-summer-2026-at-bae-systems-inc-4320635021
+
+Job Description
+
+
+This posting is one of several for software summer interns in NH. The title of each posting corresponds to the years of college completed prior to joining us in the summer of 2026 (i.e., Software Engineering Intern I – completed 1st/freshman year of college, Software Engineering Intern II – completed 2nd/sophomore year of college, etc.). Please apply to the appropriate position.
+
+You don’t see it, but it’s there. Our employees work on the world’s most advanced electronics – from saving emissions in the City of Lights to powering the Mars Rover to protecting the F-35 fighter jet. At BAE Systems you’ll be among the brightest minds, working on the aerospace and defense industry’s most difficult problems. Drawing strength from our differences, we’re innovating for the future. And you can, too.
+
+We are seeking highly motivated and driven software interns who will be completing their sophomore year of college, prior to starting this full-time internship in summer 2026, to join our Electronic Systems group in southern NH. As a software intern, you will join a team of engineers supporting software development opportunities that solve real world problems.
+
+
+
+Typical Tasking Includes Elements From The Following
+
+
+
+Designing, developing, and testing software solutions utilizing Agile methodologies and sound software engineering principles while conforming to existing code development strategies and processes.
+Assisting in other software engineering activities such as integration testing, algorithm & data analysis, software troubleshooting, and preparing documentation in accordance with established procedures.
+Utilizing a Windows PC or Linux based software development environment and either x86 or PowerPC target and test environment.
+
+
+In addition to your technical assignment, you will participate in BAE Systems' nationwide LEAP Internship & Co-op Program, where you will Learn, Engage, Apply, and Progress within the company. The LEAP Program will provide you with additional opportunities to engage in career development opportunities, and network with our business leaders and the other students in the program.
+
+This internship will be located onsite at one of our BAE System's facilities in southern New Hampshire including Nashua, Hudson, Manchester, and Merrimack.
+
+Please note that pursuant to a government contract, this specific position requires US Person status.
+
+
+
+Required Education, Experience, & Skills
+
+
+
+Must be currently enrolled in an undergraduate program for CS (Computer Science), CE (Computer Engineering), or a related field, and will complete your sophomore year prior to summer 2026
+Programming experience in at least one or more of the following languages: C, C++, Java, Python.
+Strong interpersonal and written and verbal communication skills
+Experience with Microsoft Office Suite (e.g., Excel, PowerPoint, Word, etc.)
+Demonstrated self-motivation and ability to work independently
+Must be eligible for a US DoD security clearance
+
+
+
+
+Preferred Education, Experience, & Skills
+
+
+
+Knowledge of Data Structures and Object-Oriented Design/Development
+Knowledge of AGILE based development
+Experience with Windows and/or Linux Operating Systems
+Experience using common software version control tools such as Git
+Security clearance (secret or higher)
+
+
+
+Pay Information
+
+Full-Time Salary Range: $45553 - $63330
+
+Please note: This range is based on our market pay structures. However, individual salaries are determined by a variety of factors including, but not limited to: business considerations, local market conditions, and internal equity, as well as candidate qualifications, such as skills, education, and experience.
+
+Temporary employees generally are not eligible for BAE Systems benefits, but can elect to participate in the 401(k) savings plan. Temporary employees working 20+ hours per week are eligible for medical benefits, the employee assistance program, and business travel accident insurance.
+
+
+
+About BAE Systems Electronic Systems
+
+
+BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc, an international defense, aerospace and security company which delivers a full range of products and services for air, land and naval forces, as well as advanced electronics, security, information technology solutions and customer support services. Improving the future and protecting lives is an ambitious mission, but it’s what we do at BAE Systems. Working here means using your passion and ingenuity where it counts – defending national security with breakthrough technology, superior products, and intelligence solutions. As you develop the latest technology and defend national security, you will continually hone your skills on a team—making a big impact on a global scale. At BAE Systems, you’ll find a rewarding career that truly makes a difference. Electronic Systems (ES) is the global innovator behind BAE Systems’ game-changing defense and commercial electronics. Exploiting every electron, we push the limits of what is possible, giving our customers the edge and our employees opportunities to change the world. Our products and capabilities can be found everywhere – from the depths of the ocean to the far reaches of space. At our core are more than 14,000 highly talented Electronic Systems employees with the brightest minds in the industry, we make an impact – for our customers and the communities we serve.
+
+This position will be posted for at least 5 calendar days. The posting will remain active until the position is filled, or a qualified pool of candidates is identified.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Summer 2026 Software Engineering Internship | https://www.linkedin.com/jobs/view/summer-2026-software-engineering-internship-at-raptor-maps-4375647493
+
+About Raptor Maps, Inc
+
+Solar power is the largest source of new energy in the world. Raptor Maps is a fast-growing, venture-backed, MIT-born climate tech company building software to enable the solar energy industry to scale. We have the leading platform for remotely managed solar operations, and our mission is to make solar asset management and O&M dramatically simpler through better data, automation, and the integration of robotics. We serve tens of thousands of solar sites around the world with a dedicated and passionate team committed to having impact through work and advancing the renewable energy economy.
+
+Our mission is groundbreaking, and we need great people to make it happen. Join us in building the digital backbone of a stronger, more scalable solar industry! ☀️
+
+About The Role
+
+Raptor Maps is seeking a Software Engineering Intern to join our Engineering team for Summer 2026. This internship offers hands-on experience working on production systems that support large-scale solar operations, with opportunities across full-stack web development, machine learning, and robotics. Interns are embedded within active teams, contribute meaningful code, and learn directly from experienced engineers through mentorship and collaboration.
+
+Internships are a core part of our talent pipeline and culture at Raptor Maps. We intentionally design our internship program to provide real ownership, strong technical growth, and exposure to climate-impact work, and many of our interns return as full-time team members after graduation
+
+All interns must be able to join us in our office at Greentown Labs in Somerville at least 3x/week. Some interns may be asked to travel occasionally.
+
+What You'll Do
+
+Interns will be hired for a specific track, either Full-Stack or Automation. Work may include:
+
+Full-Stack Engineering
+
+
+Design, develop, and deploy new features in production web applications
+Collaborate with engineers and product partners to translate requirements into technical solutions
+Debug, troubleshoot, and improve application performance and reliability
+
+
+Automation
+
+
+Contribute to the training, evaluation and deployment of machine learning models for computer vision applications
+Contribute to the prototyping, implementation, and evaluation of algorithms to process images and 3D data
+Analyze and curate datasets for machine learning and computer vision tasks
+
+
+Qualifications - Nonnegotiable
+
+
+Currently pursuing a degree in Computer Science, Engineering, Robotics, or a related technical field (rising Seniors and graduate students preferred)
+Coursework or project experience in software development
+Ability to write clear, maintainable code and learn new technologies quickly
+Authorized to work in the United States
+Primarily located in Boston, MA during the internship period
+
+
+Qualifications - Preferred
+
+
+Experience with Python and/or JavaScript (React)
+Exposure to machine learning, robotics, or computer vision through coursework or projects
+Familiarity with web application development, APIs, or data pipelines
+Interest in climate tech, renewable energy, or mission-driven work
+
+
+The Pay Range For This Role Is
+
+25 - 25 USD per hour(Somerville, MA)
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineering Intern III, Summer 2026 | https://www.linkedin.com/jobs/view/software-engineering-intern-iii-summer-2026-at-bae-systems-inc-4320645175
+
+Job Description
+
+
+This posting is one of several for software summer interns in NH. The title of each posting corresponds to the years of college completed prior to joining us in the summer of 2026 (i.e., Software Engineering Intern I – completed 1st/freshman year of college, Software Engineering Intern II – completed 2nd/sophomore year of college, etc.). Please apply to the appropriate position.
+
+You don’t see it, but it’s there. Our employees work on the world’s most advanced electronics – from saving emissions in the City of Lights to powering the Mars Rover to protecting the F-35 fighter jet. At BAE Systems you’ll be among the brightest minds, working on the aerospace and defense industry’s most difficult problems. Drawing strength from our differences, we’re innovating for the future. And you can, too.
+
+We are seeking highly motivated and driven software interns who will be completing their junior year of college, prior to starting this full-time internship in summer 2026, to join our Electronic Systems group in southern NH. As a software intern, you will join a team of engineers supporting software development opportunities that solve real world problems.
+
+
+
+Typical Tasking Includes Elements From The Following
+
+
+
+Designing, developing, and testing software solutions utilizing Agile methodologies and sound software engineering principles while conforming to existing code development strategies and processes.
+Assisting in other software engineering activities such as integration testing, algorithm & data analysis, software troubleshooting, and preparing documentation in accordance with established procedures.
+Utilizing a Windows PC or Linux based software development environment and either x86 or PowerPC target and test environment.
+
+
+In addition to your technical assignment, you will participate in BAE Systems' nationwide LEAP Internship & Co-op Program, where you will Learn, Engage, Apply, and Progress within the company. The LEAP Program will provide you with additional opportunities to engage in career development opportunities, and network with our business leaders and the other students in the program.
+
+This internship will be located onsite at one of our BAE System's facilities in southern New Hampshire including Nashua, Hudson, Manchester, and Merrimack.
+
+Please note that pursuant to a government contract, this specific position requires US Person status.
+
+
+
+Required Education, Experience, & Skills
+
+
+
+Must be currently enrolled in an undergraduate program for CS (Computer Science), CE (Computer Engineering), or a related field, and will complete your junior year prior to summer 2026
+Programming experience in at least one or more of the following languages: C, C++, Java, Python.
+Strong interpersonal and written and verbal communication skills
+Experience with Microsoft Office Suite (e.g., Excel, PowerPoint, Word, etc.)
+Demonstrated self-motivation and ability to work independently
+Must be eligible for a US DoD security clearance
+
+
+
+
+Preferred Education, Experience, & Skills
+
+
+
+Knowledge of Data Structures and Object Oriented Design/Development
+Knowledge of AGILE based development
+Experience with Windows and/or Linux Operating Systems
+Experience using common software version control tools such as Git
+Security clearance (secret or higher)
+
+
+
+Pay Information
+
+Full-Time Salary Range: $49592 - $68993
+
+Please note: This range is based on our market pay structures. However, individual salaries are determined by a variety of factors including, but not limited to: business considerations, local market conditions, and internal equity, as well as candidate qualifications, such as skills, education, and experience.
+
+Temporary employees generally are not eligible for BAE Systems benefits, but can elect to participate in the 401(k) savings plan. Temporary employees working 20+ hours per week are eligible for medical benefits, the employee assistance program, and business travel accident insurance.
+
+
+
+About BAE Systems Electronic Systems
+
+
+BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc, an international defense, aerospace and security company which delivers a full range of products and services for air, land and naval forces, as well as advanced electronics, security, information technology solutions and customer support services. Improving the future and protecting lives is an ambitious mission, but it’s what we do at BAE Systems. Working here means using your passion and ingenuity where it counts – defending national security with breakthrough technology, superior products, and intelligence solutions. As you develop the latest technology and defend national security, you will continually hone your skills on a team—making a big impact on a global scale. At BAE Systems, you’ll find a rewarding career that truly makes a difference. Electronic Systems (ES) is the global innovator behind BAE Systems’ game-changing defense and commercial electronics. Exploiting every electron, we push the limits of what is possible, giving our customers the edge and our employees opportunities to change the world. Our products and capabilities can be found everywhere – from the depths of the ocean to the far reaches of space. At our core are more than 14,000 highly talented Electronic Systems employees with the brightest minds in the industry, we make an impact – for our customers and the communities we serve.
+
+This position will be posted for at least 5 calendar days. The posting will remain active until the position is filled, or a qualified pool of candidates is identified.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineering Intern IV, Summer 2026 | https://www.linkedin.com/jobs/view/software-engineering-intern-iv-summer-2026-at-bae-systems-inc-4320704966
+
+Job Description
+
+
+This posting is one of several for software summer interns in NH. The title of each posting corresponds to the years of college completed prior to joining us in the summer of 2026 (i.e., Software Engineering Intern I – completed 1st/freshman year of college, Software Engineering Intern II – completed 2nd/sophomore year of college, etc.). Please apply to the appropriate position.
+
+You don’t see it, but it’s there. Our employees work on the world’s most advanced electronics – from saving emissions in the City of Lights to powering the Mars Rover to protecting the F-35 fighter jet. At BAE Systems you’ll be among the brightest minds, working on the aerospace and defense industry’s most difficult problems. Drawing strength from our differences, we’re innovating for the future. And you can, too.
+
+We are seeking highly motivated and driven software interns who will be completing their senior year of college, prior to starting this full-time internship in summer 2026, to join our Electronic Systems group in southern NH. As a software intern, you will join a team of engineers supporting software development opportunities that solve real world problems.
+
+
+
+Typical Tasking Includes Elements From The Following
+
+
+
+Designing, developing, and testing software solutions utilizing Agile methodologies and sound software engineering principles while conforming to existing code development strategies and processes.
+Assisting in other software engineering activities such as integration testing, algorithm & data analysis, software troubleshooting, and preparing documentation in accordance with established procedures.
+Utilizing a Windows PC or Linux based software development environment and either x86 or PowerPC target and test environment.
+
+
+In addition to your technical assignment, you will participate in BAE Systems' nationwide LEAP Internship & Co-op Program, where you will Learn, Engage, Apply, and Progress within the company. The LEAP Program will provide you with additional opportunities to engage in career development opportunities, and network with our business leaders and the other students in the program.
+
+This internship will be located onsite at one of our BAE System's facilities in southern New Hampshire including Nashua, Hudson, Manchester, and Merrimack.
+
+Please note that pursuant to a government contract, this specific position requires US person status.
+
+
+
+Required Education, Experience, & Skills
+
+
+
+Must be currently enrolled in a graduate program for CS (Computer Science), CE (Computer Engineering), or a related field, and will complete your senior year of undergrad school prior to summer 2026
+Programming experience in at least one or more of the following languages: C, C++, Java, Python.
+Strong interpersonal and written and verbal communication skills
+Experience with Microsoft Office Suite (e.g., Excel, PowerPoint, Word, etc.)
+Demonstrated self-motivation and ability to work independently
+Must be eligible for a US DoD security clearance
+
+
+
+
+Preferred Education, Experience, & Skills
+
+
+
+Knowledge of Data Structures and Object-Oriented Design/Development
+Knowledge of AGILE based development
+Experience with Windows and/or Linux Operating Systems
+Experience using common software version control tools such as Git
+Security clearance (secret or higher)
+
+
+
+Pay Information
+
+Full-Time Salary Range: $58344 - $81128
+
+Please note: This range is based on our market pay structures. However, individual salaries are determined by a variety of factors including, but not limited to: business considerations, local market conditions, and internal equity, as well as candidate qualifications, such as skills, education, and experience.
+
+Temporary employees generally are not eligible for BAE Systems benefits, but can elect to participate in the 401(k) savings plan. Temporary employees working 20+ hours per week are eligible for medical benefits, the employee assistance program, and business travel accident insurance.
+
+
+
+About BAE Systems Electronic Systems
+
+
+BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc, an international defense, aerospace and security company which delivers a full range of products and services for air, land and naval forces, as well as advanced electronics, security, information technology solutions and customer support services. Improving the future and protecting lives is an ambitious mission, but it’s what we do at BAE Systems. Working here means using your passion and ingenuity where it counts – defending national security with breakthrough technology, superior products, and intelligence solutions. As you develop the latest technology and defend national security, you will continually hone your skills on a team—making a big impact on a global scale. At BAE Systems, you’ll find a rewarding career that truly makes a difference. Electronic Systems (ES) is the global innovator behind BAE Systems’ game-changing defense and commercial electronics. Exploiting every electron, we push the limits of what is possible, giving our customers the edge and our employees opportunities to change the world. Our products and capabilities can be found everywhere – from the depths of the ocean to the far reaches of space. At our core are more than 14,000 highly talented Electronic Systems employees with the brightest minds in the industry, we make an impact – for our customers and the communities we serve.
+
+This position will be posted for at least 5 calendar days. The posting will remain active until the position is filled, or a qualified pool of candidates is identified.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineer Backend/Platform Systems I (Intern) – United States | https://www.linkedin.com/jobs/view/software-engineer-backend-platform-systems-i-intern-–-united-states-at-cisco-4338948334
+
+Please note this posting is to advertise potential job opportunities. This exact role may not be open today but could open in the near future. When you apply, a Cisco representative may contact you directly if a relevant position opens.
+
+Applications are accepted until further notice.
+
+Meet the Team
+
+Our dedicated team is building the future of Cisco’s AI-driven platforms and data infrastructure, driving innovation across the globe. You will join teams focused on developing advanced data pipelines, machine learning infrastructure, and analytics platforms for business-critical initiatives. As part of this collaborative environment, you will contribute to the advancement of emerging technologies in data and intelligent systems. Explore the opportunities at the intersection of backend engineering and AI, helping to transform how Cisco and its customers harness information and intelligent automation.
+
+Your Impact
+
+As a passionate software engineer, you bring expertise in developing scalable backend systems, designing robust analytics platforms, and building infrastructure to support modern cloud and distributed computing initiatives. Your strong background in programming, distributed systems, and cloud platforms enables you to solve complex challenges with innovation and precision. By building and maintaining key software tools and backend infrastructure, you empower Cisco’s business groups to leverage AI and data-driven insights for operational excellence and strategic growth. Your contributions ensure high-quality, reliable platforms that support Cisco’s leadership in intelligent, scalable technology solutions.
+
+Minimum Qualifications
+
+
+Currently enrolled in a certification program (e.g., Boot Camp, Apprenticeship, Community College), or currently enrolled in an undergraduate degree program.
+Proficiency in at least one backend programming language: C/C++, Java, or Go.
+Experience designing and developing microservices and APIs.
+Strong understanding of Linux and fundamental networking concepts (TCP/IP, DNS, DHCP).
+Familiarity with cloud platforms such as AWS, Azure, or GCP.
+
+
+Preferred Qualifications
+
+
+Conceptual understanding of AI/ML.
+Experience with automation and software testing (e.g., pyTest).
+Familiarity with CI/CD pipelines.
+Knowledge of networking protocols such as BGP and VLANs.
+
+
+ProductIntern26
+
+Why Cisco?
+
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts, and you’ll see that the opportunities to grow and build are limitless. We work as a team, collaborating with empathy to make really big things happen on a global scale. Because our solutions are everywhere, our impact is everywhere.
+
+We are Cisco, and our power starts with you.
+
+Message to applicants applying to work in the U.S. and/or Canada:
+
+Individual pay is determined by the candidate's hiring location, market conditions, job-related skillset, experience, qualifications, education, certifications, and/or training. The full salary range for certain locations is listed below. For locations not listed below, the recruiter can share more details about compensation for the role in your location during the hiring process.
+
+U.S. employees are offered benefits, subject to Cisco’s plan eligibility rules, which include medical, dental and vision insurance, a 401(k) plan with a Cisco matching contribution, paid parental leave, short and long-term disability coverage, and basic life insurance. Please see the Cisco careers site to discover more benefits and perks. Employees may be eligible to receive grants of Cisco restricted stock units, which vest following continued employment with Cisco for defined periods of time.
+
+U.S. employees are eligible for paid time away as described below, subject to Cisco’s policies:
+
+
+10 paid holidays per full calendar year, plus 1 floating holiday for non-exempt employees
+1 paid day off for employee’s birthday, paid year-end holiday shutdown, and 4 paid days off for personal wellness determined by Cisco
+Non-exempt employees** receive 16 days of paid vacation time per full calendar year, accrued at rate of 4.92 hours per pay period for full-time employees
+Exempt employees participate in Cisco’s flexible vacation time off program, which has no defined limit on how much vacation time eligible employees may use (subject to availability and some business limitations)
+80 hours of sick time off provided on hire date and each January 1st thereafter, and up to 80 hours of unused sick time carried forward from one calendar year to the next
+Additional paid time away may be requested to deal with critical or emergency issues for family members
+Optional 10 paid days per full calendar year to volunteer
+
+
+For non-sales roles, employees are also eligible to earn annual bonuses subject to Cisco’s policies.
+
+Employees On Sales Plans Earn Performance-based Incentive Pay On Top Of Their Base Salary, Which Is Split Between Quota And Non-quota Components, Subject To The Applicable Cisco Plan. For Quota-based Incentive Pay, Cisco Typically Pays As Follows
+
+
+.75% of incentive target for each 1% of revenue attainment up to 50% of quota;
+1.5% of incentive target for each 1% of attainment between 50% and 75%;
+1% of incentive target for each 1% of attainment between 75% and 100%; and
+Once performance exceeds 100% attainment, incentive rates are at or above 1% for each 1% of attainment with no cap on incentive compensation.
+
+
+For non-quota-based sales performance elements such as strategic sales objectives, Cisco may pay 0% up to 125% of target. Cisco sales plans do not have a minimum threshold of performance for sales incentive compensation to be paid.
+
+The applicable full salary ranges for this position, by specific state, are listed below:
+
+New York City Metro Area
+
+$44,000.00 - $185,000.00
+
+Non-Metro New York State & Washington State
+
+$44,000.00 - $185,000.00
+
+
+For quota-based sales roles on Cisco’s sales plan, the ranges provided in this posting include base pay and sales target incentive compensation combined.
+Employees in Illinois, whether exempt or non-exempt, will participate in a unique time off program to meet local requirements.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Intern - Web Developer, Cloud Technology | https://www.linkedin.com/jobs/view/intern-web-developer-cloud-technology-at-akamai-technologies-4376112383
+
+Job Description
+
+Do you relish the opportunity to work on multiple projects and impact key business objectives?
+
+Do you enjoy building web applications and taking ownership to get the job done?
+
+Join or Web Development Team!
+
+Akamai's Custom Government Web Development team is responsible for building custom web applications for our Public Sector customers, providing identity management tools, single sign-on solutions, and content delivery configuration for customers of the Akamai platform. We are looking for an to intern work with stakeholders across our GCDS and Cloud Technology groups to help provide new features, fixes and enhancements for existing and future web applications.
+
+As a participant in our programs, you will gain valuable experience and make contributions through meaningful project work. You will have the opportunity to join us for trainings, networking events, and engagements with company leadership. Our 2026 12-week intern program starts on May 26th and goes through August 14th.
+
+Partner with the best
+
+During your time with us, you will work with senior engineers and solve real customer problems. You'll be tasked with writing code in support of these larger projects or writing tools to improve how we work. You will have ample opportunities to learn new subjects and engage with various technologies, toolsets and software languages. The ideal candidate will be collegial, curious, agile, and demonstrate the ability to apply new skills in an ambiguous environment.
+
+As a Web Software Development Intern, you will be responsible for:
+
+
+Developing backend and frontend solutions while automating workflows to improve productivity and operational efficiency.
+Building web application features throughout the full software development lifecycle for internal use both within Akamai and by external customers.
+Collaborating with cross-functional teams to define standards and document processes.
+Learning about our distributed systems, products, and technical stack as needed for your role.
+
+
+Do What You Love
+
+To be successful in this role you will:
+
+
+Be currently studying in a Bachelor sor Masters program in Computer Science or a related field.
+Have experience with web development technologies like Ruby on Rails and Javascript/React.
+Love getting your hands dirty in code (no vibe coding here), and be eager to learn!
+Be responsible, self-motivated, diligent, and able to think analytically and delivering solutions to complex problems.
+
+
+Work in a way that works for you
+
+This program requires you to be available 40 hours per week during summer months (May-August).
+
+This is a flexible role and may be performed at your home and/or the local Akamai office (in the country advertised). We are happy to discuss working options in this role and encourage you to speak with your recruiter in more details when you apply.
+
+We power and protect life online, by solving the toughest challenges, together.
+
+At Akamai, we're curious, innovative, collaborative and tenacious. We celebrate diversity of thought and we hold an unwavering belief that we can make a meaningful difference. Our teams use their global perspectives to put customers at the forefront of everything they do, so if you are people-centric, you'll thrive here.
+
+Working for you
+
+Benefits
+
+Through our intern and co-op programs we will provide you with opportunities to grow, flourish, and achieve great things. Financial benefits offered to interns and co-ops, including a 401k and health insurance, are offered through our managed service provider (MSP). Students also gain the following benefits directly from our programs:
+
+
+Mentorship
+Career development trainings
+Visibility into senior leadership through Fireside Chats
+Networking and social events with an international intern cohort
+Final project showcase presented to the company
+Fun perks including Akamai branded merchandise
+
+
+About Us
+
+Akamai powers and protects life online. Leading companies worldwide choose Akamai to build, deliver, and secure their digital experiences helping billions of people live, work, and play every day. With the world's most distributed compute platform from cloud to edge we make it easy for customers to develop and run applications, while we keep experiences closer to users and threats farther away.
+
+Join us
+
+Are you seeking an opportunity to learn and make a real impact in a global technology company? Come join us and learn with a team of people who will energize and inspire you! By the end of your assignment, you will gain a network of encouraging colleagues ready to support you in your studies and beyond.
+
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineer Embedded/Network Systems II (Intern) - United States | https://www.linkedin.com/jobs/view/software-engineer-embedded-network-systems-ii-intern-united-states-at-cisco-4375649566
+
+Please note this posting is to advertise potential job opportunities. This exact role may not be open today but could open in the near future. When you apply, a Cisco representative may contact you directly if a relevant position opens.
+
+Applications are accepted until further notice.
+
+Meet the Team
+
+Our dedicated team members are engineering the foundation of Cisco’s core technologies across the globe, including teams in Engineering like Common Hardware Group, Network Product Eng, Infrastructure & Security. You will be an essential contributor to the development of next-generation innovations in operating systems, firmware, networking stacks, and security infrastructure. Working on these teams, you will gain hands-on experience with hardware-software integration and low-level networking technologies that power Cisco’s critical products. Discover the possibilities when deep technical expertise meets creativity and help build solutions that transform how the world connects and communicates.
+
+Your Impact
+
+You are a passionate engineer skilled in low-level programming, networking protocols, and hardware-software integration, with strong communication and collaboration abilities. You thrive in solving complex challenges through innovation and precision, while being highly organized and process-driven. Your work develops and maintains critical software and tools that ensure hardware compatibility, network performance, and security for Cisco’s core products like operating systems, firmware, and networking stacks. By effectively managing your time and streamlining processes, you deliver high-quality solutions that embed resilience and efficiency into global communications infrastructure, directly contributing to Cisco’s leadership in trusted, scalable networking technologies.
+
+Minimum Qualifications
+
+
+Currently enrolled in a certification program (e.g., Boot Camp, Apprenticeship, Community College or 4-Year University with 2 years of relevant experience) or currently enrolled in a graduate degree program with 0 years of relevant experience.
+Proficiency in C programming and experience with embedded Linux, including a solid understanding of operating system fundamentals.
+Familiarity with network principles & concepts, routing protocols, and general networking concepts.
+Hands-on experience with automation tools and scripting languages (such as Python or Bash), along with knowledge of CI/CD pipelines (e.g., Jenkins, GitHub Actions).
+Understanding of DevSecOps practices and their application in software development workflows.
+
+
+Preferred Qualifications
+
+
+Conceptual understanding or hands-on experience with AI/ML.
+Understanding of cybersecurity principles and security protocols.
+Experience with FPGA development.
+Knowledge of signal and power integrity, and PCB design.
+
+
+Why Cisco?
+
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts, and you’ll see that the opportunities to grow and build are limitless. We work as a team, collaborating with empathy to make really big things happen on a global scale. Because our solutions are everywhere, our impact is everywhere.
+
+We are Cisco, and our power starts with you.
+
+Message to applicants applying to work in the U.S. and/or Canada:
+
+Individual pay is determined by the candidate's hiring location, market conditions, job-related skillset, experience, qualifications, education, certifications, and/or training. The full salary range for certain locations is listed below. For locations not listed below, the recruiter can share more details about compensation for the role in your location during the hiring process.
+
+U.S. employees are offered benefits, subject to Cisco’s plan eligibility rules, which include medical, dental and vision insurance, a 401(k) plan with a Cisco matching contribution, paid parental leave, short and long-term disability coverage, and basic life insurance. Please see the Cisco careers site to discover more benefits and perks. Employees may be eligible to receive grants of Cisco restricted stock units, which vest following continued employment with Cisco for defined periods of time.
+
+U.S. employees are eligible for paid time away as described below, subject to Cisco’s policies:
+
+
+10 paid holidays per full calendar year, plus 1 floating holiday for non-exempt employees
+1 paid day off for employee’s birthday, paid year-end holiday shutdown, and 4 paid days off for personal wellness determined by Cisco
+Non-exempt employees** receive 16 days of paid vacation time per full calendar year, accrued at rate of 4.92 hours per pay period for full-time employees
+Exempt employees participate in Cisco’s flexible vacation time off program, which has no defined limit on how much vacation time eligible employees may use (subject to availability and some business limitations)
+80 hours of sick time off provided on hire date and each January 1st thereafter, and up to 80 hours of unused sick time carried forward from one calendar year to the next
+Additional paid time away may be requested to deal with critical or emergency issues for family members
+Optional 10 paid days per full calendar year to volunteer
+
+
+For non-sales roles, employees are also eligible to earn annual bonuses subject to Cisco’s policies.
+
+Employees On Sales Plans Earn Performance-based Incentive Pay On Top Of Their Base Salary, Which Is Split Between Quota And Non-quota Components, Subject To The Applicable Cisco Plan. For Quota-based Incentive Pay, Cisco Typically Pays As Follows
+
+
+.75% of incentive target for each 1% of revenue attainment up to 50% of quota;
+1.5% of incentive target for each 1% of attainment between 50% and 75%;
+1% of incentive target for each 1% of attainment between 75% and 100%; and
+Once performance exceeds 100% attainment, incentive rates are at or above 1% for each 1% of attainment with no cap on incentive compensation.
+
+
+For non-quota-based sales performance elements such as strategic sales objectives, Cisco may pay 0% up to 125% of target. Cisco sales plans do not have a minimum threshold of performance for sales incentive compensation to be paid.
+
+The applicable full salary ranges for this position, by specific state, are listed below:
+
+New York City Metro Area
+
+$44,000.00 - $185,000.00
+
+Non-Metro New York State & Washington State
+
+$44,000.00 - $185,000.00
+
+
+For quota-based sales roles on Cisco’s sales plan, the ranges provided in this posting include base pay and sales target incentive compensation combined.
+Employees in Illinois, whether exempt or non-exempt, will participate in a unique time off program to meet local requirements.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Intern - High School, Summer 2026 | https://www.linkedin.com/jobs/view/software-intern-high-school-summer-2026-at-bae-systems-inc-4320754794
+
+Job Description
+
+
+You don’t see it, but it’s there. Our employees work on the
+world’s most advanced electronics – from saving emissions in the City of Lights to powering the Mars Rover to protecting the F-35 fighter jet. At BAE Systems you’ll be among the brightest minds, working on the aerospace and defense industry’s most difficult problems.
+Drawing strength from our differences, we’re innovating for the future. And you can, too
+
+We are seeking high school graduates for full-time Summer 2026 internships to join our Electronic Systems Group in Southern NH. As a Software intern, you will join a team of engineers supporting software development opportunities that solve real world problems.
+
+
+
+Typical Tasking Includes Elements From The Following
+
+
+
+Designing, developing, and testing software solutions utilizing Agile methodologies and sound software engineering principles while conforming to existing code development strategies and processes.
+Assisting in other software engineering activities such as integration testing, algorithm & data analysis, software troubleshooting, and preparing documentation in accordance with established procedures.
+Utilizing a Windows PC or Linux based software development environment and either x86 or PowerPC target and test environment.
+
+
+In addition to your technical assignment, you will participate in BAE Systems' nationwide
+LEAP Internship & Co-op Program, where you will
+Learn,
+Engage,
+Apply, and
+Progress within the company. The LEAP Program will provide you with additional opportunities to engage in career development opportunities, and network with our business leaders and the other students in the program.
+
+This internship will be located onsite at one of our BAE System's facilities in southern New Hampshire including Nashua, Hudson, Manchester, and Merrimack.
+
+
+Please note that pursuant to a government contract, this specific position requires US person status.
+
+
+
+Required Education, Experience, & Skills
+
+
+
+Must be a high school graduate prior to summer 2026 enrolled in an undergraduate program for CS (Computer Science), CE (Computer Engineering), or a related field.
+Programming experience in at least one or more of the following languages: C, C++, Java, Python.
+Strong interpersonal and written and verbal communication skills
+Experience with Microsoft Office Suite (e.g., Excel, PowerPoint, Word, etc.)
+Demonstrated self-motivation and ability to work independently
+Must be eligible for a US DoD security clearance
+
+
+
+
+Preferred Education, Experience, & Skills
+
+
+
+Past/current participant in one of the BAE Outreach programs including FOCUS or FIRST Robotics.
+Knowledge of Data Structures and Object-Oriented Design/Development
+Knowledge of AGILE based development
+Experience with Windows and/or Linux Operating Systems
+Experience using common software version control tools such as Git
+Security clearance (secret or higher)
+
+
+
+Pay Information
+
+Full-Time Salary Range: $35792 - $49809
+
+Please note: This range is based on our market pay structures. However, individual salaries are determined by a variety of factors including, but not limited to: business considerations, local market conditions, and internal equity, as well as candidate qualifications, such as skills, education, and experience.
+
+Temporary employees generally are not eligible for BAE Systems benefits, but can elect to participate in the 401(k) savings plan. Temporary employees working 20+ hours per week are eligible for medical benefits, the employee assistance program, and business travel accident insurance.
+
+
+
+About BAE Systems Electronic Systems
+
+
+BAE Systems, Inc. is the U.S. subsidiary of BAE Systems plc, an international defense, aerospace and security company which delivers a full range of products and services for air, land and naval forces, as well as advanced electronics, security, information technology solutions and customer support services. Improving the future and protecting lives is an ambitious mission, but it’s what we do at BAE Systems. Working here means using your passion and ingenuity where it counts – defending national security with breakthrough technology, superior products, and intelligence solutions. As you develop the latest technology and defend national security, you will continually hone your skills on a team—making a big impact on a global scale. At BAE Systems, you’ll find a rewarding career that truly makes a difference. Electronic Systems (ES) is the global innovator behind BAE Systems’ game-changing defense and commercial electronics. Exploiting every electron, we push the limits of what is possible, giving our customers the edge and our employees opportunities to change the world. Our products and capabilities can be found everywhere – from the depths of the ocean to the far reaches of space. At our core are more than 14,000 highly talented Electronic Systems employees with the brightest minds in the industry, we make an impact – for our customers and the communities we serve.
+
+This position will be posted for at least 5 calendar days. The posting will remain active until the position is filled, or a qualified pool of candidates is identified.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Software Engineer Intern, Platform Security - Summer 2026 | https://www.linkedin.com/jobs/view/software-engineer-intern-platform-security-summer-2026-at-pegasystems-4347616195
+
+Meet Our Team
+
+The Platform Security team is deeply involved in designing and delivering core security capabilities that power the Pega platform architecture. Security is foundational to building robust, end-to-end enterprise applications, and this team leads the way in ensuring that foundation is strong. We focus on building platform that is secure, leveraging industry-leading security practices and technology advancements, so that clients can build and operate their applications in a secure, trusted environment
+
+Picture Yourself At Pega
+
+Pega’s internship program is the perfect platform to help students transition their academic knowledge into a successful professional career. We push great students to be better, we encourage them to take on the biggest challenges, and we also believe that great ideas can come from anyone or anywhere, irrespective of hierarchy or location. The purpose our internships are to provide students with the opportunity to gain valuable business skills, work on real-time, impactful initiatives, and collaborate on a global scale, all while earning a competitive compensation.
+
+What You'll Do At Pega
+
+As an intern on the Platform Security team, you’ll actively contribute to the design, development, and enhancement of core security capabilities including encryption, authentication, authorization, and vulnerability mitigation. You will collaborate with experienced engineers who are passionate about building secure, scalable enterprise applications, bringing your curiosity and enthusiasm to real-world security challenges. You will also apply your understanding of AI tools and concepts to develop innovative solutions in a supportive, agile environment. This internship offers the opportunity to learn, grow, and make a meaningful impact on the Pega platform’s security capabilities.
+
+Who You Are
+
+
+You are pursuing or have completed a Bachelor's degree in Computer Science, ideally with a focus on cyber security
+Basic understanding of application security concepts, including authentication, authorization, encryption, and vulnerability mitigation.
+Familiarity with security testing tools and techniques, such as static and dynamic analysis or penetration testing frameworks.
+Interest in building secure, resilient systems and applying best practices in software security
+Basic knowledge of web and cloud technologies, APIs, and databases.
+
+
+Pega Offers You
+
+
+Opportunity to work with diverse global teams on real-time, impactful projects and initiatives
+Professional development seminars and meet & greets with Pega’s CEO and Founder, and Executive Leadership Team through our “Coffee Break Series”
+Participation in Pega and intern specific events such as social events, volunteer opportunities, group projects, team outings, etc.
+Potential for full-time offer
+Structured manager and mentor program
+Competitive salary and perks
+Casual and fun environment
+
+
+Job ID: 22704
+
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Machine Learning Computer Vision MS/PhD Summer Internship | https://www.linkedin.com/jobs/view/machine-learning-computer-vision-ms-phd-summer-internship-at-str-4298932886
+
+Join STR’s Video & Image Understanding (VIU) Group as a summer intern to develop and apply deep learning or reinforcement learning techniques to solve challenging problems in computer vision, situational awareness and autonomous control. We tackle problems that have not been previously addressed by academic and industry research communities. The VIU Group is part of STR’s Intelligence Division, which develops and applies state-of-the-art information processing techniques to produce robust, scalable solutions for intelligence analysts and military decision makers. STR staff drive our success with their hard work, talent, and ingenuity. Join us this summer and help develop meaningful solutions to challenging, real-world problems which enhance our nation’s security.
+
+Job Description:
+
+
+You will work as part of a project team with focused mentorship from experienced staff.
+You will adapt, extend and optimize innovative machine learning algorithms for solving challenging computer vision or autonomy problems.
+You will collaborate with STR research engineers as well as academic researchers, who are often part of our team, to develop practical and powerful machine learning and computer vision solutions.
+You will have the opportunity to evaluate and optimize machine learning performance on relevant and practical data sets.
+
+
+Requirements:
+
+
+Enrollment in an MS or PhD degree program in Computer Science, Electrical Engineering, Applied Mathematics or related technical discipline.
+Successful track record of applying machine learning algorithms, such as deep learning or reinforcement learning, to computer vision or autonomy problems.
+Strong academic record and interest in research.
+Experience in scientific software development, particularly with Python.
+This position requires the ability to obtain a security clearance, for which U.S. citizenship is needed by U.S. Government.
+
+
+Perks:
+
+
+Competitive pay
+Housing stipend
+Flexibility/work-life balance
+Vibrant community with fun summer activities inside and outside the office
+Intern seminars and tech talks
+Strong track record of interns returning for subsequent summers and future full-time employment.
+
+
+Pay Information
+
+Full-Time Salary Range: $89,000 - $112,000
+
+The salary range listed is based on external market data. Offers are based on factors, such as but not limited to, the candidate’s experience, education, training, key skills/critical skills, security clearances, and prevailing market and business conditions.
+
+STR is a growing technology company with locations near Boston, MA, Arlington, VA, near Dayton, OH, Melbourne, FL, and Carlsbad, CA. We specialize in advanced research and development for defense, intelligence, and national security in: cyber; next generation sensors, radar, sonar, communications, and electronic warfare; and artificial intelligence algorithms and analytics to make sense of the complexity that is exploding around us.
+
+STR is committed to creating a collaborative learning environment that supports deep technical understanding and recognizes the contributions and achievements of all team members. Our work is challenging, and we go home at night knowing that we pushed the envelope of technology and made the world safer.
+
+STR is not just any company. Our people, culture, and attitude along with their unique set of skills, experiences, and perspectives put us on a trajectory to change the world. We can't do it alone, though - we need fellow trailblazers. If you are one, join our team and help to keep our society safe! Visit us at www.str.us for more info.
+
+STR is an equal opportunity employer. We are fully dedicated to hiring the most qualified candidate regardless of race, color, religion, sex (including gender identity, sexual orientation and pregnancy), marital status, national origin, age, veteran status, disability, genetic information or any other characteristic protected by federal, state or local laws.
+
+If you need a reasonable accommodation for any portion of the employment process, email us at appassist@str.us and provide your contact info.
+
+Pursuant to applicable federal law and regulations, positions at STR require employees to obtain national security clearances and satisfy the requirements for compliance with export control and other applicable laws.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+UX/UI Design Intern - Digital Experience Team (Summer 2026) | https://www.linkedin.com/jobs/view/ux-ui-design-intern-digital-experience-team-summer-2026-at-pa-consulting-4324892534
+
+Company Description
+
+About Us
+
+PA Consulting operates as a unified global team, bringing together strategists, innovators, designers, consultants, digital experts, scientists, engineers, and technologists to help clients drive innovation and transformation. Our Digital Experience (DX) team is a multidisciplinary group of UX/UI designers, researchers, and technologists who create intuitive and impactful digital experiences across industries such as consumer electronics, MedTech, CPG, transportation, and enterprise software.
+
+Our US-based design teams in Boston (formerly Essential) are looking for a UX/UI Design Intern to help define and design user-centric experiences for our clients. This role is ideal for someone who thrives in a fast-paced, collaborative environment and is passionate about crafting seamless digital interactions that bridge strategy, technology, and human needs.
+
+Job Description
+
+Salary: $27-$35
+
+Duration: 3 months
+
+Responsibilities
+
+
+
+Design & Research: Conduct user research, develop wireframes, prototypes, and high-fidelity UI designs that align with user needs and business goals.
+Collaboration: Work closely with cross-functional teams, including UX researchers, industrial designers, engineers, and strategists, to define and execute design solutions.
+Prototyping & Testing: Create interactive prototypes to test usability and iterate based on user feedback.
+User-Centered Thinking: Advocate for the user at every stage of the design process, ensuring digital experiences are intuitive, accessible, and visually compelling.
+Visual & Interaction Design: Develop clean, modern, and scalable design systems while maintaining consistency across different platforms and touchpoints.
+Presentation & Communication: Articulate design decisions, present work to stakeholders, and incorporate feedback to refine solutions.
+
+
+
+Qualifications
+
+Qualifications
+
+
+
+Obtaining a Degree in UX/UI Design, Interaction Design, Industrial Design, Product Design, Human-Computer Interaction (HCI), Graphic Design
+Strong problem-solving skills and a passion for designing user-first digital experiences.
+A standout portfolio showcasing UI design, UX research, interaction design, and high-fidelity prototypes.
+Proficiency in design tools such as Figma, Adobe Creative Suite (Illustrator, Photoshop)
+Experience with user research methods (e.g., interviews, usability testing, heuristic evaluations) and translating insights into actionable design solutions.
+Ability to create and work with design systems and component libraries.
+
+
+
+Bonus Skills (Nice To Have, But Not Required)
+
+
+
+Interest in Generative AI applications (ChatGPT, Midjourney, Vizcom, etc.).
+Basic understanding of front-end development principles (HTML, CSS, JavaScript).
+Familiarity with motion design tools (After Effects, Principle, Lottie).
+
+
+
+What We Look For
+
+We seek designers who not only meet the qualifications but also bring a unique perspective, critical thinking skills, and a collaborative mindset. The ideal candidate is eager to learn, stays ahead of emerging design trends, and understands how to translate complex ideas into elegant, user-friendly digital experiences.
+
+While not every qualification is required, a willingness to explore, experiment, and push boundaries in digital design is highly valued. If you’re passionate about creating exceptional digital experiences and want to be part of a diverse and innovative team, we’d love to hear from you!
+
+Candidates are required to provide either a pdf or linked portfolio to their application/resume. Applications without any form of portfolio will be disregarded.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Bakery Team Member (Service Counter) - Part Time | https://www.linkedin.com/jobs/view/bakery-team-member-service-counter-part-time-at-whole-foods-market-4375620841
+
+Provides support as a member of the Bakery team to include receiving and preparing product, maintaining the Bakery area and displays, and selling product in support of WFM standards. Performs all functions related to breaking down deliveries and stocking shelves. All Whole Foods Market Retail jobs require ensuring a positive company image by providing courteous, friendly, and efficient service to customers and Team Members at all times. All positions must be performed in accordance with team and store Standard Operating Procedures. Further, Team Members must be prepared and able to perform the duties inherent in other Team Member job descriptions. Team Leaders are required to spend significant time on the floor, engaging with customers, and pitching in to help whenever and wherever needed. All positions must strive to support WFM core values and goals, promote national, regional, and store programs and initiatives, and ensure adherence to all applicable health and safety regulations.
+
+Job Responsibilities
+
+
+Ensures a fresh and appealing display by keeping cases and shelves clean and well stocked by front-facing, checking codes, rotating and removing out-of-date products.
+Stocks and cleans shelves, bins, and display areas.
+Monitors and prevents spoilage and communicates waste to buyers, Team Leaders, and shift supervisor.
+Maintains back stock in good order.
+Assists with sampling program, keeping sample areas full, clean and appealing.
+Assists with periodic inventory checks.
+Arrives to work station on time, appropriately groomed, dressed and ready to work; works all scheduled shifts and attends required trainings and meetings.
+Provides excellent customer service, addresses needs of customers in a timely and effective manner and models suggestive selling techniques; answers phones and pages promptly and courteously.
+Maximizes sales potential through effective and proper procedures for prepping, storing, rotating, stocking, and merchandising product.
+Follows and complies, or ensures compliance, with established procedures, including Weights and Measures, health and sanitation, and safe work practices.
+Maintains, or ensures maintenance of, a clean and sanitary working and shopping environment; maintains equipment in accordance with WFM cleanliness and safety standards.
+Performs opening, mid, and closing duties as assigned; ensures accuracy of signs and pricing.
+Immediately reports safety hazards and violations.
+Performs other duties as assigned by store, regional, or national leadership.
+
+
+Job Skills
+
+
+Ability to sell proactively.
+Ability to learn basic knowledge of all products carried in department.
+Ability to visually examine products for quality and freshness.
+Proactively reads labels and familiarizes oneself on various products.
+Assists with periodic inventory checks.
+Strong to excellent communication skills and willingness to work as part of a team.
+Ability to deliver information in a clear and respectable manner to fellow Team Members, customers, and vendors.
+Ability to meet customer service expectations and standards in all interactions with customers, vendors, and Team Members.
+Ability to follow directions and procedures; effective time management and organization skills.
+Passion for natural foods and the mission of Whole Foods Market.
+Strong work ethic and ability to work in a fast-paced environment with a sense of urgency.
+Understanding of and compliance with WFM quality goals.
+
+
+Experiences
+
+
+No prior retail experience required.
+
+
+Physical Requirements / Working Conditions
+
+
+Must be able to lift 50 pounds.
+In an 8-hour work day: standing/walking 6-8 hours.
+Hand use: single grasping, fine manipulation, pushing and pulling.
+Work requires the following motions: bending, twisting, squatting and reaching.
+Exposure to FDA approved cleaning chemicals.
+Exposure to temperatures: <32 degrees Fahrenheit (freezing), 32-40 degrees Fahrenheit (refrigerators), >90 degrees Fahrenheit.
+Ability to work in wet and dry conditions.
+Ability to work a flexible schedule including nights, weekends, and holidays as needed.
+Ability to use tools and equipment, including knives, box cutters, electric pallet jacks, and other heavy machinery.
+May require use of ladders.
+
+
+Note: The purpose of this document is to provide a general summary of essential responsibilities for the position and is not meant as an exhaustive list. This document does not reflect all job duties or requirements for every position. Requirements build as one progresses through the job levels, so any job duties required at a lower level may be required at the higher level in addition to the duties listed for that higher level. Duties, assignments, and other responsibilities may differ for similar positions based on business conditions, departmental or geographic location, and/or needs for the particular position. An individual must demonstrate successful performance in their current position before being considered for promotion. In addition, in order to promote into a higher-level position, a business need for the promotion must exist and the candidate must be considered the most qualified person for the new position. Completion of certain milestones such as obtaining an advanced degree or certification, time in current position, or developing skills to perform at the higher-level role do not guarantee a promotion.
+
+The wage range for this position is $17.00-$25.40 Hourly, commensurate with experience. Whole Foods Market offers "Whole Benefits". Whole Benefits may include health insurance, retirement plan benefits, eligibility for a store discount, paid time off and access to other benefit programs. Eligibility for Whole Benefits is determined under the terms of the applicable Whole Benefits plan at a person’s date of hire. For additional information, visit our Whole Foods Market Careers site: https://careers.wholefoodsmarket.com/benefits.
+
+New entry level Team Members who successfully complete their first 90-days of employment and who remain actively employed in an eligible role, may be eligible for a base rate increase after their 90-day anniversary.
+
+At Whole Foods Market, we provide a fair and equal employment opportunity for all Team Members and candidates regardless of race, color, religion, national origin, gender, pregnancy, sexual orientation, gender identity/expression, age, marital status, disability, or any other legally protected characteristic. Whole Foods Market hires and promotes individuals solely based on qualifications for the position to be filled and business needs.
+
+Whole Foods Market works with job sites like Indeed, LinkedIn, and ZipRecruiter to promote opportunities at our company. Please be aware that other career sites may not be accurate or up to date and may even be fraudulent. We encourage and recommend all candidates to apply via our site.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
