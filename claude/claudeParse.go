@@ -103,7 +103,7 @@ func main() {
 
 	// 4. Read companies/products JSON file
 	fmt.Println("Reading products JSON file...")
-	companiesData, err := os.ReadFile("./JSONS/MOCK_DATA.json")
+	companiesData, err := os.ReadFile("scraper/parse.txt")
 	if err != nil {
 		fmt.Printf("Error reading products file: %v\n", err)
 		return

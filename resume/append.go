@@ -15,14 +15,14 @@ func main() {
 		log.Fatal(err)
 	}
 
-	jobs, err := os.ReadFile("parse.txt")
+	jobs, err := os.ReadFile("scraper/parse.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	combined := string(resume) + "\n" + separator + string(jobs)
 
-	if err := os.WriteFile("parse.txt", []byte(combined), 0644); err != nil {
+	if err := os.WriteFile("scraper/parse.txt", []byte(combined), 0644); err != nil {
 		log.Fatal(err)
 	}
 }
