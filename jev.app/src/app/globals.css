@@ -8,19 +8,51 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-maple-mono);
+  --font-mono: var(--font-maple-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #d8dee9;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-maple-mono), monospace;
+}
+
+.textbox {
+  height: 50px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+  background: var(--background);
+  border: 2px solid #d4d4d8;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.textbox:focus {
+  border-color: #71717a;
+  box-shadow: 0 0 0 2px rgba(113, 113, 122, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .textbox {
+    border-color: #3f3f46;
+  }
+
+  .textbox:focus {
+    border-color: #71717a;
+  }
 }
