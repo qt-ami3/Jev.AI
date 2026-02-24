@@ -1,14 +1,19 @@
+'use client'
+
+import { handleGettingStarted } from "./TS/gettingStarted"
+
 export default function Dashboard() {
   return (
     <div className="max-w-4xl">
       <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
         Dashboard
       </h1>
-      
-      <br />
 
-      <div className="textbox group relative pr-6" style={{ marginLeft: "5px" }}>
+      <br/>
+
+      <button onClick={handleGettingStarted} className="textbox group relative pr-6" style={{ marginLeft: "5px" }}>
         &nbsp;Getting Started&nbsp;
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="11"
@@ -25,7 +30,7 @@ export default function Dashboard() {
           <polyline points="15 3 21 3 21 9" />
           <line x1="10" y1="14" x2="21" y2="3" />
         </svg>
-      </div>
+      </button>
     </div>
   );
 }
