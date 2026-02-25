@@ -1,6 +1,10 @@
-export async function handleGettingStarted() {
-  const res = await fetch("/api/config")
-  const config = await res.json()
+export async function uploadResume(file: File): Promise<{ error?: string }> {
+  const form = new FormData()
+  form.append("resume", file)
 
-  console.log("resume uploaded:",config.progress?.resume)
+  const res = await fetch("/api/config", { method: "POST", body: form })
+  const data = await res.json()
+
+  if (!res.ok) return { error: data.error }
+  return {}
 }
