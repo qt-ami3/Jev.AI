@@ -1,0 +1,46 @@
+Software Engineer Intern - Applications | https://www.linkedin.com/jobs/view/software-engineer-intern-applications-at-zoominfo-4378047952
+
+ZoomInfo is where careers accelerate. We move fast, think boldly, and empower you to do the best work of your life. You’ll be surrounded by teammates who care deeply, challenge each other, and celebrate wins. With tools that amplify your impact and a culture that backs your ambition, you won’t just contribute. You’ll make things happen–fast.
+
+Join ZoomInfo’s Applications department as a Summer Intern to work on high-impact projects that power our go-to-market data products. You’ll join one of the two teams below to participate in real work using AI alongside experienced mentors, with a strong emphasis on data quality, reliability, and learning fast.
+
+What You'll Do
+
+Option A: CoPilot Engine Team
+
+The S2A Engine team is looking for an engineering intern to help build and improve the backend systems that power ZoomInfo's Copilot platform. You'll work on scalable services and data-driven features that deliver insights and actions to customers, with a focus on performance, reliability, and clean system design. Background in TypeScript, Node.js or modern backend development is preferred.
+
+Option B: Go-To-Market Workspace
+
+Our team is building the GTM Workspace, a unified AI system that solves the 'tool chaos' for sales teams by consolidating CRM data, market signals, and conversation history into a single, actionable execution layer. As an intern, you will build full-stack features using React, Node.js, and GraphQL to help enterprise reps move away from spreadsheets and into a streamlined, AI-driven environment.
+
+What you’ll bring
+
+
+Undergraduate junior status (or graduating Jan–Aug 2027) in Computer Science.
+Strong programming fundamentals, required to pass a complex coding assessment.
+Clear communication, strong problem-solving, and comfort working in a fast-moving environment.
+Able to commute to Bethesda, MD or Waltham, MA (in office 4 days/week, 1 day WFH).
+Can commit to the program for the full 10 weeks, between June 1 – August 7, 2026.
+
+
+The US base hourly range for this position is $30-35 per hour.
+
+Actual compensation offered will be based on factors such as the candidate’s work location, qualifications, skills, experience and/or training. Your recruiter can share more information about the specific salary range for your desired work location during the hiring process.
+
+We want our employees and their families to thrive. In addition to comprehensive benefits we offer holistic mind, body and lifestyle programs designed for overall well-being. Learn more about ZoomInfo benefits here.
+
+About Us
+
+ZoomInfo (NASDAQ: GTM) is the Go-To-Market Intelligence Platform that empowers businesses to grow faster with AI-ready insights, trusted data, and advanced automation. Its solutions provide more than 35,000 companies worldwide with a complete view of their customers, making every seller their best seller.
+
+ZoomInfo is committed to protecting your privacy when you apply for jobs with us. Please review our Job Applicant Privacy Notice for more details on how we handle your personal information.
+
+ZoomInfo may use a software-based assessment as part of the recruitment process. More information about this tool, including the results of the most recent bias audit, is available here.
+
+ZoomInfo is proud to be an equal opportunity employer, hiring based on qualifications, merit, and business needs, and does not discriminate based on protected status. We welcome all applicants and are committed to providing equal employment opportunities regardless of sex, race, age, color, national origin, sexual orientation, gender identity, marital status, disability status, religion, protected military or veteran status, medical condition, or any other characteristic protected by applicable law. We also consider qualified candidates with criminal histories in accordance with legal requirements.
+
+For Massachusetts Applicants: It is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment. An employer who violates this law shall be subject to criminal penalties and civil liability. ZoomInfo does not administer lie detector tests to applicants in any location.
+
+
+Show more

@@ -1,0 +1,47 @@
+Quant Developer Intern - Summer 2026 | https://www.linkedin.com/jobs/view/quant-developer-intern-summer-2026-at-acadian-asset-management-4315882710
+
+Acadian Asset Management is a global, systematic investment manager at the forefront of data-driven investing since 1986. Headquartered in Boston, with locations in Singapore, London, and Sydney, we manage over $120 billion on behalf of leading institutions worldwide—including pension funds, endowments, foundations, and sovereign wealth funds. We harness advanced technology, rich datasets, and multidisciplinary expertise to help clients navigate complex markets and uncover insights that may be overlooked by traditional approaches.
+
+
+
+
+What sets Acadian apart is our people. We foster a collaborative, intellectually curious environment where ideas are tested, diverse perspectives are welcomed, and innovation thrives. We’re united by a shared purpose: delivering effective client outcomes and supporting one another in work that’s both challenging and rewarding. We offer a flexible hybrid work environment, strong benefits, and a casual but focused office culture—all designed to support the meaningful, collaborative work that defines Acadian.
+
+
+
+
+Position Overview
+
+The Investment Analytics & Data (IAD) team provides and develops the tools, data, software and systems that drive Acadian’s quantitative forecasting models. We are seeking an exceptionally talented and motivated individual to join our team for the summer. The intern will have the opportunity to work with senior engineers, analysts and portfolio managers to improve our investment infrastructure and modeling process. This is a hands-on opportunity for the individual to gain experience at a top-tier quantitative investment management firm. As part of the experience, you will have access to training and mentorship from some of the most talented professionals in the industry. The ideal candidate will be a highly motivated and energetic individual who takes initiative, enjoys solving business challenges, and takes extreme pride in their work. Acadian supports a hybrid work environment; Interns will be expected on-site in the Boston office a minimum of 3 days a week.
+
+
+
+
+What You’ll Do
+
+Writing code to improve the stability, speed and accuracy of signals/models used in Acadian’s investment process
+Improving the usability of the tools and analytics used to evaluate Acadian’s models
+Assist with various enhancements such as extensions to data access or visualization libraries
+
+
+
+
+We’re Looking For Teammates With
+
+Progress towards a Bachelor’s or Master’s degree in computer science, engineering, or other analytical discipline required
+1+ years programming experience in Python required through school or internship experience; working knowledge of SQL preferred
+Strong data management and statistics skills and a willingness to independently dissect, evaluate, and interpret results
+Motivation and ability to learn quickly, solve problems and communicate questions and findings in a clear manner
+Ability to work autonomously and in collaboration with other interns and investment professionals
+
+
+
+
+To apply for this position or view Acadian’s open roles, please visit the Careers section of our website at: http://www.acadian-asset.com/careers/Job-opportunities. We will contact only selected candidates. If you are a candidate with a disability, or are assisting a candidate with a disability, and require an accommodation to apply for one of our jobs, please email us at recruiting@acadian-asset.com.
+
+
+
+
+Acadian Asset Management LLC is committed to providing equal employment opportunity to all employees and applicants. No employee or applicant shall be discriminated against on the basis of gender, race, creed, color, sex, age, national origin, marital status, pregnancy or parenthood, veteran status, citizenship status, disability, gender identity, or sexual orientation.
+
+Show more

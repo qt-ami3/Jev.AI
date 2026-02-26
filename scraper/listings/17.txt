@@ -1,0 +1,86 @@
+Software Engineer Security & Automation II (Intern) – United States | https://www.linkedin.com/jobs/view/software-engineer-security-automation-ii-intern-–-united-states-at-cisco-4340789646
+
+Please note this posting is to advertise potential job opportunities. This exact role may not be open today but could open in the near future. When you apply, a Cisco representative may contact you directly if a relevant position opens.
+
+Applications are accepted until further notice.
+
+Meet the Team
+
+Our dedicated team members are building the future of Cisco’s AI-driven platforms and data infrastructure, supporting innovation across the globe. You will join a collaborative environment focused on developing advanced data pipelines, secure cloud infrastructure, and automation solutions within business groups such as Security and Infra & Security (Compute, Cloud, Security teams). As part of this innovative team, you will contribute to the growth of cutting-edge technologies in data, intelligent systems, and cybersecurity automation. Explore opportunities at the intersection of security engineering, automation, and AI—helping to transform how Cisco and its customers harness secure, intelligent automation.
+
+Your Impact
+
+As a passionate software engineer, you will play a critical role in developing scalable, secure data pipelines, designing robust analytics platforms, and building automation infrastructure to support Cisco’s security and cloud initiatives. Your expertise in programming, data systems, and cybersecurity allows you to solve complex challenges with innovation and precision. By building and maintaining essential security tools and automation platforms, you enable Cisco’s business groups to leverage AI-driven, secure, and automated insights for operational excellence and strategic growth. Your contributions ensure reliable, high-quality, and secure infrastructure that supports Cisco’s leadership in intelligent, security-first technology solutions.
+
+Minimum Qualifications
+
+
+Currently enrolled in a certification program (e.g., Boot Camp, Apprenticeship, Community College or 4-Year University with 2 years of relevant experience) or currently enrolled in a graduate degree program with 0 years of relevant experience.
+Experience writing, debugging, and maintaining code in Python or other scripting languages (such as Bash), with a focus on automating tasks, workflows, or processes.
+Understanding of security protocols and principles (e.g., TLS/SSL, SSH, OAuth, SAML, IPsec) and familiarity with common cybersecurity tools.
+Exposure to DevOps and DevSecOps practices, including integrating security measures into CI/CD pipelines (e.g., Jenkins, GitHub Actions) and cloud environments.
+Familiarity with cloud security concepts and experience using automation tools within software development and deployment workflows.
+
+
+Preferred Qualifications
+
+
+Understanding of artificial intelligence and machine learning concepts, algorithms, and basic implementation techniques.
+Familiarity with securing cloud environments, including knowledge of cloud security best practices and commonly used security tools.
+Experience or coursework related to securing containerized applications (e.g., Docker, Kubernetes), including vulnerability assessment and mitigation strategies.
+Hands-on experience writing and executing automated tests for Python applications using the pytest framework.
+
+
+Why Cisco?
+
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts, and you’ll see that the opportunities to grow and build are limitless. We work as a team, collaborating with empathy to make really big things happen on a global scale. Because our solutions are everywhere, our impact is everywhere.
+
+We are Cisco, and our power starts with you.
+
+Message to applicants applying to work in the U.S. and/or Canada:
+
+Individual pay is determined by the candidate's hiring location, market conditions, job-related skillset, experience, qualifications, education, certifications, and/or training. The full salary range for certain locations is listed below. For locations not listed below, the recruiter can share more details about compensation for the role in your location during the hiring process.
+
+U.S. employees are offered benefits, subject to Cisco’s plan eligibility rules, which include medical, dental and vision insurance, a 401(k) plan with a Cisco matching contribution, paid parental leave, short and long-term disability coverage, and basic life insurance. Please see the Cisco careers site to discover more benefits and perks. Employees may be eligible to receive grants of Cisco restricted stock units, which vest following continued employment with Cisco for defined periods of time.
+
+U.S. employees are eligible for paid time away as described below, subject to Cisco’s policies:
+
+
+10 paid holidays per full calendar year, plus 1 floating holiday for non-exempt employees
+1 paid day off for employee’s birthday, paid year-end holiday shutdown, and 4 paid days off for personal wellness determined by Cisco
+Non-exempt employees** receive 16 days of paid vacation time per full calendar year, accrued at rate of 4.92 hours per pay period for full-time employees
+Exempt employees participate in Cisco’s flexible vacation time off program, which has no defined limit on how much vacation time eligible employees may use (subject to availability and some business limitations)
+80 hours of sick time off provided on hire date and each January 1st thereafter, and up to 80 hours of unused sick time carried forward from one calendar year to the next
+Additional paid time away may be requested to deal with critical or emergency issues for family members
+Optional 10 paid days per full calendar year to volunteer
+
+
+For non-sales roles, employees are also eligible to earn annual bonuses subject to Cisco’s policies.
+
+Employees On Sales Plans Earn Performance-based Incentive Pay On Top Of Their Base Salary, Which Is Split Between Quota And Non-quota Components, Subject To The Applicable Cisco Plan. For Quota-based Incentive Pay, Cisco Typically Pays As Follows
+
+
+.75% of incentive target for each 1% of revenue attainment up to 50% of quota;
+1.5% of incentive target for each 1% of attainment between 50% and 75%;
+1% of incentive target for each 1% of attainment between 75% and 100%; and
+Once performance exceeds 100% attainment, incentive rates are at or above 1% for each 1% of attainment with no cap on incentive compensation.
+
+
+For non-quota-based sales performance elements such as strategic sales objectives, Cisco may pay 0% up to 125% of target. Cisco sales plans do not have a minimum threshold of performance for sales incentive compensation to be paid.
+
+The applicable full salary ranges for this position, by specific state, are listed below:
+
+New York City Metro Area
+
+$44,000.00 - $185,000.00
+
+Non-Metro New York State & Washington State
+
+$44,000.00 - $185,000.00
+
+
+For quota-based sales roles on Cisco’s sales plan, the ranges provided in this posting include base pay and sales target incentive compensation combined.
+Employees in Illinois, whether exempt or non-exempt, will participate in a unique time off program to meet local requirements.
+Show more

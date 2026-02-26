@@ -13,6 +13,8 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
+const listingsDir = "listings"
+
 func main() {
 	file, err := os.Open("output.txt")
 	if err != nil {
@@ -34,6 +36,11 @@ func main() {
 		return
 	}
 
+	if err := os.MkdirAll(listingsDir, 0755); err != nil {
+		fmt.Printf("Error creating listings dir: %v\n", err)
+		return
+	}
+
 	opts := append(chromedp.DefaultExecAllocatorOptions[:],
 		chromedp.Flag("headless", true),
 		chromedp.Flag("no-sandbox", true),
@@ -44,18 +51,6 @@ func main() {
 
 	allocCtx, allocCancel := chromedp.NewExecAllocator(context.Background(), opts...)
 	defer allocCancel()
-
-	outFile, err := os.Create("parse.txt")
-	if err != nil {
-		fmt.Printf("Error creating parse.txt: %v\n", err)
-		return
-	}
-	defer outFile.Close()
-
-	writer := bufio.NewWriter(outFile)
-	defer writer.Flush()
-
-	separator := strings.Repeat("-", 118)
 
 	descJS := `
 		(function() {
@@ -109,12 +104,55 @@ func main() {
 			title = "(no title)"
 		}
 
-		fmt.Fprintf(writer, "%s | %s\n\n", title, jobURL)
-		if description != "" {
-			fmt.Fprintf(writer, "%s\n", description)
+		listingPath := fmt.Sprintf("%s/%d.txt", listingsDir, i+1)
+		lf, err := os.Create(listingPath)
+		if err != nil {
+			fmt.Printf("  Error creating %s: %v\n", listingPath, err)
+			continue
 		}
-		fmt.Fprintf(writer, "\n%s\n\n", separator)
+
+		lw := bufio.NewWriter(lf)
+		fmt.Fprintf(lw, "%s | %s\n\n", title, jobURL)
+		if description != "" {
+			fmt.Fprintf(lw, "%s\n", description)
+		}
+		lw.Flush()
+		lf.Close()
+
+		fmt.Printf("  Saved %s\n", listingPath)
 	}
 
-	fmt.Printf("Done. Written to parse.txt\n")
+	fmt.Println("Compiling listings into parse.txt...")
+	if err := compile(len(urls)); err != nil {
+		fmt.Printf("Error compiling: %v\n", err)
+		return
+	}
+	fmt.Println("Done. Written to parse.txt")
+}
+
+func compile(count int) error {
+	outFile, err := os.Create("parse.txt")
+	if err != nil {
+		return err
+	}
+	defer outFile.Close()
+
+	writer := bufio.NewWriter(outFile)
+	defer writer.Flush()
+
+	separator := strings.Repeat("-", 118)
+	compiled := 0
+
+	for i := 1; i <= count; i++ {
+		data, err := os.ReadFile(fmt.Sprintf("%s/%d.txt", listingsDir, i))
+		if err != nil {
+			continue
+		}
+		writer.Write(data)
+		fmt.Fprintf(writer, "\n%s\n\n", separator)
+		compiled++
+	}
+
+	fmt.Printf("Compiled %d/%d listings\n", compiled, count)
+	return nil
 }

@@ -1,0 +1,89 @@
+Amazon Robotics - 2026 Robotics Systems Engineer Intern/Co-op, Robotics Deployment Engineering | https://www.linkedin.com/jobs/view/amazon-robotics-2026-robotics-systems-engineer-intern-co-op-robotics-deployment-engineering-at-lensa-4378065454
+
+Lensa is a career site that helps job seekers find great jobs in the US. We are not a staffing firm or agency. Lensa does not hire directly for these jobs, but promotes jobs on LinkedIn on behalf of its direct clients, recruitment ad agencies, and marketing partners. Lensa partners with DirectEmployers to promote this job for Amazon. Clicking "Apply Now" or "Read more" on Lensa redirects you to the job board/employer site. Any information collected there is subject to their terms and privacy notice.
+
+Description
+
+Are you inspired by invention? Is problem solving through teamwork in your DNA? Do you like the idea of seeing how your work impacts the bigger picture? Answer yes to these questions and you'll fit right in here at Amazon Robotics. We are a smart team of doers who work passionately to apply cutting edge advances in robotics and software to solve real-world challenges that will transform our customers experiences in ways we can't even image yet. We invent new improvements every day.
+
+Amazon Robotics empowers a smarter, faster, more consistent customer experience through automation. Amazon Robotics automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands. Amazon Robotics has a dedicated focus on research and development to continuously explore new opportunities to extend its product lines into new areas.
+
+Come join us in North Reading, MA, or in our newly expanded innovation hub in Westborough, MA! Both campuses provide a unique opportunity for co-ops to have direct access to robotics testing labs and manufacturing facilities.
+
+Please note that by applying to this role you would be considered for Robotics Systems Engineer 2026 summer intern, spring co-op, and fall co-op roles on the Robotics Deployment Engineering team.
+
+The Robotics System Engineer Intern/Co-op plays a crucial role in the Amazon Robotics deployment team. They work alongside a team who oversees the installation, troubleshooting, integration, and commissioning of Amazon Robotics equipment in new and existing fulfillment centers (FCs). This field engineering based position demands strong technical skills for deploying robotic equipment, including working with mechanical systems, electrical, configuring networking, and coordinating software systems. While training is provided on the specific systems that the engineers will be working on, a candidate should have foundational knowledge of robotics, networked mechanical systems, and electrical systems.
+
+The Robotics System Engineer Intern/Co-op will work with a team of 1-5 engineers and collaborate with an on-site project manager to provide technical oversight on the installation of both third party and Amazon designed robotics equipment. These deployments require extensive collaboration with various stakeholders, including third-party installers, contracted engineers, construction, hardware, software, IT, and other partner teams. Strong communication skills are essential for interacting with both internal and external partners and customers. As an Amazonian the candidate must demonstrate independent initiative to identify and solve problems in real time during deployments. They will also drive continuous improvement initiatives to avoid recurrences.
+
+The Robotics System Engineer Intern/Co-op will be deploying the robotic systems in various phases of a product life cycle. When supporting new products, the candidate is required to lead the development of process documentation and modifying the existing processes. Strong technical understanding, love for field work, and a keen interest in diving deep into the understanding of Amazon's robotics systems are key attributes for this role. As an Amazonian, the ability to recognize process gaps and take ownership in developing solutions are important. Project duration can range from a few days to several months and include travel across the US. International work is available for candidates interested in pursuing. This position requires 75% travel. Valid US drivers' license required.
+
+Key job responsibilities
+
+System Engineer Intern/Co-op Critical Skills
+
+
+Ability to read and develop technical documentation and process instructions.
+Ability to handle multiple competing priorities in a fast-paced environment.
+Willingness to work primarily in a construction or warehouse environment in a field-based role.
+
+
+Must be proficient in standard office software tools and processes.
+
+
+Strong foundational knowledge in robotics or complex electro-mechanical and networked engineering, including knowledge of robotic systems, components, and software.
+Strong bias towards taking independent initiative while reporting these efforts up to their leadership.
+Excellent verbal and written communication skills with ability to clearly explain technical concepts to customers and internal stakeholders
+Ability to work with cross-functional teams.
+Ability to capture lessons learned and drive technical continuous improvement projects.
+Ability to function independently and manage a team of 1-5 engineers and related trades during deployments.
+Ability to coordinate with multiple internal and external stakeholders working on the project to resolve cross-functional deployment issues.
+Ability to oversee and resolve escalations during robotics deployment including quality hand-off, live order testing, site acceptance testing, operational readiness testing, monitoring robotics system performance, etc.
+Responsible for delivering projects by owning key KPIs around on-time delivery, cost, quality, safety, and sustainability.
+Understanding of data collection, reporting processes, and ability to make data-driven decisions.
+
+
+Basic Qualifications
+
+Are 18 years of age or older
+
+Currently working towards Bachelor's or Masters Degree with a graduation date between December 2026 and August 2027
+
+Currently enrolled in a Bachelor's, Masters, or PhD program that is physically located in the United States and must have at least one semester/term/quarter of school left to complete after the end of the co-op
+
+Are enrolled in a Bachelor's or Master's degree program in Mechanical, Electrical, Industrial Engineering, or related STEM field
+
+Must be eligible and available for a full-time (40h / week) co-op during the 6-month co-op duration
+
+Understanding of data collection, reporting processes, and ability to make data-driven decisions
+
+Ability to read technical drawings and/or reading CAD models to resolve on-site clash issues using 3D clash detection reports
+
+Ability to troubleshoot robotics systems to resolve escalations including quality hand-off, live order testing, site acceptance testing, operational readiness testing, monitoring robotics system performance, etc
+
+Ability to read and develop technical documentation and process instructions
+
+Willingness to work primarily in a construction or warehouse environment in a field-based role and travel extensively across the US and potentially internationally
+
+Preferred Qualifications
+
+1-2 years of experience working in a field engineering, construction, manufacturing, or warehouse environment
+
+Proven experience working on hardware integration or complex mechanical-electrical or networked industrial equipment
+
+Ability to demonstrate past use of data to drive decision making processes
+
+Practical understanding of network fundamentals (DNS, DHCP, TCP/IP, routing, switching, HTTP)
+
+Ability to take independent initiative when presented with a business need
+
+Knowledge of robot specific experience (Fanuc, ABB), Allen Bradley PLC experience, C++, Python, Java, etc
+
+Amazon is an equal opportunity employer and does not discriminate on the basis of protected veteran status, disability, or other legally protected status.
+
+Our inclusive culture empowers Amazonians to deliver the best results for our customers. If you have a disability and need a workplace accommodation or adjustment during the application and hiring process, including support for the interview or onboarding process, please visit https://amazon.jobs/content/en/how-we-hire/accommodations for more information. If the country/region you're applying in isn't listed, please contact your Recruiting Partner.
+
+Our compensation reflects the cost of labor across several US geographic markets. The base pay for this position ranges from $35.63/hr in our lowest geographic market up to $78.37/hr in our highest geographic market. Pay is based on a number of factors including market location and may vary depending on job-related knowledge, skills, and experience. Amazon is a total compensation company. Dependent on the position offered, equity, sign-on payments, and other forms of compensation may be provided as part of a total compensation package, in addition to a full range of medical, financial, and/or other benefits. For more information, please visit https://www.aboutamazon.com/workplace/employee-benefits . This position will remain posted until filled. Applicants should apply via our internal or external career site.
+
+If you have questions about this posting, please contact support@lensa.com
+Show more

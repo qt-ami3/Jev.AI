@@ -1,0 +1,98 @@
+Software Engineer Intern | https://www.linkedin.com/jobs/view/software-engineer-intern-at-proofpoint-4378023746
+
+About Us
+
+Proofpoint is a global leader in human- and agent-centric cybersecurity. We protect how people, data, and AI agents connect across email, cloud, and collaboration tools. Over 80 of the Fortune 100, 10,000 large enterprises, and millions of smaller organizations trust Proofpoint to stop threats, prevent data loss, and build resilience across their people and AI workflows. Our mission is simple safeguard the digital world and empower people to work securely and confidently. Join us in our pursuit to defend data and protect people.
+
+How We Work
+
+At Proofpoint you’ll be part of a global team that breaks barriers to redefine cybersecurity guided by our BRAVE core values
+
+Bold in how we dream and innovate
+
+Responsive to feedback, challenges and opportunities
+
+Accountable for results and best in class outcomes
+
+Visionary in future focused problem-solving
+
+Exceptional in execution and impact
+
+About Us
+
+Proofpoint is a global leader in human- and agent-centric cybersecurity. We protect how people, data, and AI agents connect across email, cloud, and collaboration tools. Over 80 of the Fortune 100, 10,000 large enterprises, and millions of smaller organizations trust Proofpoint to stop threats, prevent data loss, and build resilience across their people and AI workflows. Our mission is simple safeguard the digital world and empower people to work securely and confidently. Join us in our pursuit to defend data and protect people.
+
+How We Work
+
+At Proofpoint you’ll be part of a global team that breaks barriers to redefine cybersecurity guided by our BRAVE core values
+
+Bold in how we dream and innovate
+
+Responsive to feedback, challenges and opportunities
+
+Accountable for results and best in class outcomes
+
+Visionary in future focused problem-solving
+
+Exceptional in execution and impact
+
+The Software Engineer Intern supports the design, development, testing, and maintenance of software applications under the guidance of senior engineers. This role is focused on building foundational development skills, contributing to production code, and learning best practices in software engineering while delivering reliable, maintainable solutions.
+
+The Software Engineer Intern works on well-defined tasks, participates in code reviews, troubleshoots issues, and collaborates with cross-functional teams to support business and operational needs.
+
+Your day-to-day
+
+
+Find bugs in existing codebase and propose fixes
+Help refactor existing code to improve usability and efficiency
+Assist in writing and developing unit/integration tests to be used in CI/CD pipeline
+Participate in code reviews
+Help diagnose and resolve technical problems, user-reported issues, and vulnerabilities
+Manage Jira tickets, updating status and communicating overall progress with stakeholders
+Write up patch notes and help communicate changes to the wider team internally
+Collaborate with the wider team to help find new opportunities and brainstorm ideas
+
+
+Technical Skills
+
+
+Basic proficiency in one or more programming languages (e.g., Python, JavaScript, Java, or similar)
+Understanding of fundamental software development concepts (data structures, control flow, APIs)
+Familiarity with version control systems (e.g., Git)
+Basic knowledge of databases and querying (SQL or NoSQL)
+Ability to write clear, maintainable, and well-documented code
+Exposure to debugging and unit testing concepts
+
+
+Qualifications
+
+
+Currently pursuing a bachelor’s degree in Computer Science
+Rising senior (graduation date between fall 2026 – spring 2027)
+Able to work Eastern Time Zone hours
+
+
+Why Proofpoint?
+
+At Proofpoint, we believe that an exceptional career experience includes a comprehensive compensation and benefits package. Here are just a few reasons you’ll love working with us
+
+
+Competitive compensation
+Comprehensive benefits
+Career success on your terms
+Flexible work environment
+Annual wellness and community outreach days
+Always on recognition for your contributions
+Global collaboration and networking opportunities
+
+
+Our Culture
+
+Our culture is rooted in values that inspire belonging, empower purpose and drive success-every day, for everyone.
+
+We encourage applications from individuals of all backgrounds, experiences, and perspectives. If you need accommodation during the application or interview process, please reach out to accessibility@proofpoint.com.
+
+How To Apply
+
+Interested? Submit your application along with any supporting information- we can’t wait to hear from you!
+Show more
