@@ -23,8 +23,8 @@
       "highlights": [
         "Calls ClaudeAPI to intelligently match data sets from JSONs to SQL",
         "Error handling and scalability for future projects",
-        "Learned SQL \u0026 JSON integration in GO for backend development",
-        "Understanding of ClaudeAPI \u0026 its documentation to effectively utilize in project scope"
+        "Learned SQL & JSON integration in GO for backend development",
+        "Understanding of ClaudeAPI & its documentation to effectively utilize in project scope"
       ]
     },
     {
@@ -39,9 +39,9 @@
       "name": "Personal Website",
       "dates": "Nov 13, 2025 – Current",
       "highlights": [
-        "AWS \u0026 load time optimizations",
-        "In depth vanilla CSS/HTML styling \u0026 animations",
-        "Fundamentals \u0026 utilization of JavaScript for improved functionality in HTML \u0026 CSS"
+        "AWS & load time optimizations",
+        "In depth vanilla CSS/HTML styling & animations",
+        "Fundamentals & utilization of JavaScript for improved functionality in HTML & CSS"
       ]
     },
     {
@@ -58,7 +58,7 @@
       "dates": "Dec 11, 2025 – Current",
       "highlights": [
         "Using OOP to run game logic, track progress/stats, drive enemy AI",
-        "Use \u0026 knowledge of the Ebitengine framework and its documentation",
+        "Use & knowledge of the Ebitengine framework and its documentation",
         "Documenting and maintaining codebase to be legible and easy to understand",
         "Utilizing the Ebitengine framework to implement higher level game engine features"
       ]
@@ -79,12 +79,12 @@
       "git",
       "Linux",
       "MariaDB",
-      "SQL",
       "APIs",
-      "JSON"
+      "JSON",
+      "SQL"
     ],
     "soft": [
-      "Understanding \u0026 approachable",
+      "Understanding & approachable",
       "Enjoys organizing and optimizing daily tasks",
       "Eager to learn",
       "Asks for direction not answers when stuck"
