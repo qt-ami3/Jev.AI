@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #d8dee9;
 }
 
 @theme inline {
@@ -10,13 +17,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-maple-mono);
   --font-mono: var(--font-maple-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #d8dee9;
-  }
 }
 
 body {
@@ -47,12 +47,10 @@ body {
   box-shadow: 0 0 0 2px rgba(113, 113, 122, 0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  .textbox {
-    border-color: #3f3f46;
-  }
+.dark .textbox {
+  border-color: #3f3f46;
+}
 
-  .textbox:focus {
-    border-color: #71717a;
-  }
+.dark .textbox:focus {
+  border-color: #71717a;
 }
