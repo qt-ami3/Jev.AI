@@ -13,6 +13,7 @@ interface JobPrefsForm {
 
 export default function Dashboard() {
   const [showModal, setShowModal] = useState(false)
+  const [setupComplete, setSetupComplete] = useState(false)
   const [step, setStep] = useState(0)
   const [file, setFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
@@ -39,6 +40,13 @@ export default function Dashboard() {
           config.progress?.resume === true || config.progress?.resume === "true"
         const prefsDone =
           config.progress?.jobPrefs === true || config.progress?.jobPrefs === "true"
+        const sub = config.progress?.subscription
+        const subDone =
+          sub === true || sub === "true" || sub === "n/a" || sub === undefined
+
+        if (resumeDone && prefsDone && subDone) {
+          setSetupComplete(true)
+        }
 
         if (resumeDone && !prefsDone) {
           const scraperRes = await fetch("/api/config/jobprefs")
@@ -181,7 +189,7 @@ export default function Dashboard() {
 
       <br />
 
-      <button
+      {!setupComplete && <button
         onClick={() => setShowModal(true)}
         className="textbox group relative pr-6"
         style={{ marginLeft: "5px" }}
@@ -203,7 +211,7 @@ export default function Dashboard() {
           <polyline points="15 3 21 3 21 9" />
           <line x1="10" y1="14" x2="21" y2="3" />
         </svg>
-      </button>
+      </button>}
 
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
