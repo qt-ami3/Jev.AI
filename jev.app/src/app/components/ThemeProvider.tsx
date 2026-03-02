@@ -8,6 +8,7 @@ const ThemeContext = createContext<{ theme: Theme; toggle: () => void } | null>(
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('dark')
+  const [flashing, setFlashing] = useState(false)
 
   useEffect(() => {
     const saved = localStorage.getItem('theme') as Theme | null
@@ -22,6 +23,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       const next = prev === 'dark' ? 'light' : 'dark'
       localStorage.setItem('theme', next)
       document.documentElement.classList.toggle('dark', next === 'dark')
+      setFlashing(true)
+      setTimeout(() => setFlashing(false), 600)
       return next
     })
   }
@@ -29,6 +32,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
       {children}
+      {flashing && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            pointerEvents: 'none',
+            background: 'linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #06b6d4 100%)',
+            animation: 'theme-flash 0.6s ease-out forwards',
+          }}
+        />
+      )}
     </ThemeContext.Provider>
   )
 }

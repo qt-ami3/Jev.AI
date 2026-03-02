@@ -2,9 +2,22 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@property --background {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ffffff;
+}
+
+@property --foreground {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #171717;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  transition: --background 0.5s ease, --foreground 0.5s ease;
 }
 
 .dark {
@@ -53,4 +66,10 @@ body {
 
 .dark .textbox:focus {
   border-color: #71717a;
+}
+
+@keyframes theme-flash {
+  0%   { opacity: 0; }
+  30%  { opacity: 0.12; }
+  100% { opacity: 0; }
 }
