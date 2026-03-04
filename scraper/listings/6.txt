@@ -1,56 +1,65 @@
-Software Engineering Intern | https://www.linkedin.com/jobs/view/software-engineering-intern-at-werfen-north-america-4369002950
+Software Engineering Intern | https://www.linkedin.com/jobs/view/software-engineering-intern-at-l3harris-technologies-4380393275
 
-Werfen
+L3Harris is dedicated to recruiting and developing high-performing talent who are passionate about what they do. Our employees are unified in a shared dedication to our customers’ mission and quest for professional growth. L3Harris provides an inclusive, engaging environment designed to empower employees and promote work-life success. Fundamental to our culture is an unwavering focus on values, dedication to our communities, and commitment to excellence in everything we do.
 
-Werfen is a growing, family-owned, innovative company founded in 1966 in Barcelona, Spain. We are a worldwide leader in specialized diagnostics in the areas of Hemostasis, Acute Care Diagnostics, Transfusion, Autoimmunity, and Transplant. Through our Original Equipment Manufacturing (OEM) business line, we research, develop, and manufacture customized assays and biomaterials. We operate directly in 30 countries, and in more than 100 territories through distributors. Our Headquarters and Technology Centers are located in the US and Europe, and our workforce is more than 7,000 strong.
+L3Harris is the Trusted Disruptor in defense tech. With customers’ mission-critical needs always in mind, our employees deliver end-to-end technology solutions connecting the space, air, land, sea and cyber domains in the interest of national security.
 
-Our success comes from a specific focus in these rapidly evolving diagnostic areas, our commitment to customers, and our dedication to innovation and quality. We’re passionate about providing healthcare professionals the most valuable and complete solutions to improve hospital efficiency and enhance patient care.
+Job Title: Software Engineer Intern
 
-Overview
+Job Code: 34705
 
-Overview
+Job Location: Wilmington, MA
 
-The purpose of the internship is to provide meaningful professional hands-on experience to students with leadership potential and proven academic performance. Werfen hires students majoring in Engineering and Life Sciences fields into this internship program based on business need. Ideal candidates will combine technical and business knowledge with analytical strength and creative problem-solving abilities.
+Job Schedule: 9/80: Employees work 9 out of every 14 days – totaling 80 hours worked, and have every other Friday off.
 
-Responsibilities
-
-Position Description
+Job Description: 
 
 
-To perform entry level work of a routine nature requiring application of standard techniques, procedures and criteria in carrying out a sequence of related tasks.
-The Intern will be involved in the day-to-day activities of the team included aiding other departments as they relate to department projects. We expect the intern to gain an in-depth knowledge of the product and its associated processes, particularly the process activities in-which they will be directly involved. The intern will have opportunities to assist in nearly all aspects of the workflow.
+Apply computer science, engineering, and mathematical analysis concepts and principles in the development of software for the target application
+Work closely with cross functional members of the engineering organization to develop and evaluate interfaces between hardware and software, and operational performance requirements and design of the overall system
+Support and participate in all phases of the software development life cycle, including requirements analysis, design, implementation, integration, and test of embedded software for real-time control of advanced tactical radio equipment
+Develop software test procedures, software programs, and related documentation
+Utilize modeling tools and equipment to establish operating data, conduct experimental tests, and evaluate results
+Participate in peer reviews, identify, track and repair defects
+Utilize a variety of software languages (i.e., C++, C#, C, Java, Ruby, HTML5, XML, SQL, Perl, Python, Ajax, Qt) on Windows, Linux, mobile platforms, and embedded real time operating systems (VxWorks, Linux, QNX, Integrity, Windows CE, and others for Motorola, Intel, TI, and custom processor designs)  
 
 
-Key Attributes
+
+Digital Signal Processing 
 
 
-Requires confidence in using Microsoft Word and Excel tools.
-Requires Enthusiasm, motivation, initiative and ability to work within an interactive and energetic workplace.
-Review process procedures, change orders, equipment specifications, validation plans, and reports.
-Performs research on technology, equipment and tooling to improve process quality, yield or cost. Generates proposals based on research.
-Assistance in creating, reviewing and maintaining department files.
-Performs experiments, analyzes and interprets numerical data from experiments.
-Summarizes findings by computer readouts, statistical summaries, graphs and other methods.
+Apply digital signal processing (DSP), communication systems, and software engineering concepts and principles in the development of software for the target application
+Understanding of time domain versus frequency domain analysis, filter structures, and modulation/coding algorithms  
+Work closely with cross functional members of the engineering organization to develop and evaluate interfaces between hardware and software, and operational performance requirements and design of the overall system
+Support and participate in all phases of the software and firmware development life cycle, including requirements analysis, design, implementation, integration, and test of embedded software for real-time control of advanced tactical radio equipment in an agile environment 
+Develop software test procedures, software programs, and related documentation
+Utilize modeling tools and equipment to establish operating data, conduct experimental tests, and evaluate results
+Participate in peer reviews, identify, track and repair defects
+Utilize a variety of software languages (primarily C, C++, and VHDL as well as scripting languages) on embedded Linux and real-time operating system platforms (QNX, Motorola, Intel, TI, and custom processor designs)
 
 
-Qualifications
 
-Minimum Knowledge & Experience Required for the Position:
-
-
-Currently pursuing B.S. in Engineering, Finance, Business, Marketing with a minimum of 2 college semesters complete.
-Ability to multitask.
+Qualifications:
 
 
-The hourly range for this role is $22/hr to $30/hr. Individual compensation will ultimately depend on factors including relevant experience and grade level completed.
+Pursuing a Bachelor's degree in Computer Engineering, Software Engineering, Electrical Engineering or related field
 
-Closing
 
-If you are interested in constantly learning and being challenged on a daily basis we encourage you to submit your resume or CV.
 
-Werfen is an Equal Opportunity employer and is committed to a diverse workplace. Werfen strictly prohibits unlawful discrimination, harassment or retaliation based upon an individual’s race, color, religion, gender, sexual orientation, gender identity/expression, national origin/ancestry, age, mental/physical disability, medical condition, marital status, veteran status, or any other protected characteristic as defined by applicable state or federal law. If you have a disability and need an accommodation in relation to the online application process, please contact NAtalentacquisition@werfen.com for assistance.
+Preferred Skills:
 
-We operate directly in over 30 countries, and in more than 100 territories through distributors. Annual revenue is approximately $2 billion and more than 7,000 employees around the world comprise our Werfen team.
 
-www.werfen.com
+One or more of the following:  C++, C#, C, Java, Ruby, JEE, HTML5, XML, SQL, Qt, Windows, .NET, Unix, Linux, SOA, RTOS, Real-Time Controls, Wireless, Software Security, Robotics, OOA/OOD, Hadoop, Android, Embedded Systems
+
+
+
+In compliance with pay transparency requirements, the salary range for this role in California, Massachusetts, New Jersey, Washington, and the Greater D.C, Denver, or NYC areas is $28.50/hr - $52.50/hr. The salary range for this role in Colorado state, Hawaii, Illinois, Maryland, Minnesota, New York state, Cleveland Ohio, and Vermont is $24.00/hr - $46.00/hr. This is not a guarantee of compensation or salary, as final offer amount may vary based on factors including but not limited to experience and geographic location. L3Harris also offers a variety of benefits, including relocation stipend, 401(k), EAP, and company-paid holidays. The specific programs and options available to an employee may vary depending on date of hire, schedule type, and the applicability of collective bargaining agreements.
+
+L3Harris Technologies is proud to be an Equal Opportunity Employer. L3Harris is committed to treating all employees and applicants for employment with respect and dignity and maintaining a workplace that is free from unlawful discrimination. All applicants will be considered for employment without regard to race, color, religion, age, national origin, ancestry, ethnicity, gender (including pregnancy, childbirth, breastfeeding or other related medical conditions), gender identity, gender expression, sexual orientation, marital status, veteran status, disability, genetic information, citizenship status, characteristic or membership in any other group protected by federal, state or local laws. L3Harris maintains a drug-free workplace and performs pre-employment substance abuse testing and background checks, where permitted by law.
+
+Please be aware many of our positions require the ability to obtain a security clearance. Security clearances may only be granted to U.S. citizens. In addition, applicants who accept a conditional offer of employment may be subject to government security investigation(s) and must meet eligibility requirements for access to classified information.
+
+By submitting your resume for this position, you understand and agree that L3Harris Technologies may share your resume, as well as any other related personal information or documentation you provide, with its subsidiaries and affiliated companies for the purpose of considering you for other available positions.
+
+L3Harris Technologies is an E-Verify Employer. Please click here for the E-Verify Poster in English or Spanish. For information regarding your Right To Work, please click here for English or Spanish.
 Show more

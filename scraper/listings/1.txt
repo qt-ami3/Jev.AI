@@ -1,52 +1,55 @@
-Software Engineer Intern | https://www.linkedin.com/jobs/view/software-engineer-intern-at-lensa-4378081063
+Software Developer Intern 2026 - Cambridge | https://www.linkedin.com/jobs/view/software-developer-intern-2026-cambridge-at-lensa-4380105841
 
-Lensa is a career site that helps job seekers find great jobs in the US. We are not a staffing firm or agency. Lensa does not hire directly for these jobs, but promotes jobs on LinkedIn on behalf of its direct clients, recruitment ad agencies, and marketing partners. Lensa partners with DirectEmployers to promote this job for Red Hat. Clicking "Apply Now" or "Read more" on Lensa redirects you to the job board/employer site. Any information collected there is subject to their terms and privacy notice.
+Lensa is a career site that helps job seekers find great jobs in the US. We are not a staffing firm or agency. Lensa does not hire directly for these jobs, but promotes jobs on LinkedIn on behalf of its direct clients, recruitment ad agencies, and marketing partners. Lensa partners with DirectEmployers to promote this job for IBM. Clicking "Apply Now" or "Read more" on Lensa redirects you to the job board/employer site. Any information collected there is subject to their terms and privacy notice.
 
-Job Summary
+Introduction
 
-At Red Hat, our interns are an integral part of the team. They don’t get relegated to busywork or unimportant tasks, but participate in the day-to-day work and are active contributors to their team.
+A career in IBM Software means you’ll be part of a team that transforms our customer’s challenges into solutions.
 
-We are currently looking for Software Engineering interns to join us in Boston, MA or Raleigh, NC. You will work closely with a senior mentor to gain technical knowledge and experience in your field, and cooperate with a broader international team both locally and globally.
+Seeking new possibilities and always staying curious, we are a team dedicated to creating the world’s leading AI-powered, cloud-native software solutions for our customers. Our renowned legacy creates endless global opportunities for our IBMers, so the door is always open for those who want to grow their career.
 
-You will be part of a cohort of interns and have the opportunity to work on multiple projects within Global Engineering while also receiving learning and curriculum on different technologies. These projects and curriculum may include areas such as Ansible, RHEL, OpenShift, AI, and more. You’ll also have the chance to work with technologies like Python, GitHub, Java, Agile, JavaScript, etc.
+IBM’s product and technology landscape includes Research, Software, and Infrastructure. Entering this domain positions you at the heart of IBM, where growth and innovation thrive.
 
-In this role, you will work in an environment where different perspectives are invited, the best ideas are valued, and people feel empowered to contribute. Freedom and courage are two of our core values, which is why you can practice taking risks and exploring the unknown and developing strengths. Yet being a Red Hatter isn't just about being brave; it's also about demonstrating commitment and sticking to it.
+Your Role And Responsibilities
 
-The focus for Red Hat's Intern Program is a dual partnership between the Emerging Talent Team and our intern managers. We can offer you professional development, social engagement and networking, performance and development, and meaningful work throughout your time at Red Hat.
+We are looking for Software Developer Interns to join our engineering teams. As an intern, you will work alongside experienced IBM developers to design, build, and test software that powers our cloud, AI, and hybrid‑platform solutions. This role is designed for students who are passionate about coding—regardless of which programming language they started with. You will gain hands-on experience in real-world projects, learn modern development practices, and collaborate in an Agile environment where your ideas can make an immediate impact.
 
-Job Responsibilities
-
-
-Work closely with your mentor to design, develop, and maintain code in Python, Golang or similar programming language
-Add new features, debug, identify, and track issues in Red Hat products (RHEL, OpenShift or other)
-Collaborate with the wider team members and other departments such as Quality Engineering, Designers, Product Management or Documentation team throughout the product cycle
-Network with other talented interns in a workplace where you can be yourself and thrive
+What You’ll Do
 
 
-Required Skills
+Support the design, development, testing, and debugging of software in front-end, back-end, or full‑stack environments.
+Work with a variety of programming languages depending on the project (examples: Python, Java, JavaScript, TypeScript, C++, Go, Rust, Swift, Kotlin, or others).
+Help build user interfaces using frameworks like React or contribute to back-end services and APIs.
+Use Git and other version‑control and collaboration tools.
+Work with cloud and container technologies such as Docker, Kubernetes, and REST APIs.
+Participate in Agile ceremonies, code reviews, and technical discussions.
+Explore emerging technologies, including AI/ML, automation, and cloud-native development.
 
 
-Working knowledge of written and spoken English
-Basic knowledge of and passion for Software Engineering, basic knowledge and willingness to use Python, Golang or similar programming language
-Passion, curiosity, and desire to create new things and examine how things work internally
-Willingness to learn and proactively work as a part of a wider team
+Required Technical And Professional Expertise
 
 
-About Red Hat
+To be eligible, candidates must be currently enrolled in a Bachelor’s or Master’s program, with an expected graduation date between December 2026 and May 2029.
+Coursework or project experience in software development using any programming language.
+Familiarity with fundamental concepts such as data structures, basic algorithms, or debugging.
+Exposure to front-end or back-end technologies (React, Node.js, Python, Java, SQL, etc.).
+Experience using Git or similar version control tools.
+Interest in cloud computing, containers, or modern deployment practices.
+Strong analytical thinking, problem‑solving, and communication skills.
+Ability to collaborate and learn quickly in a team environment.
 
-Red Hat (https://www.redhat.com/) is the world’s leading provider of enterprise open source (https://www.redhat.com/en/about/open-source) software solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. Spread across 40+ countries, our associates work flexibly across work environments, from in-office, to office-flex, to fully remote, depending on the requirements of their role. Red Hatters are encouraged to bring their best ideas, no matter their title or tenure. We're a leader in open source because of our open and inclusive environment. We hire creative, passionate people ready to contribute their ideas, help solve complex problems, and make an impact.
 
-Inclusion at Red Hat
+Preferred Technical And Professional Experience
 
-Red Hat’s culture is built on the open source principles of transparency, collaboration, and inclusion, where the best ideas can come from anywhere and anyone. When this is realized, it empowers people from different backgrounds, perspectives, and experiences to come together to share ideas, challenge the status quo, and drive innovation. Our aspiration is that everyone experiences this culture with equal opportunity and access, and that all voices are not only heard but also celebrated. We hope you will join our celebration, and we welcome and encourage applicants from all the beautiful dimensions that compose our global village.
 
-Equal Opportunity Policy (EEO)
+Experience with cloud services (IBM Cloud, AWS, Azure, or GCP).
+Familiarity with REST APIs and databases (relational or NoSQL).
+Exposure to CI/CD pipelines or automation tools.
+Personal or open-source projects that demonstrate creativity and initiative.
+Understanding of Agile development methods.
 
-Red Hat is proud to be an equal opportunity workplace and an affirmative action employer. We review applications for employment without regard to their race, color, religion, sex, sexual orientation, gender identity, national origin, ancestry, citizenship, age, veteran status, genetic information, physical or mental disability, medical condition, marital status, or any other basis prohibited by law.
 
-Red Hat does not seek or accept unsolicited resumes or CVs from recruitment agencies. We are not responsible for, and will not pay, any fees, commissions, or any other payment related to unsolicited resumes or CVs except as required in a written contract between Red Hat and the recruitment agency or party requesting payment of a fee.
-
-Red Hat supports individuals with disabilities and provides reasonable accommodations to job applicants. If you need assistance completing our online job application, email application-assistance@redhat.com . General inquiries, such as those regarding the status of a job application, will not receive a reply.
+IBM is committed to creating a diverse environment and is proud to be an equal-opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, gender, gender identity or expression, sexual orientation, national origin, caste, genetics, pregnancy, disability, neurodivergence, age, veteran status, or other characteristics. IBM is also committed to compliance with all fair employment practices regarding citizenship and immigration status.
 
 If you have questions about this posting, please contact support@lensa.com
 Show more

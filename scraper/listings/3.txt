@@ -1,63 +1,84 @@
-Intern – Full-Stack Developer, Genome Informatics – Cambridge, MA – Summer 2026 | https://www.linkedin.com/jobs/view/intern-–-full-stack-developer-genome-informatics-–-cambridge-ma-–-summer-2026-at-philips-4359236722
+Intern Software Development | https://www.linkedin.com/jobs/view/intern-software-development-at-radnet-4379108749
 
-Job Title
+Responsibilities
 
-Intern – Full-Stack Developer, Genome Informatics – Cambridge, MA – Summer 2026
+Job Title: Software Developer Intern
 
-Job Description
+Reports to: Product Development Leader
 
-Are you interested in an Internship opportunity with Philips? We welcome individuals who are currently pursuing an undergraduate (BS) or graduate (MS) to participate in 3 month paid intern opportunities at our site in Cambridge. Through this role you will gain meaningful, hands-on experience working for a HealthTech company.
+FLSA Status: Non-Exempt
 
-Your Role
+Job Summary
 
+DeepHealth is seeking a Software Developer Intern for Summer 2026 to join our Seattle-area engineering team. This is a hands-on, in-person role focused on building and shipping production-grade systems in a fast-paced healthcare AI environment.
 
-Designing and developing a web-based tool for genomic variant analysis with a professional user interface
-Integrating the MPEG-G (an ISO/IEC compression standard for genomic data) codec into the tool.
-Implementing functionalities that include query using pre-built indexes such as B-Tree and LevelDB, filtering, sorting, formatting, etc.
-Optimizing the tool for speed and memory usage to ensure a smooth user experience for the analysis and presentation of millions of genomic variants
-Following Philips practices for software excellence and working closely with the software development team and external collaborators. Preparing clear documentations and presentations
+Essential Duties And Responsibilities
 
+Interns will contribute directly to live product development in one of the following areas:
 
-You're The Right Fit If
+Agentic AI Engineering
 
 
-Currently pursuing a Bachelor or Master’s degree in Computer Science
-Technical experience, knowledge and/or certification: software development experience – full-stack development, user interface design and performance optimization. Proficiency in the Javascript, Java and C (optional) programming languages.
-Technical skills: experience or knowledge in at least one of the following technologies: React/Remix framework for server-side rendering (SSR), HTML, Angular or other JavaScript-based frameworks for user interface development, Query using indexing tools such as B-Tree and LevelDB, RESTful web services, Deployment of software services on AWS or XML & JSON
-Personal skills: able to work within a team environment and should be self-motivated with the ability to plan and execute
-You must be able to successfully perform the following minimum Physical, Cognitive and Environmental job requirements with or without accommodation for this position.
+Build and deploy AI agents on real-world healthcare datasets
+Develop orchestration logic and evaluation pipelines
+Integrate LLM-powered workflows into production systems
 
 
-How We Work Together
-
-We believe that we are better together than apart. For our office-based teams, this means working in-person at least 3 days per week. Onsite roles require full-time presence in the company’s facilities. Field roles are most effectively done outside of the company’s main facilities, generally at the customers’ or suppliers’ locations.
-
-This is an office role.
-
-About Philips
-
-We are a health technology company. We built our entire company around the belief that every human matters, and we won't stop until everybody everywhere has access to the quality healthcare that we all deserve. Do the work of your life to help improve the lives of others.
+Full Stack Engineering
 
 
-Learn more about our business.
-Discover our rich and exciting history.
-Learn more about our purpose.
-Learn more about our culture.
+Design and implement scalable backend services and APIs
+Build responsive front-end applications
+Contribute to cloud-native architectures and CI/CD pipelines
 
 
-Philips Transparency Details
+Across Both Tracks, Interns Will
 
-The hourly pay range for this position is Bachelor Candidates: $29.00 to $32.00, Masters Candidates: $33.00-45.00, plus eligible overtime. The actual base pay offered may vary within the posted ranges depending on multiple factors including job-related knowledge/skills, experience, business needs, geographical location, and internal equity.  
 
-Details About Our Benefits Can Be Found Here.
+Write clean, testable, production-quality code
+Participate in design reviews and system architecture discussions
+Collaborate closely with engineering and product teams
+Deliver a high-impact project by the end of the internship
 
-At Philips, it is not typical for an individual to be hired at or near the top end of the range for their role and compensation decisions are dependent upon the facts and circumstances of each case.
 
-Additional Information
+PLEASE NOTE: This is not an exhaustive list of all duties, responsibilities and requirements of the position described above. Other functions may be assigned and management retains the right to add or change duties at any time.
 
-US work authorization is a precondition of employment. The company will not consider candidates who require sponsorship for a work-authorized visa, now or in the future.
+Minimum Qualifications, Education And Experience
 
-This requisition is expected to stay active for 45 days but may close earlier if a successful candidate is selected or business necessity dictates. Interested candidates are encouraged to apply as soon as possible to ensure consideration.
 
-Philips is an Equal Employment and Opportunity Employer including Disability/Vets and maintains a drug-free workplace.
+Pursuing a BS or MS in Computer Science, Computer Engineering, or related field
+Strong foundation in data structures and algorithms
+Experience in one or more of: Python, JavaScript/TypeScript, Java, or C++
+Ability to work on-site in the Seattle/Bothell area for the full internship
+
+
+Preferred : Experience with distributed systems, cloud platforms (AWS or GCP), modern web frameworks, or AI/ML frameworks.
+
+Quality Standards
+
+
+Communicates, cooperates, and consistently functions professionally and harmoniously with all levels of supervision, co-workers, patients, visitors, and vendors.
+Demonstrates initiative, personal awareness, professionalism and integrity, and exercises confidentiality in all areas of performance.
+Follows all local, state and federal laws concerning employment to include but not limited to: I-9, Harassment, EEOC, Civil rights and ADA.
+Follows OSHA regulations, RadNet and site protocols, policies and procedures.
+Follows HIPAA, compliance, privacy, safety and confidentiality standards at all times.
+Practices universal safety precautions.
+Promotes good public relations on the phone and in person.
+Adapts and is willing to learn new tasks, methods, and systems.
+Reports to work regularly as scheduled; consistently punctual with respect to working hours, meal and rest breaks, and maintains satisfactory personal attendance in accordance with RadNet guidelines.
+Consistently adheres to the time management policies and procedures.
+Completes job responsibilities in a quality and timely manner.
+
+
+Physical Demands
+
+This position often requires sitting, standing, walking, bending, twisting, reaching with hands and arms, using hands and fingers, handling, or feeling, speaking, listening, and high-level cognitive thinking. Also, must be able to lift up to 10 pounds occasionally.
+
+Working Environment
+
+This is a 3 month assignment starting June of 2026 in our Seattle / Bothell, WA office.
+
+ACCOMMODATIONS
+
+Reasonable accommodations may be made to enable people with disabilities to perform the essential functions of the job
 Show more

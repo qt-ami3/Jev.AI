@@ -1,48 +1,62 @@
-Software Engineer Intern - Data Engineering | https://www.linkedin.com/jobs/view/software-engineer-intern-data-engineering-at-zoominfo-4378054849
+Software Engineering Intern - MFS Investment Management | https://www.linkedin.com/jobs/view/software-engineering-intern-mfs-investment-management-at-jobs-via-efinancialcareers-4377790996
 
-ZoomInfo is where careers accelerate. We move fast, think boldly, and empower you to do the best work of your life. You’ll be surrounded by teammates who care deeply, challenge each other, and celebrate wins. With tools that amplify your impact and a culture that backs your ambition, you won’t just contribute. You’ll make things happen–fast.
+At MFS, you will find a culture that supports you in doing what you do best. Our employees work together to reach better outcomes, favoring the strongest idea over the strongest individual. We put people first and demonstrate care and compassion for our community and each other. Because what we do matters - to us as valued professionals and to the millions of people and institutions who rely on us to help them build more secure and prosperous futures.
 
-Overview
+Software Engineer Intern
 
-Join ZoomInfo’s Data Engineering department as a Summer Intern to work on high-impact projects that power our go-to-market data products. You’ll join one of the two teams below to participate in real work using AI alongside experienced mentors, with a strong emphasis on data quality, reliability, and learning fast.
+MFS is a premier investment management firm with a rich history and a growing global reputation. Since 1924, when our founders invented the mutual fund, collaboration and innovation have fueled our success. When you join our team, you will be challenged by the work you do, and you will share your talents with a vibrant network of vested individuals to create an elite organization and build a rewarding career.
 
-What you'll do
-
-Option A: Person Data Team
-
-Work hands-on with large-scale data pipelines, processing 400M+ contact records with a strong focus on analytics and data quality. You’ll help debug and improve complex datasets to ensure accuracy and reliability at scale. Java experience is required.
-
-Option B: Data Engineering Team
-
-Build operational agents that delivers company data to thousands of customers, with a strong focus on proactive data quality. You will develop LLM + vector database chatbots to analyze daily data changes, detect issues before they reach customers, and provide self-service architecture/troubleshooting support.
-
-What you’ll bring
+This internship experience provides participants with a meaningful , relevant work experience as part of their academic studies. In addition to daily responsibilities, participants will have the opportunity to participate in a series of structured activities designed to enhance their learning experience including:
 
 
-Undergraduate junior status (or graduating Jan–Aug 2027) in Computer Science.
-Strong programming fundamentals, required to pass a complex coding assessment.
-Clear communication, strong problem-solving, and comfort working in a fast-moving environment.
-Able to commute to Bethesda, MD or Waltham, MA (in office 4 days/week, 1 day WFH).
-Can commit to the program for the full 10 weeks, between June 1 – August 7, 2026.
+Intern New Hire Orientation
+Senior Leadership Speaker Series
+Social & Networking Events
+Presentation Challenges
 
 
-The US base hourly range for this position is $30-35 per hour.
 
-Actual compensation offered will be based on factors such as the candidate’s work location, qualifications, skills, experience and/or training. Your recruiter can share more information about the specific salary range for your desired work location during the hiring process.
+At the conclusion of this position, interns will have increased their knowledge of investing, the mutual fund industry, employee engagement, and a firm understanding of how information technology (IT) works at an asset manager.
 
-We want our employees and their families to thrive. In addition to comprehensive benefits we offer holistic mind, body and lifestyle programs designed for overall well-being. Learn more about ZoomInfo benefits here.
+The MFS Summer Internship program is a 10-12-week program, starting June 2nd, 2026, and ending on August 7th, 2026. Students work full-time, Monday through Friday, 35 - 40 hours per week and are paid hourly. All applicants must be authorized to work in the United States. Internships are open to students who are rising seniors (class of 2026).
 
-About Us
+MFS is a hybrid work environment (with 2 remote days and 3 on-site days) unless otherwise stated in the job posting.
 
-ZoomInfo (NASDAQ: GTM) is the Go-To-Market Intelligence Platform that empowers businesses to grow faster with AI-ready insights, trusted data, and advanced automation. Its solutions provide more than 35,000 companies worldwide with a complete view of their customers, making every seller their best seller.
+About G IT At MFS
 
-ZoomInfo is committed to protecting your privacy when you apply for jobs with us. Please review our Job Applicant Privacy Notice for more details on how we handle your personal information.
+Our G IT (Global Information Technology) team s oper ate a highly redundant, fully documented data environment using the best technology available . They often build proprietary security solutions to make sure the right people have the right access.
 
-ZoomInfo may use a software-based assessment as part of the recruitment process. More information about this tool, including the results of the most recent bias audit, is available here.
+Technology intern s help develop systems technology projects that address the business needs of MFS ."They will learn how to elicit and gather business requirements, analyze data supporting business decisions and translate these into solutions. They will also be introduced to other technology project functions and learn how to test, and deploy solutions." Intern s will gain ex posure to technology changes proposed and in progress across MFS business areas and a unique/holistic view of the business through that change. Successful intern s will also be involved with multiple projects a t multiple stages, allowing them to gain understanding of the Agile Software Development Lifecycle (SDLC).
 
-ZoomInfo is proud to be an equal opportunity employer, hiring based on qualifications, merit, and business needs, and does not discriminate based on protected status. We welcome all applicants and are committed to providing equal employment opportunities regardless of sex, race, age, color, national origin, sexual orientation, gender identity, marital status, disability status, religion, protected military or veteran status, medical condition, or any other characteristic protected by applicable law. We also consider qualified candidates with criminal histories in accordance with legal requirements.
-
-For Massachusetts Applicants: It is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment. An employer who violates this law shall be subject to criminal penalties and civil liability. ZoomInfo does not administer lie detector tests to applicants in any location.
+Some principal respo nsibilities of intern s in this group may include:
 
 
+Performing analysis of business activities to determine business requirements .
+Strong software engineering background with demonstrated experience in Java, Python, or C#.
+Working to ensure a positive product for business stakeholders . Creating and maintaining proper training materials and business documentation.
+Build solutions that will support advancing our target state architecture and align with our client's strategic vision.
+
+
+
+Qualifications:
+
+
+P ursuing a Bachelor's degree in a comp uter science or engineering.
+Demonstrated experience in one of the languages - Java, Python or C#.
+Exposure to relational database technology , API knowledge, and some SQL experience.
+Ability to take initiative, to utilize resources, and to communicate effectively. Strong written skills and an ability to simultaneously manage working on multiple projects of varying size and complexity.
+Proven analytical skills and demonstrated ability to take initiative and help with developing creative solutions to meet business needs.
+Experience working in a team, preferably on projects as well as in a support role.
+
+
+
+If any applicant is unable to complete an application or respond to a job opening because of a disability, please contact MFS at 617-954-5000 or email talent_acquisition@mfs.com for assistance ."
+
+MFS is an Affirmative Action and Equal Opportunity Employer and it is our policy to not discriminate against any employee or applicant for employment because of race, color, religion, sex, national origin, age, marital status, sexual orientation, gender identity, genetic information, disability, veteran status, or any other status protected by federal, state or local laws. Employees and applicants of MFS will not be subject to harassment on the basis of their status. Additionally, retaliation, including intimidation, threats, or coercion, because an employee or applicant has objected to discrimination, engaged or may engage in filing a complaint, assisted in a review, investigation, or hearing or have otherwise sought to obtain their legal rights under any Federal, State, or local EEO law is prohibited.
+
+MFS is a hybrid work environment (remote/onsite) unless otherwise stated in the job posting .
+
+If any applicant is unable to complete an application or respond to a job opening because of a disability, please contact MFS at 617-954-5000 or email talent_acquisition@mfs.com for assistance.
+
+MFS is an Equal Opportunity Employer and it is our policy to not discriminate against any employee or applicant for employment because of race, color, religion, sex, national origin, age, marital status, sexual orientation, gender identity, genetic information, disability, veteran status, or any other status protected by federal, state or local laws. Employees and applicants of MFS will not be subject to harassment on the basis of their status. Additionally, retaliation, including intimidation, threats, or coercion, because an employee or applicant has objected to discrimination, engaged or may engage in filing a complaint, assisted in a review, investigation, or hearing or have otherwise sought to obtain their legal rights under any Federal, State, or local EEO law is prohibited. Please see the Know Your Rights: Workplace Discrimination is Illegal document, linked for your reference.
 Show more

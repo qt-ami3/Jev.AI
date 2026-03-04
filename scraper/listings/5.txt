@@ -1,56 +1,54 @@
-Software Engineering Intern | https://www.linkedin.com/jobs/view/software-engineering-intern-at-werfen-north-america-4369000928
+Summer Intern - Software Engineer | https://www.linkedin.com/jobs/view/summer-intern-software-engineer-at-nordson-corporation-4379109721
 
-Werfen
+Nordson Medical, a global leader in Interventional Solutions, Fluid Components, and Surgical Solutions, is seeking an experienced and highly motivated individual to join our team. We are committed to creating a diverse and inclusive workplace, and we are looking for candidates who share that same commitment.
 
-Werfen is a growing, family-owned, innovative company founded in 1966 in Barcelona, Spain. We are a worldwide leader in specialized diagnostics in the areas of Hemostasis, Acute Care Diagnostics, Transfusion, Autoimmunity, and Transplant. Through our Original Equipment Manufacturing (OEM) business line, we research, develop, and manufacture customized assays and biomaterials. We operate directly in 30 countries, and in more than 100 territories through distributors. Our Headquarters and Technology Centers are located in the US and Europe, and our workforce is more than 7,000 strong.
+Summary Of The Role
 
-Our success comes from a specific focus in these rapidly evolving diagnostic areas, our commitment to customers, and our dedication to innovation and quality. We’re passionate about providing healthcare professionals the most valuable and complete solutions to improve hospital efficiency and enhance patient care.
+As a member of our team, you will have the opportunity to work in a dynamic and collaborative environment, where your ideas and contributions will be valued and respected.
 
-Overview
-
-Overview
-
-The purpose of the internship is to provide meaningful professional hands-on experience to students with leadership potential and proven academic performance. Werfen hires students majoring in Engineering and Life Sciences fields into this internship program based on business need. Ideal candidates will combine technical and business knowledge with analytical strength and creative problem-solving abilities.
-
-Responsibilities
-
-Position Description
+Job Summary
 
 
-To perform entry level work of a routine nature requiring application of standard techniques, procedures and criteria in carrying out a sequence of related tasks.
-The Intern will be involved in the day-to-day activities of the team included aiding other departments as they relate to department projects. We expect the intern to gain an in-depth knowledge of the product and its associated processes, particularly the process activities in-which they will be directly involved. The intern will have opportunities to assist in nearly all aspects of the workflow.
+Testing and conformance verification of Nordson automation control software, providing detailed analysis of software bugs and isolating procedures resulting in errors
+Assisting with marketing collateral creation for the tabletop automation line of business as newly released features are incorporated
 
 
-Key Attributes
+Essential Job Duties And Responsibilities
 
 
-Requires confidence in using Microsoft Word and Excel tools.
-Requires Enthusiasm, motivation, initiative and ability to work within an interactive and energetic workplace.
-Review process procedures, change orders, equipment specifications, validation plans, and reports.
-Performs research on technology, equipment and tooling to improve process quality, yield or cost. Generates proposals based on research.
-Assistance in creating, reviewing and maintaining department files.
-Performs experiments, analyzes and interprets numerical data from experiments.
-Summarizes findings by computer readouts, statistical summaries, graphs and other methods.
+Perform all variable and attribute inspections on product based on specifications
+Interpret basic blueprint dimensions/notes specific to the parts being inspected – Automation hardware and software
+Perform measurements properly using identified equipment
+Properly care for measuring and test equipment
+Determine acceptability of product utilizing Nordson EFD workmanship standards and related procedures
+Disposition product features and specifications as approved or rejected
+Perform data entry and assist with data analysis and trending for non-conforming materials, final product inspection yields, complaints, corrective actions, scrap reports and supplier issues
+All other duties as assigned
 
 
-Qualifications
-
-Minimum Knowledge & Experience Required for the Position:
+Education And Experience Requirements
 
 
-Currently pursuing B.S. in Engineering, Finance, Business, Marketing with a minimum of 2 college semesters complete.
-Ability to multitask.
+Bachelor’s degree in Engineering or Computer Science
+In-depth knowledge of quality engineering theories, principles, inspection techniques, tools and equipment
+Demonstrated basic problem-solving experience in root cause corrective action and have a systematic approach to problem solving
+Industrial automation programming experience is preferred
+Must be willing to work in a laboratory setting
 
 
-The hourly range for this role is $22/hr to $30/hr. Individual compensation will ultimately depend on factors including relevant experience and grade level completed.
+Skills And Abilities
 
-Closing
 
-If you are interested in constantly learning and being challenged on a daily basis we encourage you to submit your resume or CV.
+Proficiency in Microsoft Office; Excel, Word and PowerPoint
+Able to read, understand and interpret technical drawings/documentation in data acquisition and mechanical design
+Ability to work with cross-functional teams
 
-Werfen is an Equal Opportunity employer and is committed to a diverse workplace. Werfen strictly prohibits unlawful discrimination, harassment or retaliation based upon an individual’s race, color, religion, gender, sexual orientation, gender identity/expression, national origin/ancestry, age, mental/physical disability, medical condition, marital status, veteran status, or any other protected characteristic as defined by applicable state or federal law. If you have a disability and need an accommodation in relation to the online application process, please contact NAtalentacquisition@werfen.com for assistance.
 
-We operate directly in over 30 countries, and in more than 100 territories through distributors. Annual revenue is approximately $2 billion and more than 7,000 employees around the world comprise our Werfen team.
+Interested?
 
-www.werfen.com
+If you are interested in being a part of a team and creating an inclusive and diverse workplace, please apply online with your CV.
+
+About Nordson Medical
+
+At Nordson MEDICAL, you don't have to be a doctor to help save lives. We are the global expert in the design, development, and manufacturing of complex medical devices and component technologies. By joining our team today, you will help us bring innovative ideas to life. Nordson MEDICAL is a global team that works to create components for life-saving medical devices. We offer a supportive culture in a growing and dynamic work environment. Whether you're just beginning your career or you're a seasoned professional, there's a place for you to belong at Nordson MEDICAL. We offer hourly and salary positions in production, maintenance, customer service, quality, engineering, and more. We actively invest in our teams to help you build your skillsets and advance your career.
 Show more
