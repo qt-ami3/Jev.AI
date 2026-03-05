@@ -4,11 +4,13 @@ package main
 
 import (
 	"context"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"os"
 
 	"github.com/anthropics/anthropic-sdk-go"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 type Resume struct {
@@ -38,6 +40,13 @@ type Skills struct {
 	Frontend []string `json:"frontend"`
 	Backend  []string `json:"backend"`
 	Soft     []string `json:"soft"`
+}
+
+func dbDSN() string {
+	if v := os.Getenv("DB_DSN"); v != "" {
+		return v
+	}
+	return "aval:Lol123456789!@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
 }
 
 func main() {
@@ -88,7 +97,7 @@ Resume text:
 
 	raw := msg.Content[0].Text
 
-	// Pretty-print if valid JSON, otherwise write raw
+	// Pretty-print if valid JSON, otherwise store raw
 	var output []byte
 	var parsed Resume
 	if err := json.Unmarshal([]byte(raw), &parsed); err == nil {
@@ -97,9 +106,18 @@ Resume text:
 		output = []byte(raw)
 	}
 
-	if err := os.WriteFile("resume.txt", output, 0644); err != nil {
-		fmt.Fprintf(os.Stderr, "failed to write resume.txt: %v\n", err)
+	db, err := sql.Open("mysql", dbDSN())
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "failed to connect to database: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Println("wrote resume.txt")
+	defer db.Close()
+
+	_, err = db.Exec("UPDATE resume SET parsed_data = ? WHERE id = 1", string(output))
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "failed to write parsed resume to database: %v\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Println("wrote parsed resume to database")
 }

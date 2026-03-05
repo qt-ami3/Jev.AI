@@ -1,16 +1,21 @@
 import fs from "fs"
-import ini from "ini"
 import { NextRequest, NextResponse } from "next/server"
 import path from "path"
+import pool from "@/lib/db"
 
-const iniPath = path.join(process.cwd(), "gettingStarted.ini")
 const resumeDir = path.join(process.cwd(), "../resume")
 
 const ALLOWED_EXTENSIONS = [".pdf", ".docx"]
 
 export async function GET() {
-  const config = ini.parse(fs.readFileSync(iniPath, "utf-8"))
-  return NextResponse.json(config)
+  const [rows] = await pool.query("SELECT resume_done, job_prefs_done FROM config WHERE id = 1")
+  const row = (rows as Record<string, unknown>[])[0] ?? {}
+  return NextResponse.json({
+    progress: {
+      resume: row.resume_done === 1,
+      jobPrefs: row.job_prefs_done === 1,
+    },
+  })
 }
 
 export async function POST(req: NextRequest) {
@@ -35,9 +40,8 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(await file.arrayBuffer())
     fs.writeFileSync(path.join(resumeDir, file.name), buffer)
 
-    const config = ini.parse(fs.readFileSync(iniPath, "utf-8"))
-    config.progress.resume = "true"
-    fs.writeFileSync(iniPath, ini.stringify(config))
+    await pool.query("UPDATE resume SET filename = ? WHERE id = 1", [file.name])
+    await pool.query("UPDATE config SET resume_done = 1 WHERE id = 1")
 
     return NextResponse.json({ ok: true })
   } catch (err) {

@@ -7,18 +7,19 @@
 package main
 
 import (
-	"io"
-	"os"
-	"fmt"
-	"time"
 	"context"
-	"net/url"
-	"strings"
-	"net/http"
+	"database/sql"
 	"encoding/json"
+	"fmt"
+	"io"
+	"net/http"
+	"net/url"
+	"os"
+	"strings"
+	"time"
 
-	"gopkg.in/ini.v1"
 	"github.com/chromedp/chromedp"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func lookupGeoID(location string) (string, error) {
@@ -46,35 +47,63 @@ func lookupGeoID(location string) (string, error) {
 	return results[0].ID, nil
 }
 
+func dsn() string {
+	if v := os.Getenv("DB_DSN"); v != "" {
+		return v
+	}
+	return "aval:Lol123456789!@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
+}
+
 func main() {
-	cfg, err := ini.Load("config.ini")
+	db, err := sql.Open("mysql", dsn())
 	if err != nil {
 		panic(err)
 	}
+	defer db.Close()
 
-	kw := cfg.Section("keywords")
+	var location, distance, fWT, fE, fTPR, alertAction, currentJobID, origin, sortBy string
+	var spellCorrection bool
+	err = db.QueryRow(`
+		SELECT location, distance, f_WT, f_E, f_TPR,
+		       alert_action, current_job_id, origin, sort_by,
+		       spell_correction_enabled
+		FROM job_prefs WHERE id = 1
+	`).Scan(&location, &distance, &fWT, &fE, &fTPR,
+		&alertAction, &currentJobID, &origin, &sortBy, &spellCorrection)
+	if err != nil {
+		panic(fmt.Errorf("reading job_prefs: %w", err))
+	}
 
-	location := kw.Key("location").String()
+	var keywords string
+	err = db.QueryRow("SELECT keywords FROM job_prefs WHERE id = 1").Scan(&keywords)
+	if err != nil {
+		panic(fmt.Errorf("reading keywords: %w", err))
+	}
+
 	geoID, err := lookupGeoID(location)
 	if err != nil {
 		panic(fmt.Errorf("geoId lookup failed: %w", err))
 	}
 	fmt.Printf("geoId for %q: %s\n", location, geoID)
 
-	// Build URL in the same order as the template
+	spellStr := "true"
+	if !spellCorrection {
+		spellStr = "false"
+	}
+
 	ordered := [][2]string{
-		{"alertAction",            kw.Key("alertAction").String()},
-		{"currentJobId",           kw.Key("currentJobId").String()},
-		{"distance",               kw.Key("distance").String()},
-		{"f_E",                    kw.Key("f_E").String()},
-		{"f_TPR",                  kw.Key("f_TPR").String()},
-		{"f_WT",                   kw.Key("f_WT").String()},
-		{"geoId",                  geoID},
-		{"keywords",               kw.Key("keywords").String()},
-		{"location",               location},
-		{"origin",                 kw.Key("origin").String()},
-		{"sortBy",                 kw.Key("sortBy").String()},
-		{"spellCorrectionEnabled", kw.Key("spellCorrectionEnabled").String()},
+		{"alertAction", alertAction},
+		{"currentJobId", currentJobID},
+		{"distance", distance},
+		{"f_E", fE},
+		{"f_TPR", fTPR},
+		{"f_WT", fWT},
+		{"geoId", geoID},
+		{"keywords", keywords},
+		{"location", location},
+		{"origin", origin},
+		{"sortBy", sortBy},
+		{"spellCorrectionEnabled", spellStr},
 	}
 	var parts []string
 	for _, kv := range ordered {
@@ -112,7 +141,7 @@ func main() {
 		panic(err)
 	}
 
-	// Deduplicate by job path (strip query params so tracking noise doesn't create duplicates)
+	// Deduplicate by job path (strip query params)
 	seen := make(map[string]bool)
 	var lines []string
 	for _, raw := range rawLinks {

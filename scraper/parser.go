@@ -5,17 +5,31 @@ package main
 import (
 	"bufio"
 	"context"
+	"database/sql"
 	"fmt"
 	"os"
 	"strings"
 	"time"
 
 	"github.com/chromedp/chromedp"
+	_ "github.com/go-sql-driver/mysql"
 )
 
-const listingsDir = "listings"
+func dsn() string {
+	if v := os.Getenv("DB_DSN"); v != "" {
+		return v
+	}
+	return "aval:Lol123456789!@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
+}
 
 func main() {
+	db, err := sql.Open("mysql", dsn())
+	if err != nil {
+		fmt.Printf("Error connecting to database: %v\n", err)
+		return
+	}
+	defer db.Close()
+
 	file, err := os.Open("output.txt")
 	if err != nil {
 		fmt.Printf("Error opening output.txt: %v\n", err)
@@ -33,11 +47,6 @@ func main() {
 	}
 	if err := scanner.Err(); err != nil {
 		fmt.Printf("Error reading file: %v\n", err)
-		return
-	}
-
-	if err := os.MkdirAll(listingsDir, 0755); err != nil {
-		fmt.Printf("Error creating listings dir: %v\n", err)
 		return
 	}
 
@@ -78,6 +87,12 @@ func main() {
 			return best;
 		})()`
 
+	// Clear existing jobs before inserting new ones
+	if _, err := db.Exec("TRUNCATE TABLE jobs"); err != nil {
+		fmt.Printf("Error truncating jobs table: %v\n", err)
+		return
+	}
+
 	for i, jobURL := range urls {
 		fmt.Printf("[%d/%d] %s\n", i+1, len(urls), jobURL)
 
@@ -104,33 +119,33 @@ func main() {
 			title = "(no title)"
 		}
 
-		listingPath := fmt.Sprintf("%s/%d.txt", listingsDir, i+1)
-		lf, err := os.Create(listingPath)
+		_, err = db.Exec(
+			"INSERT INTO jobs (title, url, description) VALUES (?, ?, ?)",
+			title, jobURL, description,
+		)
 		if err != nil {
-			fmt.Printf("  Error creating %s: %v\n", listingPath, err)
+			fmt.Printf("  Error inserting job: %v\n", err)
 			continue
 		}
 
-		lw := bufio.NewWriter(lf)
-		fmt.Fprintf(lw, "%s | %s\n\n", title, jobURL)
-		if description != "" {
-			fmt.Fprintf(lw, "%s\n", description)
-		}
-		lw.Flush()
-		lf.Close()
-
-		fmt.Printf("  Saved %s\n", listingPath)
+		fmt.Printf("  Saved to database\n")
 	}
 
 	fmt.Println("Compiling listings into parse.txt...")
-	if err := compile(len(urls)); err != nil {
+	if err := compile(db); err != nil {
 		fmt.Printf("Error compiling: %v\n", err)
 		return
 	}
 	fmt.Println("Done. Written to parse.txt")
 }
 
-func compile(count int) error {
+func compile(db *sql.DB) error {
+	rows, err := db.Query("SELECT title, url, description FROM jobs ORDER BY id")
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
 	outFile, err := os.Create("parse.txt")
 	if err != nil {
 		return err
@@ -141,18 +156,21 @@ func compile(count int) error {
 	defer writer.Flush()
 
 	separator := strings.Repeat("-", 118)
-	compiled := 0
+	count := 0
 
-	for i := 1; i <= count; i++ {
-		data, err := os.ReadFile(fmt.Sprintf("%s/%d.txt", listingsDir, i))
-		if err != nil {
+	for rows.Next() {
+		var title, jobURL, description string
+		if err := rows.Scan(&title, &jobURL, &description); err != nil {
 			continue
 		}
-		writer.Write(data)
+		fmt.Fprintf(writer, "%s | %s\n\n", title, jobURL)
+		if description != "" {
+			fmt.Fprintf(writer, "%s\n", description)
+		}
 		fmt.Fprintf(writer, "\n%s\n\n", separator)
-		compiled++
+		count++
 	}
 
-	fmt.Printf("Compiled %d/%d listings\n", compiled, count)
+	fmt.Printf("Compiled %d listings\n", count)
 	return nil
 }

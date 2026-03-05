@@ -1,0 +1,4 @@
+backend: GO, MariaDB, AnthropicAPI
+Frontend: NextJS
+
+NAMG

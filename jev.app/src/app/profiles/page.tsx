@@ -140,8 +140,10 @@ export default function Profiles() {
 
   type EduForm = { idx: number | null; school: string; degree: string; date: string }
   type ProjForm = { idx: number | null; name: string; dates: string; highlights: string[] }
+  type ContactForm = { name: string; email: string; phone: string; linkedin: string; github: string }
   const [editEdu, setEditEdu] = useState<EduForm | null>(null)
   const [editProj, setEditProj] = useState<ProjForm | null>(null)
+  const [editContact, setEditContact] = useState<ContactForm | null>(null)
 
   function loadProfile() {
     return fetch("/api/profile")
@@ -162,6 +164,12 @@ export default function Profiles() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(update),
     })
+  }
+
+  function saveContact(f: ContactForm) {
+    setResume((prev) => prev ? { ...prev, ...f } : prev)
+    patchResume(f)
+    setEditContact(null)
   }
 
   function saveSkills(updated: Resume) { patchResume({ skills: updated.skills }) }
@@ -328,58 +336,72 @@ export default function Profiles() {
       <h1 className="flex-shrink-0 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Your profile</h1>
 
       {/* ── Contact header ── */}
-      {resume && (
-        <div className="flex-shrink-0">
-          <Card>
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex flex-col gap-1 min-w-0">
-                <span className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-                  {resume.name}
-                </span>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                  {resume.email && <span>{resume.email}</span>}
-                  {resume.phone && <span>{resume.phone}</span>}
-                  {resume.linkedin && (
-                    <a href={resume.linkedin} target="_blank" rel="noreferrer"
-                      className="hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
-                      LinkedIn ↗
-                    </a>
-                  )}
-                  {resume.github && (
-                    <a href={resume.github} target="_blank" rel="noreferrer"
-                      className="hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
-                      GitHub ↗
-                    </a>
-                  )}
-                </div>
-                {uploadErr && <p className="text-xs text-red-500 mt-1">{uploadErr}</p>}
-              </div>
+      <div className="flex-shrink-0">
+        <Card>
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex flex-col gap-1 min-w-0">
+              {resume ? (
+                <>
+                  <span className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">{resume.name}</span>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                    {resume.email && <span>{resume.email}</span>}
+                    {resume.phone && <span>{resume.phone}</span>}
+                    {resume.linkedin && (
+                      <a href={resume.linkedin} target="_blank" rel="noreferrer"
+                        className="hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
+                        LinkedIn ↗
+                      </a>
+                    )}
+                    {resume.github && (
+                      <a href={resume.github} target="_blank" rel="noreferrer"
+                        className="hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
+                        GitHub ↗
+                      </a>
+                    )}
+                  </div>
+                </>
+              ) : (
+                <span className="text-sm text-zinc-400 dark:text-zinc-500">No resume data — upload a resume to get started</span>
+              )}
+              {uploadErr && <p className="text-xs text-red-500 mt-1">{uploadErr}</p>}
+            </div>
 
-              <div className="flex-shrink-0">
-                <input
-                  ref={resumeInputRef}
-                  type="file"
-                  accept=".pdf,.docx"
-                  className="hidden"
-                  onChange={(e) => { const f = e.target.files?.[0]; if (f) handleResumeUpload(f); e.target.value = "" }}
-                />
+            <div className="flex-shrink-0 flex items-center gap-2">
+              {resume && (
                 <button
-                  onClick={() => resumeInputRef.current?.click()}
-                  disabled={uploading}
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 disabled:opacity-40 transition-colors"
+                  onClick={() => setEditContact({ name: resume.name, email: resume.email, phone: resume.phone, linkedin: resume.linkedin, github: resume.github })}
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="17 8 12 3 7 8"/>
-                    <line x1="12" y1="3" x2="12" y2="15"/>
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                   </svg>
-                  {uploading ? "Uploading…" : "Upload Resume"}
+                  Edit
                 </button>
-              </div>
+              )}
+              <input
+                ref={resumeInputRef}
+                type="file"
+                accept=".pdf,.docx"
+                className="hidden"
+                onChange={(e) => { const f = e.target.files?.[0]; if (f) handleResumeUpload(f); e.target.value = "" }}
+              />
+              <button
+                onClick={() => resumeInputRef.current?.click()}
+                disabled={uploading}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 disabled:opacity-40 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                {uploading ? "Uploading…" : "Upload Resume"}
+              </button>
             </div>
-          </Card>
-        </div>
-      )}
+          </div>
+        </Card>
+      </div>
 
       <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-4">
 
@@ -528,6 +550,30 @@ export default function Profiles() {
         </div>
 
       </div>
+
+      {/* ── Contact modal ── */}
+      {editContact && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white dark:bg-zinc-900 rounded-lg p-6 w-80 shadow-xl flex flex-col gap-3">
+            <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">Edit Contact</h2>
+            {(["name", "email", "phone", "linkedin", "github"] as const).map((field) => (
+              <div key={field} className="flex flex-col gap-1">
+                <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400 capitalize">{field}</label>
+                <input
+                  type="text"
+                  value={editContact[field]}
+                  onChange={(e) => setEditContact((p) => p && ({ ...p, [field]: e.target.value }))}
+                  className={inputCls}
+                />
+              </div>
+            ))}
+            <div className="flex gap-2 justify-end pt-1">
+              <button onClick={() => setEditContact(null)} className="px-4 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">Cancel</button>
+              <button onClick={() => saveContact(editContact)} disabled={!editContact.name} className="px-4 py-2 text-sm rounded-md bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 disabled:opacity-40">Save</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Education modal ── */}
       {editEdu && (

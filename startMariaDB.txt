@@ -1,0 +1,2 @@
+sudo systemctl start mariadb
+mariadb -u aval -p'Lol123456789!' < db/schema.sql

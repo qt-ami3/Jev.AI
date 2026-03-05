@@ -1,33 +1,35 @@
-import fs from "fs"
-import ini from "ini"
 import { NextRequest, NextResponse } from "next/server"
-import path from "path"
-
-const resumePath = path.join(process.cwd(), "../resume/resume.txt")
-const scraperConfigPath = path.join(process.cwd(), "../scraper/config.ini")
+import pool from "@/lib/db"
 
 const WORK_TYPES: Record<string, string> = { "1": "On-site", "2": "Remote", "3": "Hybrid" }
 const EXP_LEVELS: Record<string, string> = { "1": "Intern", "2": "Entry Level" }
 
 export async function GET() {
-  let resume = null
+  const [resumeRows] = await pool.query("SELECT parsed_data FROM resume WHERE id = 1")
+  const [prefRows] = await pool.query(
+    "SELECT keywords, location, distance, f_WT, f_E FROM job_prefs WHERE id = 1"
+  )
+
+  const resumeRow = (resumeRows as Record<string, unknown>[])[0]
+  const prefRow = (prefRows as Record<string, unknown>[])[0]
+
+  const raw = resumeRow?.parsed_data ?? null
+  const resume = raw == null ? null : typeof raw === "string" ? JSON.parse(raw) : raw
   let jobPrefs = null
 
-  if (fs.existsSync(resumePath)) {
-    try {
-      resume = JSON.parse(fs.readFileSync(resumePath, "utf-8"))
-    } catch {}
-  }
-
-  if (fs.existsSync(scraperConfigPath)) {
-    const config = ini.parse(fs.readFileSync(scraperConfigPath, "utf-8"))
-    const k = config.keywords ?? {}
+  if (prefRow) {
     jobPrefs = {
-      keywords: String(k.keywords ?? ""),
-      location: String(k.location ?? "").trim(),
-      distance: String(k.distance ?? "").trim(),
-      workTypes: String(k.f_WT ?? "").split(",").map((s: string) => WORK_TYPES[s.trim()] ?? s.trim()).filter(Boolean),
-      expLevels: String(k.f_E ?? "").split(",").map((s: string) => EXP_LEVELS[s.trim()] ?? s.trim()).filter(Boolean),
+      keywords: String(prefRow.keywords ?? ""),
+      location: String(prefRow.location ?? "").trim(),
+      distance: String(prefRow.distance ?? "").trim(),
+      workTypes: String(prefRow.f_WT ?? "")
+        .split(",")
+        .map((s: string) => WORK_TYPES[s.trim()] ?? s.trim())
+        .filter(Boolean),
+      expLevels: String(prefRow.f_E ?? "")
+        .split(",")
+        .map((s: string) => EXP_LEVELS[s.trim()] ?? s.trim())
+        .filter(Boolean),
     }
   }
 
@@ -37,8 +39,12 @@ export async function GET() {
 export async function PATCH(req: NextRequest) {
   try {
     const body = await req.json()
-    const current = JSON.parse(fs.readFileSync(resumePath, "utf-8"))
-    fs.writeFileSync(resumePath, JSON.stringify({ ...current, ...body }, null, 2))
+    const [rows] = await pool.query("SELECT parsed_data FROM resume WHERE id = 1")
+    const raw = (rows as Record<string, unknown>[])[0]?.parsed_data ?? null
+    const current: object = raw == null ? {} : typeof raw === "string" ? JSON.parse(raw) : raw as object
+    await pool.query("UPDATE resume SET parsed_data = ? WHERE id = 1", [
+      JSON.stringify({ ...current, ...body }),
+    ])
     return NextResponse.json({ ok: true })
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 })
