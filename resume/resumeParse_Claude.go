@@ -10,6 +10,7 @@ import (
 	"os"
 
 	"github.com/anthropics/anthropic-sdk-go"
+	"github.com/anthropics/anthropic-sdk-go/option"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -50,18 +51,31 @@ func dbDSN() string {
 }
 
 func main() {
+	db, err := sql.Open("mysql", dbDSN())
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "failed to connect to database: %v\n", err)
+		os.Exit(1)
+	}
+	defer db.Close()
+
+	var apiKey string
+	err = db.QueryRow("SELECT claude_api_key FROM config WHERE id = 1").Scan(&apiKey)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "failed to read API key from database: %v\n", err)
+		os.Exit(1)
+	}
+	if apiKey == "" {
+		fmt.Fprintln(os.Stderr, "claude_api_key is empty in database — run db/secrets.sql first")
+		os.Exit(1)
+	}
+
 	resumeText, err := os.ReadFile("resume.txt")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to read resume.txt: %v\n", err)
 		os.Exit(1)
 	}
 
-	if os.Getenv("ANTHROPIC_API_KEY") == "" {
-		fmt.Fprintln(os.Stderr, "ANTHROPIC_API_KEY environment variable not set")
-		os.Exit(1)
-	}
-
-	client := anthropic.NewClient()
+	client := anthropic.NewClient(option.WithAPIKey(apiKey))
 
 	prompt := fmt.Sprintf(`Parse the following resume text and return ONLY a JSON object with this exact structure (no markdown, no explanation):
 {
@@ -97,7 +111,6 @@ Resume text:
 
 	raw := msg.Content[0].Text
 
-	// Pretty-print if valid JSON, otherwise store raw
 	var output []byte
 	var parsed Resume
 	if err := json.Unmarshal([]byte(raw), &parsed); err == nil {
@@ -105,13 +118,6 @@ Resume text:
 	} else {
 		output = []byte(raw)
 	}
-
-	db, err := sql.Open("mysql", dbDSN())
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to connect to database: %v\n", err)
-		os.Exit(1)
-	}
-	defer db.Close()
 
 	_, err = db.Exec("UPDATE resume SET parsed_data = ? WHERE id = 1", string(output))
 	if err != nil {

@@ -1,0 +1,56 @@
+River Knuuttila
+
+https://www.linkedin.com/in/river-knuuttila-96678636b | https://github.com/qt-ami3 |
+riverknuuttila2@outlook.com | (808) 223 4780
+
+Education
+West Hawaii explorations academy
+High school diploma
+Mount Wachusett Community College
+
+May 2023
+Sep 2025 - Current
+
+Project
+ClaudeAPI JSON to DB Tool – Call’s ClaudeAPI to intellegently match data sets from JSONS to SQL
+. Error handling and scalibility for future projects.
+. Learned SQL & JSON integration in GO for backend development.
+. Understanding of ClaudeAPI & its documentation to effectively utilize in project scope.
+
+Sorting Algorithm Visualizer - Demonstrates sorting algorithm principles
+
+Dec 18 – Dec 28, 2025
+
+. Understanding and use cases of sorting algorithms.
+. Implementing efficient and light-weight graphical solutions from scratch.
+
+Personal Website - Work in progress
+
+Nov 13, 2025 – Current
+
+. AWS & load time optimizations.
+. In depth vanilla CSS/HTML styling & animations.
+. Fundamentals & utilization of JavaScript for improved functionality in HTML & CSS.
+
+2048py – a 2048 clone made in Pygame with detailed graphical effects
+
+Dec 26, 2025 – Current
+
+. Animations and VCR effects.
+. Graphical optimizations for ModernGL.
+. Implementation of low level features for advanced game logic.
+
+Chaos Crashers game – a hack and slash written in go using the Ebitengine
+
+Dec 11, 2025 – Current
+
+. Using OOP to run game logic, track progress/stats, drive enemy AI.
+. Use & knowledge of the Ebitengine framework and its documentation.
+. Documenting and maintaining codebase to be legible and easy to understand.
+. Utilizing the Ebitengine framework to implement higher level game engine features.
+Front-End: HTML, CSS, TypeScript, Github, Ebitengine.
+Back-End: Python, Golang, C++, git, Linux, MariaDB, SQL, API’s, JSON
+Soft Skills: Understanding & approachable, enjoys organizing and optimizing daily tasks. Eager to learn and asks for
+direction not answers when stuck.
+
+

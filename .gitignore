@@ -2,3 +2,4 @@ locations/US.txt
 locations/US.zip
 jev.app/node_modules/
 scraper/listings/
+db/secrets.sql

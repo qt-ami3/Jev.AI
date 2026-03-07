@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS config (
   resume_done   TINYINT(1)  NOT NULL DEFAULT 0,
   job_prefs_done TINYINT(1) NOT NULL DEFAULT 0,
   subscription  VARCHAR(255) NOT NULL DEFAULT 'n/a',
+  claude_api_key VARCHAR(500) NOT NULL DEFAULT '',
   PRIMARY KEY (id)
 );
 INSERT IGNORE INTO config (id) VALUES (1);
