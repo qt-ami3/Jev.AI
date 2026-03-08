@@ -1,4 +1,4 @@
-backend: GO, MariaDB, AnthropicAPI
+backend: GO, MariaDB, AnthropicAPI, AWS
 Frontend: NextJS
 
-NAMG
+MAGNA
