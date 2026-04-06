@@ -87,14 +87,35 @@ func main() {
 			return best;
 		})()`
 
-	// Clear existing jobs before inserting new ones
-	if _, err := db.Exec("TRUNCATE TABLE jobs"); err != nil {
-		fmt.Printf("Error truncating jobs table: %v\n", err)
+	// Load existing URLs so we only scrape new ones
+	existingURLs := make(map[string]bool)
+	rows, err := db.Query("SELECT url FROM jobs")
+	if err != nil {
+		fmt.Printf("Error reading existing jobs: %v\n", err)
 		return
 	}
+	for rows.Next() {
+		var u string
+		if err := rows.Scan(&u); err == nil {
+			existingURLs[u] = true
+		}
+	}
+	rows.Close()
 
-	for i, jobURL := range urls {
-		fmt.Printf("[%d/%d] %s\n", i+1, len(urls), jobURL)
+	var newURLs []string
+	for _, u := range urls {
+		if !existingURLs[u] {
+			newURLs = append(newURLs, u)
+		}
+	}
+	if len(newURLs) == 0 {
+		fmt.Println("No new job URLs to scrape")
+		return
+	}
+	fmt.Printf("Found %d new URLs (skipping %d existing)\n", len(newURLs), len(urls)-len(newURLs))
+
+	for i, jobURL := range newURLs {
+		fmt.Printf("[%d/%d] %s\n", i+1, len(newURLs), jobURL)
 
 		ctx, ctxCancel := chromedp.NewContext(allocCtx)
 		ctx, timeoutCancel := context.WithTimeout(ctx, 30*time.Second)

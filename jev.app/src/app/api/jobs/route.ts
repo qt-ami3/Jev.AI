@@ -10,7 +10,7 @@ export interface Job {
 
 export async function GET() {
   const [rows] = await pool.query(
-    "SELECT id, title, url, description FROM jobs ORDER BY id"
+    "SELECT id, title, url, description FROM jobs ORDER BY id DESC"
   )
   return NextResponse.json(rows)
 }

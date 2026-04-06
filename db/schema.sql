@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS config (
   job_prefs_done TINYINT(1) NOT NULL DEFAULT 0,
   subscription  VARCHAR(255) NOT NULL DEFAULT 'n/a',
   claude_api_key VARCHAR(500) NOT NULL DEFAULT '',
+  last_login     DATE         DEFAULT NULL,
   PRIMARY KEY (id)
 );
 INSERT IGNORE INTO config (id) VALUES (1);

@@ -1,0 +1,631 @@
+Model-Based Software Systems Engineer | https://www.linkedin.com/jobs/view/model-based-software-systems-engineer-at-mitre-4377571570
+
+Why choose between doing meaningful work and having a fulfilling life? At MITRE, you can have both. That's because MITRE people are committed to tackling our nation's toughest challenges—and we're committed to the long-term well-being of our employees. MITRE is different from most technology companies. We are a not-for-profit corporation chartered to work for the public interest, with no commercial conflicts to influence what we do. The R&D centers we operate for the government create lasting impact in fields as diverse as cybersecurity, healthcare, aviation, defense, and enterprise transformation. We're making a difference every day—working for a safer, healthier, and more secure nation and world. Our workplace reflects our values. We offer competitive benefits, exceptional professional development opportunities for career growth, and a culture of innovation that embraces adaptability, collaboration, technical excellence, and people in partnership. If this sounds like the choice you want to make, then choose MITRE - and make a difference with us.
+
+Department Summary:
+
+The Emerging Systems Engineering Technologies Department is charged with identifying, developing, and applying new technologies that can address the Government's most challenging Systems Engineering problems. This is an opportunity for early career engineers who are highly motivated, innovative, and proactive. This position provides challenging opportunities to apply and expand one’s systems architecture modeling, and trade space analysis skills. Areas of interest include Model Based Engineering (MBSE, MDA, MDD, MDE), Systems of Systems, architecture modeling, analysis of complex systems, and decision support.
+
+Roles & Responsibilities:
+
+
+Developing prototypes using Java, Python, and related programming languages.
+Modeling architectures of complex systems using standards-based languages (ex. SysML / UML).
+Assist in evaluating architectures using qualitative and quantitative techniques.
+Identifying and describing uncertainties associated with systems architectures, defining risks and opportunities associated with the uncertainties.
+Supporting requirements management, interface management, and architecture change management processes.
+Translating analysis results into actionable recommendations for the US Government agencies.
+
+
+Basic Qualifications:
+
+
+Bachelor’s degree in Computer Science, Engineering, Mathematics, Physics, Systems Engineering, Software Engineering, or related field
+Must be a U.S. citizen with ability to possess and maintain a DoD clearance
+Fluency in programming language(s) such as Java, Python, C/C++
+Familiarity with modeling languages such as SysML and UML
+Applicable internships across subject matter domains (e.g. Aerospace, Healthcare, Defense)
+Proficiency in use of Microsoft Office including Outlook, Excel, and Word
+Must have demonstrated proficiency and strength in verbal, written, PC, presentation, and communications skills
+This position requires a minimum of 50% hybrid on-site
+
+
+Preferred Qualifications:
+
+
+Advanced degree in technical field of study
+Knowledge of systems architecture and systems design and development. Understanding of modern SE methods.
+Experience with multi-disciplinary modeling and simulation (physics-level, engineering-level and/or operational-level).
+Proficiency in one or more of the programming languages for quantitative analyses (ex. MATLAB, Mathematica, R).
+Interest and/or experience with Artificial Intelligence (AI) and Machine Learning (ML) concepts and tools.
+Demonstrated proficiency and strength in verbal, written, PC, presentation, and communications skills
+Existing Security Clearance
+Project-based teamwork experience
+
+
+This requisition requires the candidate to have a minimum of the following clearance(s):
+
+None
+
+This requisition requires the hired candidate to have or obtain, within one year from the date of hire, the following clearance(s):
+
+Secret
+
+Salary compensation range and midpoint:
+
+$77,600 - $97,000 - $116,400 Annual
+
+Work Location Type:
+
+Hybrid
+
+It is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment. An employer who violates this law shall be subject to criminal penalties and civil liability.
+
+Commitment to Non-Discrimination
+
+All qualified applicants will receive consideration for employment without regard to disability, status as a protected veteran or any other status protected by applicable federal, state, local or international law.
+
+MITRE intends to maintain a website that is fully accessible to all individuals. If you are unable to search or apply for jobs and would like to request a reasonable accommodation for any part of MITRE’s employment process, please email recruitinghelp@mitre.org for general support and collegerecruiting@mitre.org for intern positions. This service is for individuals requiring reasonable accommodation requests. Please note that vendor solicitations will not receive a reply.
+
+Benefits information may be found here.
+
+Copyright © 1997-2026, The MITRE Corporation. All rights reserved. MITRE is a registered trademark of The MITRE Corporation. Material on this site may be copied and distributed with permission only.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Remote Software Engineer (US) | https://www.linkedin.com/jobs/view/remote-software-engineer-us-at-turing-4398029128
+
+About Us:
+
+Based in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems.
+
+
+
+
+Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in software engineering, logical reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L.
+
+
+
+
+Project Overview:
+
+As a Software Engineering evaluator, you will create cutting-edge datasets for training, benchmarking, and advancing large language models, collaborating closely with researchers. This includes curating code examples, providing precise solutions, and making corrections in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go; evaluating and refining AI-generated code for efficiency, scalability, and reliability; and working with cross-functional teams to enhance enterprise-level AI-driven coding solutions.
+
+
+
+
+What Does a Typical Day Look Like?
+
+Working on AI model training initiatives by curating code examples, building solutions, and correcting code in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go.
+Evaluate and refine AI-generated code to ensure that it is efficient, scalable, and reliable.
+Collaborate with cross-functional teams to enhance AI-driven coding solutions against industry performance benchmarks.
+Build agents that can verify the quality of the code and identify error patterns.
+Hypothesize on steps in the software engineering cycle (prototyping, architecture design, API design, production implementation, launch, experiments, monitoring, operational maintenance) and evaluate model capabilities on them
+Design verification mechanisms that can automatically verify a solution to a software engineering task.
+
+
+
+
+Required Skills:
+
+3+ years of software engineering experience.
+Strong expertise in building full-stack applications and deploying scalable, production-grade software using modern languages and tools.
+Deep understanding of software architecture, design, development, debugging, and code quality/review assessment.
+Excellent oral and written communication skills for clear, structured evaluation rationales.
+
+
+
+
+Engagement Details:
+
+Commitment: flexible engagement, minimum 10 hrs/week, up to 40 hrs/week (partial PST overlap required)
+Type: Contractor (no medical/paid leave)
+Duration: 1 month (starting next week; potential extensions based on performance and fit)
+Location: Candidates must be based out of US, Canada or WEU countries (UK, Netherlands, Italy, Germany, …)
+
+
+
+
+Note: As part of assessments you will go through an AI video interview.
+
+
+
+
+After applying, you will receive an email with a login link. Please use that link to access the portal and complete your profile.
+
+
+
+
+Know amazing talent? Refer them at turing.com/referrals, and earn money from your network.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Remote Software Engineer (US) | https://www.linkedin.com/jobs/view/remote-software-engineer-us-at-turing-4398012849
+
+About Us:
+
+Based in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems.
+
+
+
+
+Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in software engineering, logical reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L.
+
+
+
+
+Project Overview:
+
+As a Software Engineering evaluator, you will create cutting-edge datasets for training, benchmarking, and advancing large language models, collaborating closely with researchers. This includes curating code examples, providing precise solutions, and making corrections in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go; evaluating and refining AI-generated code for efficiency, scalability, and reliability; and working with cross-functional teams to enhance enterprise-level AI-driven coding solutions.
+
+
+
+
+What Does a Typical Day Look Like?
+
+Working on AI model training initiatives by curating code examples, building solutions, and correcting code in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go.
+Evaluate and refine AI-generated code to ensure that it is efficient, scalable, and reliable.
+Collaborate with cross-functional teams to enhance AI-driven coding solutions against industry performance benchmarks.
+Build agents that can verify the quality of the code and identify error patterns.
+Hypothesize on steps in the software engineering cycle (prototyping, architecture design, API design, production implementation, launch, experiments, monitoring, operational maintenance) and evaluate model capabilities on them
+Design verification mechanisms that can automatically verify a solution to a software engineering task.
+
+
+
+
+Required Skills:
+
+3+ years of software engineering experience.
+Strong expertise in building full-stack applications and deploying scalable, production-grade software using modern languages and tools.
+Deep understanding of software architecture, design, development, debugging, and code quality/review assessment.
+Excellent oral and written communication skills for clear, structured evaluation rationales.
+
+
+
+
+Engagement Details:
+
+Commitment: flexible engagement, minimum 10 hrs/week, up to 40 hrs/week (partial PST overlap required)
+Type: Contractor (no medical/paid leave)
+Duration: 1 month (starting next week; potential extensions based on performance and fit)
+Location: Candidates must be based out of US, Canada or WEU countries (UK, Netherlands, Italy, Germany, …)
+
+
+
+
+Note: As part of assessments you will go through an AI video interview.
+
+
+
+
+After applying, you will receive an email with a login link. Please use that link to access the portal and complete your profile.
+
+
+
+
+Know amazing talent? Refer them at turing.com/referrals, and earn money from your network.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Remote Software Engineer (US) | https://www.linkedin.com/jobs/view/remote-software-engineer-us-at-turing-4398034021
+
+About Us:
+
+Based in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems.
+
+
+
+
+Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in software engineering, logical reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L.
+
+
+
+
+Project Overview:
+
+As a Software Engineering evaluator, you will create cutting-edge datasets for training, benchmarking, and advancing large language models, collaborating closely with researchers. This includes curating code examples, providing precise solutions, and making corrections in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go; evaluating and refining AI-generated code for efficiency, scalability, and reliability; and working with cross-functional teams to enhance enterprise-level AI-driven coding solutions.
+
+
+
+
+What Does a Typical Day Look Like?
+
+Working on AI model training initiatives by curating code examples, building solutions, and correcting code in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go.
+Evaluate and refine AI-generated code to ensure that it is efficient, scalable, and reliable.
+Collaborate with cross-functional teams to enhance AI-driven coding solutions against industry performance benchmarks.
+Build agents that can verify the quality of the code and identify error patterns.
+Hypothesize on steps in the software engineering cycle (prototyping, architecture design, API design, production implementation, launch, experiments, monitoring, operational maintenance) and evaluate model capabilities on them
+Design verification mechanisms that can automatically verify a solution to a software engineering task.
+
+
+
+
+Required Skills:
+
+3+ years of software engineering experience.
+Strong expertise in building full-stack applications and deploying scalable, production-grade software using modern languages and tools.
+Deep understanding of software architecture, design, development, debugging, and code quality/review assessment.
+Excellent oral and written communication skills for clear, structured evaluation rationales.
+
+
+
+
+Engagement Details:
+
+Commitment: flexible engagement, minimum 10 hrs/week, up to 40 hrs/week (partial PST overlap required)
+Type: Contractor (no medical/paid leave)
+Duration: 1 month (starting next week; potential extensions based on performance and fit)
+Location: Candidates must be based out of US, Canada or WEU countries (UK, Netherlands, Italy, Germany, …)
+
+
+
+
+Note: As part of assessments you will go through an AI video interview.
+
+
+
+
+After applying, you will receive an email with a login link. Please use that link to access the portal and complete your profile.
+
+
+
+
+Know amazing talent? Refer them at turing.com/referrals, and earn money from your network.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Programmer – General Engineer/Architect | https://www.linkedin.com/jobs/view/programmer-–-general-engineer-architect-at-air-force-civilian-service-4384999235
+
+Effective 27 September 2025, federal agencies may only accept resumes up to two pages in length to comply with the OPM Merit Hiring Plan. To ensure your resume can be considered further for opportunities, please resubmit a resume that does not exceed two pages. Please see additional recommendations for formatting your resume at the following link: https://help.test.usajobs.gov/faq/application/documents/resume/page-limit. AFLCMC encourages two-page resumes. Be sure to include your contact information, relevant experience (with information on day/month/year experience began and ended), and information on education, certifications or licensures, and three professional references.
+
+
+
+
+Come be a part of something big! Smart Minds, Cool Jobs and Awesome Rewards! Fueled by innovation, talent and ambition, the Air Force Civilian Service (AFCS) is seeking civilian professionals prepared to deploy war-winning capabilities for the United States Air Force.
+
+The Air Force Civilian Service (AFCS) is looking for a Full-Time Programmer – General Engineer/Architect (GS-0801-12) to work at the 66th Civil Engineering Directorate on Hanscom AFB in Bedford, MA.
+
+
+
+
+This position can close at any time.
+
+
+
+
+Apply Now!
+
+
+
+
+Recruitment, Relocation, and Student Loan Repayment incentives may be considered.
+
+
+
+
+Qualifications/Requirements
+
+
+
+
+To serve as an architect or engineer, establishing installation programming requirements of facility and infrastructure projects. Develop and coordinate all justification, requirements, and/or documents needed to submit to higher HQ for project approval and assigned fiscal year execution in support of the approved Installation Development Plan.
+
+
+
+
+This is a designated Drug Testing Position
+
+
+
+
+Bachelors Degree in Architecture and/or Engineer
+
+
+
+
+Possesses comprehensive knowledge of engineering and architectural principles, including design, construction processes, and cost-estimating. Demonstrates proficiency with aesthetic and functional design techniques, construction standards, and compliance with federal, state, and local codes, utilizing software like Computer-Aided Design and Drafting (CADD).
+
+
+
+
+Proven ability to manage programs and projects, with an understanding of regulatory and statutory financial restrictions. Skilled in using initiative and analytical abilities to research, interpret, and apply regulations to recommend timely and economical solutions.
+
+
+
+
+Strong communication skills with the ability to plan and develop projects, conduct site surveys, and coordinate effectively with other disciplines. Capable of communicating persuasively, both orally and in writing, to maintain excellent working relationships.
+
+
+
+
+To receive additional information about current and future job openings with AFCS via email notification, please subscribe at www.Afciviliancareers.com and sign up to “Get Career Updates.”
+
+
+
+
+U.S. citizenship required.
+
+
+
+
+AFCS is Equal Opportunity Employer.
+
+
+
+
+Must be of legal working age.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Motion Automation Intelligence- Applications Engineer | https://www.linkedin.com/jobs/view/motion-automation-intelligence-applications-engineer-at-motion-4315327874
+
+Summary
+
+Under limited supervision, the Motion Ai- Application Engineer is the primary technical resource for the outside sales team and is responsible for design and engineering of electronic controls solutions to meet customer system requirements. This role works with outside sales and customers to develop and refine system specifications, organize design concepts, develop costing and prepare proposals to support outside sales.
+
+Must be eligible to work in the US without visa sponsorship.
+
+Job Duties
+
+
+Understands and conveys customer requirements internally and to factory partners.
+Trains customers and outside sales teams on product technologies.
+Provides technical support to outside sales team and customers in real time.
+Maintains expertise on the technical products from factory partners.
+Prepares a scope of work for a solution for the customer.
+Sizes and designs solutions for applications including, but not limited to, pneumatic, motion control, six axis robots and vision.
+Performs other duties as assigned.
+
+
+Education & Experience
+
+
+Typically requires a bachelor's degree in engineering and zero (0) to two (2) years of related experience.
+
+
+Knowledge, Skills, Abilities
+
+
+Proficient use of CAD software and Microsoft Office suite software.
+Strong Communication with technical and non-technical personal.
+
+
+Physical Demands
+
+
+Travels up to 40% of the time.
+
+
+Company Information
+
+Motion offers an excellent benefits package which includes options for healthcare coverage, 401(k), tuition reimbursement, vacation, sick, and holiday pay.
+
+Please keep in mind that this is not a guarantee of compensation or salary, as final offer amount may vary based on factors including but not limited to experience and geographic location. It also does not consider other components that make up the total rewards package for the position. If you are hired at Motion, your overall compensation will be determined based on factors such as geographic location, skills, education, and/or experience which may result in total compensation outside of this range.
+
+
+Compensation is from $80,000 to $110,000 annually
+
+
+Not the right fit? Let us know you're interested in a future opportunity by joining our Talent Community on jobs.genpt.com or create an account to set up email alerts as new job postings become available that meet your interest!
+
+GPC conducts its business without regard to sex, race, creed, color, religion, marital status, national origin, citizenship status, age, pregnancy, sexual orientation, gender identity or expression, genetic information, disability, military status, status as a veteran, or any other protected characteristic. GPC's policy is to recruit, hire, train, promote, assign, transfer and terminate employees based on their own ability, achievement, experience and conduct and other legitimate business reasons.
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Remote Software Developer | https://www.linkedin.com/jobs/view/remote-software-developer-at-turing-4398034341
+
+About Us:
+
+Based in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems.
+
+
+
+
+Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in software engineering, logical reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L.
+
+
+
+
+Project Overview:
+
+As a Software Engineering evaluator, you will create cutting-edge datasets for training, benchmarking, and advancing large language models, collaborating closely with researchers. This includes curating code examples, providing precise solutions, and making corrections in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go; evaluating and refining AI-generated code for efficiency, scalability, and reliability; and working with cross-functional teams to enhance enterprise-level AI-driven coding solutions.
+
+
+
+
+What Does a Typical Day Look Like?
+
+Working on AI model training initiatives by curating code examples, building solutions, and correcting code in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go.
+Evaluate and refine AI-generated code to ensure that it is efficient, scalable, and reliable.
+Collaborate with cross-functional teams to enhance AI-driven coding solutions against industry performance benchmarks.
+Build agents that can verify the quality of the code and identify error patterns.
+Hypothesize on steps in the software engineering cycle (prototyping, architecture design, API design, production implementation, launch, experiments, monitoring, operational maintenance) and evaluate model capabilities on them
+Design verification mechanisms that can automatically verify a solution to a software engineering task.
+
+
+
+
+Required Skills:
+
+3+ years of software engineering experience.
+Strong expertise in building full-stack applications and deploying scalable, production-grade software using modern languages and tools.
+Deep understanding of software architecture, design, development, debugging, and code quality/review assessment.
+Excellent oral and written communication skills for clear, structured evaluation rationales.
+
+
+
+
+Engagement Details:
+
+Commitment: flexible engagement, minimum 10 hrs/week, up to 40 hrs/week (partial PST overlap required)
+Type: Contractor (no medical/paid leave)
+Duration: 1 month (starting next week; potential extensions based on performance and fit)
+Location: Candidates must be based out of US, Canada or WEU countries (UK, Netherlands, Italy, Germany, …)
+
+
+
+
+Note: As part of assessments you will go through an AI video interview.
+
+
+
+
+After applying, you will receive an email with a login link. Please use that link to access the portal and complete your profile.
+
+
+
+
+Know amazing talent? Refer them at turing.com/referrals, and earn money from your network.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Remote Software Developer | https://www.linkedin.com/jobs/view/remote-software-developer-at-turing-4398026443
+
+About Us:
+
+Based in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems.
+
+
+
+
+Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in software engineering, logical reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L.
+
+
+
+
+Project Overview:
+
+As a Software Engineering evaluator, you will create cutting-edge datasets for training, benchmarking, and advancing large language models, collaborating closely with researchers. This includes curating code examples, providing precise solutions, and making corrections in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go; evaluating and refining AI-generated code for efficiency, scalability, and reliability; and working with cross-functional teams to enhance enterprise-level AI-driven coding solutions.
+
+
+
+
+What Does a Typical Day Look Like?
+
+Working on AI model training initiatives by curating code examples, building solutions, and correcting code in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go.
+Evaluate and refine AI-generated code to ensure that it is efficient, scalable, and reliable.
+Collaborate with cross-functional teams to enhance AI-driven coding solutions against industry performance benchmarks.
+Build agents that can verify the quality of the code and identify error patterns.
+Hypothesize on steps in the software engineering cycle (prototyping, architecture design, API design, production implementation, launch, experiments, monitoring, operational maintenance) and evaluate model capabilities on them
+Design verification mechanisms that can automatically verify a solution to a software engineering task.
+
+
+
+
+Required Skills:
+
+3+ years of software engineering experience.
+Strong expertise in building full-stack applications and deploying scalable, production-grade software using modern languages and tools.
+Deep understanding of software architecture, design, development, debugging, and code quality/review assessment.
+Excellent oral and written communication skills for clear, structured evaluation rationales.
+
+
+
+
+Engagement Details:
+
+Commitment: flexible engagement, minimum 10 hrs/week, up to 40 hrs/week (partial PST overlap required)
+Type: Contractor (no medical/paid leave)
+Duration: 1 month (starting next week; potential extensions based on performance and fit)
+Location: Candidates must be based out of US, Canada or WEU countries (UK, Netherlands, Italy, Germany, …)
+
+
+
+
+Note: As part of assessments you will go through an AI video interview.
+
+
+
+
+After applying, you will receive an email with a login link. Please use that link to access the portal and complete your profile.
+
+
+
+
+Know amazing talent? Refer them at turing.com/referrals, and earn money from your network.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+
+Remote Software Developer | https://www.linkedin.com/jobs/view/remote-software-developer-at-turing-4398028431
+
+About Us:
+
+Based in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems.
+
+
+
+
+Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in software engineering, logical reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L.
+
+
+
+
+Project Overview:
+
+As a Software Engineering evaluator, you will create cutting-edge datasets for training, benchmarking, and advancing large language models, collaborating closely with researchers. This includes curating code examples, providing precise solutions, and making corrections in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go; evaluating and refining AI-generated code for efficiency, scalability, and reliability; and working with cross-functional teams to enhance enterprise-level AI-driven coding solutions.
+
+
+
+
+What Does a Typical Day Look Like?
+
+Working on AI model training initiatives by curating code examples, building solutions, and correcting code in Python, JavaScript (including ReactJS), C/C++, Java, Rust, and Go.
+Evaluate and refine AI-generated code to ensure that it is efficient, scalable, and reliable.
+Collaborate with cross-functional teams to enhance AI-driven coding solutions against industry performance benchmarks.
+Build agents that can verify the quality of the code and identify error patterns.
+Hypothesize on steps in the software engineering cycle (prototyping, architecture design, API design, production implementation, launch, experiments, monitoring, operational maintenance) and evaluate model capabilities on them
+Design verification mechanisms that can automatically verify a solution to a software engineering task.
+
+
+
+
+Required Skills:
+
+3+ years of software engineering experience.
+Strong expertise in building full-stack applications and deploying scalable, production-grade software using modern languages and tools.
+Deep understanding of software architecture, design, development, debugging, and code quality/review assessment.
+Excellent oral and written communication skills for clear, structured evaluation rationales.
+
+
+
+
+Engagement Details:
+
+Commitment: flexible engagement, minimum 10 hrs/week, up to 40 hrs/week (partial PST overlap required)
+Type: Contractor (no medical/paid leave)
+Duration: 1 month (starting next week; potential extensions based on performance and fit)
+Location: Candidates must be based out of US, Canada or WEU countries (UK, Netherlands, Italy, Germany, …)
+
+
+
+
+Note: As part of assessments you will go through an AI video interview.
+
+
+
+
+After applying, you will receive an email with a login link. Please use that link to access the portal and complete your profile.
+
+
+
+
+Know amazing talent? Refer them at turing.com/referrals, and earn money from your network.
+
+Show more
+
+----------------------------------------------------------------------------------------------------------------------
+

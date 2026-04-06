@@ -41,16 +41,36 @@ function JobDetail({ job, onClose }: { job: Job; onClose: () => void }) {
 export default function Jobs() {
   const [jobs, setJobs] = useState<Job[]>([])
   const [loading, setLoading] = useState(true)
+  const [scraping, setScraping] = useState(false)
   const [selected, setSelected] = useState<number | null>(null)
 
   useEffect(() => {
-    fetch("/api/jobs")
-      .then((r) => r.json())
-      .then((data) => {
-        setJobs(data)
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
+    let cancelled = false
+
+    async function init() {
+      // Check if we need to scrape today
+      setScraping(true)
+      try {
+        const scrapeRes = await fetch("/api/scrape", { method: "POST" })
+        const scrapeData = await scrapeRes.json()
+        if (scrapeData.error) console.error("Scrape:", scrapeData.error)
+      } catch (e) {
+        console.error("Scrape check failed:", e)
+      }
+      if (cancelled) return
+      setScraping(false)
+
+      // Load jobs
+      try {
+        const res = await fetch("/api/jobs")
+        const data = await res.json()
+        if (!cancelled) setJobs(data)
+      } catch {}
+      if (!cancelled) setLoading(false)
+    }
+
+    init()
+    return () => { cancelled = true }
   }, [])
 
   const selectedJob = jobs.find((j) => j.id === selected) ?? null
@@ -65,11 +85,15 @@ export default function Jobs() {
       <div className="flex-1 min-h-0">
         <div className="h-full">
 
-          {loading && (
+          {scraping && (
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">Scraping new job postings...</p>
+          )}
+
+          {!scraping && loading && (
             <p className="text-sm text-zinc-500 dark:text-zinc-400">Loading...</p>
           )}
 
-          {!loading && jobs.length === 0 && (
+          {!scraping && !loading && jobs.length === 0 && (
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               No listings found. Run the parser to populate{" "}
               <code className="font-mono text-xs">scraper/listings/</code>.
