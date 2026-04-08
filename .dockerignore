@@ -1,0 +1,17 @@
+.git
+.claude
+jev.app/node_modules
+jev.app/.next
+jev.app/.env.local
+scraper/output.txt
+scraper/parse.txt
+scraper/listings
+scraper/scraper
+scraper/parser
+resume/resume.txt
+resume/resumeParse_Claude
+resume/*.pdf
+resume/*.docx
+db/secrets.sql
+locations/US.zip
+*.pdf

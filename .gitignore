@@ -1,5 +1,11 @@
 locations/US.txt
 locations/US.zip
 jev.app/node_modules/
+jev.app/.env.local
+jev.app/.env*.local
+jev.app/.next/
 scraper/listings/
 db/secrets.sql
+infra/node_modules/
+infra/dist/
+infra/cdk.out/

@@ -3,13 +3,19 @@ import fs from "fs"
 import { NextRequest, NextResponse } from "next/server"
 import path from "path"
 import pool from "@/lib/db"
+import { requireAuth } from "@/lib/auth-helpers"
+import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3"
 
 const resumeDir = path.join(process.cwd(), "../resume")
 
 const ALLOWED_EXTENSIONS = [".pdf", ".docx"]
 
 export async function GET() {
-  const [rows] = await pool.query("SELECT resume_done, job_prefs_done FROM config WHERE id = 1")
+  const result = await requireAuth()
+  if (result instanceof NextResponse) return result
+  const { userId } = result
+
+  const [rows] = await pool.query("SELECT resume_done, job_prefs_done FROM config WHERE user_id = ?", [userId])
   const row = (rows as Record<string, unknown>[])[0] ?? {}
   return NextResponse.json({
     progress: {
@@ -30,6 +36,10 @@ function extractResumeText(filePath: string, ext: string, outputPath: string): v
 }
 
 export async function POST(req: NextRequest) {
+  const result = await requireAuth()
+  if (result instanceof NextResponse) return result
+  const { userId } = result
+
   try {
     const form = await req.formData()
     const file = form.get("resume") as File | null
@@ -52,8 +62,18 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(await file.arrayBuffer())
     fs.writeFileSync(savedPath, buffer)
 
-    await pool.query("UPDATE resume SET filename = ? WHERE id = 1", [file.name])
-    await pool.query("UPDATE config SET resume_done = 1 WHERE id = 1")
+    // Persist to S3 when running on Fargate (ephemeral local filesystem)
+    if (process.env.RESUME_BUCKET) {
+      const s3 = new S3Client({})
+      await s3.send(new PutObjectCommand({
+        Bucket: process.env.RESUME_BUCKET,
+        Key: `resumes/${userId}/${file.name}`,
+        Body: buffer,
+      }))
+    }
+
+    await pool.query("UPDATE resume SET filename = ? WHERE user_id = ?", [file.name, userId])
+    await pool.query("UPDATE config SET resume_done = 1 WHERE user_id = ?", [userId])
 
     // Extract plain text then run Claude parser
     const resumeTxtPath = path.join(resumeDir, "resume.txt")
@@ -66,9 +86,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: `Text extraction failed: ${String(extractErr)}` }, { status: 500 })
     }
 
-    const result = spawnSync(binaryPath, [], { cwd: resumeDir, timeout: 60000 })
-    if (result.status !== 0) {
-      const stderr = result.stderr?.toString() ?? ""
+    const parseResult = spawnSync(binaryPath, [userId], { cwd: resumeDir, timeout: 60000 })
+    if (parseResult.status !== 0) {
+      const stderr = parseResult.stderr?.toString() ?? ""
       console.error("Parse binary error:", stderr)
       return NextResponse.json({ error: `Resume parsing failed: ${stderr}` }, { status: 500 })
     }

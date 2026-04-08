@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import type { Job } from "../api/jobs/route"
+import type { Job } from "../../api/jobs/route"
 
 function JobDetail({ job, onClose }: { job: Job; onClose: () => void }) {
   return (

@@ -31,7 +31,7 @@ export default function Dashboard() {
   const [savingPrefs, setSavingPrefs] = useState(false)
   const [prefsError, setPrefsError] = useState<string | null>(null)
 
-  // On mount: if resume is done but jobPrefs not yet set, open directly on job prefs step
+  // On mount: auto-open modal at the first incomplete step
   useEffect(() => {
     fetch("/api/config")
       .then((r) => r.json())
@@ -46,6 +46,7 @@ export default function Dashboard() {
 
         if (resumeDone && prefsDone && subDone) {
           setSetupComplete(true)
+          return
         }
 
         if (resumeDone && !prefsDone) {
@@ -65,8 +66,10 @@ export default function Dashboard() {
             })
           }
           setStep(1)
-          setShowModal(true)
+        } else {
+          setStep(0)
         }
+        setShowModal(true)
       })
       .catch(() => {})
   }, [])

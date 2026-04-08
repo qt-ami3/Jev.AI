@@ -51,6 +51,12 @@ func dbDSN() string {
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Fprintln(os.Stderr, "usage: resumeParse_Claude <user_id>")
+		os.Exit(1)
+	}
+	userID := os.Args[1]
+
 	db, err := sql.Open("mysql", dbDSN())
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to connect to database: %v\n", err)
@@ -58,15 +64,17 @@ func main() {
 	}
 	defer db.Close()
 
-	var apiKey string
-	err = db.QueryRow("SELECT claude_api_key FROM config WHERE id = 1").Scan(&apiKey)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to read API key from database: %v\n", err)
-		os.Exit(1)
-	}
+	apiKey := os.Getenv("CLAUDE_API_KEY")
 	if apiKey == "" {
-		fmt.Fprintln(os.Stderr, "claude_api_key is empty in database — run db/secrets.sql first")
-		os.Exit(1)
+		err = db.QueryRow("SELECT claude_api_key FROM config WHERE user_id = ?", userID).Scan(&apiKey)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "failed to read API key from database: %v\n", err)
+			os.Exit(1)
+		}
+		if apiKey == "" {
+			fmt.Fprintln(os.Stderr, "claude_api_key is empty in database — run db/secrets.sql first")
+			os.Exit(1)
+		}
 	}
 
 	resumeText, err := os.ReadFile("resume.txt")
@@ -119,7 +127,7 @@ Resume text:
 		output = []byte(raw)
 	}
 
-	_, err = db.Exec("UPDATE resume SET parsed_data = ? WHERE id = 1", string(output))
+	_, err = db.Exec("UPDATE resume SET parsed_data = ? WHERE user_id = ?", string(output), userID)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to write parsed resume to database: %v\n", err)
 		os.Exit(1)

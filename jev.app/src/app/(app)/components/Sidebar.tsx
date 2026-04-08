@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { signOut, useSession } from 'next-auth/react'
 import { useTheme } from './ThemeProvider'
 
 const navItems = [
@@ -28,9 +29,20 @@ function MoonIcon() {
   )
 }
 
+function LogOutIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+      <polyline points="16 17 21 12 16 7" />
+      <line x1="21" y1="12" x2="9" y2="12" />
+    </svg>
+  )
+}
+
 export default function Sidebar() {
   const pathname = usePathname()
   const { theme, toggle } = useTheme()
+  const { data: session } = useSession()
 
   return (
     <aside className="flex h-screen w-56 flex-col bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shrink-0 border-r border-zinc-200 dark:border-zinc-800">
@@ -52,15 +64,31 @@ export default function Sidebar() {
           </Link>
         ))}
       </nav>
-      <div className="px-3 py-4 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
-        <span className="text-xs text-zinc-400 dark:text-zinc-500 px-3">v0.1.0</span>
-        <button
-          onClick={toggle}
-          className="p-2 rounded-md text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          aria-label="Toggle theme"
-        >
-          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-        </button>
+      <div className="px-3 py-3 border-t border-zinc-200 dark:border-zinc-800">
+        {session?.user && (
+          <div className="flex items-center justify-between px-3 py-2">
+            <span className="text-xs text-zinc-500 dark:text-zinc-400 truncate max-w-[120px]">
+              {session.user.email}
+            </span>
+            <button
+              onClick={() => signOut({ callbackUrl: "/login" })}
+              className="p-1.5 rounded-md text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              aria-label="Sign out"
+            >
+              <LogOutIcon />
+            </button>
+          </div>
+        )}
+        <div className="flex items-center justify-between px-3 py-1">
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">v0.1.0</span>
+          <button
+            onClick={toggle}
+            className="p-2 rounded-md text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </div>
       </div>
     </aside>
   )
