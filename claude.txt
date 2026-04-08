@@ -1,1 +1,0 @@
-claude --resume "aws-fargate-deployment-plan"

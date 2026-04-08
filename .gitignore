@@ -5,6 +5,9 @@ jev.app/.env.local
 jev.app/.env*.local
 jev.app/.next/
 scraper/listings/
+scraper/scraper
+scraper/parser
+resume/resumeParse_Claude
 db/secrets.sql
 infra/node_modules/
 infra/dist/
