@@ -55,6 +55,12 @@ func dsn() string {
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Fprintln(os.Stderr, "usage: scraper <user_id>")
+		os.Exit(1)
+	}
+	userID := os.Args[1]
+
 	db, err := sql.Open("mysql", dsn())
 	if err != nil {
 		panic(err)
@@ -67,15 +73,15 @@ func main() {
 		SELECT location, distance, f_WT, f_E, f_TPR,
 		       alert_action, current_job_id, origin, sort_by,
 		       spell_correction_enabled
-		FROM job_prefs WHERE id = 1
-	`).Scan(&location, &distance, &fWT, &fE, &fTPR,
+		FROM job_prefs WHERE user_id = ?
+	`, userID).Scan(&location, &distance, &fWT, &fE, &fTPR,
 		&alertAction, &currentJobID, &origin, &sortBy, &spellCorrection)
 	if err != nil {
 		panic(fmt.Errorf("reading job_prefs: %w", err))
 	}
 
 	var keywords string
-	err = db.QueryRow("SELECT keywords FROM job_prefs WHERE id = 1").Scan(&keywords)
+	err = db.QueryRow("SELECT keywords FROM job_prefs WHERE user_id = ?", userID).Scan(&keywords)
 	if err != nil {
 		panic(fmt.Errorf("reading keywords: %w", err))
 	}
