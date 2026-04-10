@@ -24,7 +24,16 @@ import (
 
 func lookupGeoID(location string) (string, error) {
 	apiURL := "https://www.linkedin.com/jobs-guest/api/typeaheadHits?typeaheadType=GEO&geoTypes=POPULATED_PLACE,ADMIN_DIVISION_2,MARKET_AREA,COUNTRY_REGION&query=" + url.QueryEscape(location)
-	resp, err := http.Get(apiURL)
+	req, err := http.NewRequest("GET", apiURL, nil)
+	if err != nil {
+		return "", err
+	}
+	req.Header.Set("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+	req.Header.Set("Accept", "application/json, text/javascript, */*; q=0.01")
+	req.Header.Set("Accept-Language", "en-US,en;q=0.9")
+	req.Header.Set("Referer", "https://www.linkedin.com/jobs/search/")
+
+	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		return "", err
 	}
@@ -39,12 +48,19 @@ func lookupGeoID(location string) (string, error) {
 		ID string `json:"id"`
 	}
 	if err := json.Unmarshal(body, &results); err != nil {
-		return "", err
+		return "", fmt.Errorf("geoId API returned non-JSON (status %d): %s", resp.StatusCode, string(body[:min(len(body), 200)]))
 	}
 	if len(results) == 0 {
 		return "", fmt.Errorf("no geoId found for location: %q", location)
 	}
 	return results[0].ID, nil
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
 
 func dsn() string {

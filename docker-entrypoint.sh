@@ -16,6 +16,12 @@ if [ -n "$DB_HOST" ]; then
     mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/schema.sql
     echo "Schema initialized."
   fi
+  # Apply auth migration (skip if users table already exists)
+  if ! mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" -e "SELECT 1 FROM users LIMIT 1" 2>/dev/null; then
+    echo "Running auth migration..."
+    mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/auth.sql
+    echo "Auth migration complete."
+  fi
 fi
 
 cd /app/jev.app

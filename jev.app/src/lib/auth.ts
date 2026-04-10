@@ -28,20 +28,43 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       credentials: {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
+        otpToken: { label: "OTP", type: "text" },
       },
       async authorize(credentials) {
         const email = credentials?.email as string
         const password = credentials?.password as string
-        if (!email || !password) return null
+        const otpToken = credentials?.otpToken as string
+
+        if (!email) { console.error("[auth] no email"); return null }
 
         const [rows] = await pool.query("SELECT * FROM users WHERE email = ?", [email])
         const user = (rows as Record<string, unknown>[])[0]
-        if (!user || !user.password) return null
+        if (!user) { console.error("[auth] user not found:", email); return null }
 
-        if (!user.email_verified) return null
-
-        const valid = await bcrypt.compare(password, user.password as string)
-        if (!valid) return null
+        if (otpToken) {
+          // OTP login path — verify the code from verification_tokens
+          const [tokens] = await pool.query(
+            "SELECT * FROM verification_tokens WHERE identifier = ? AND token = ?",
+            [email, otpToken],
+          )
+          const tokenRow = (tokens as Record<string, unknown>[])[0]
+          if (!tokenRow) { console.error("[auth] OTP token not found"); return null }
+          const expires = new Date(tokenRow.expires as string)
+          if (expires < new Date()) { console.error("[auth] OTP expired"); return null }
+          await pool.query("DELETE FROM verification_tokens WHERE identifier = ? AND token = ?", [email, otpToken])
+          if (!user.email_verified) {
+            await pool.query("UPDATE users SET email_verified = NOW() WHERE email = ?", [email])
+          }
+        } else if (password) {
+          // Password login path
+          if (!user.password) { console.error("[auth] no password set for user"); return null }
+          if (!user.email_verified) { console.error("[auth] email not verified"); return null }
+          const valid = await bcrypt.compare(password, user.password as string)
+          if (!valid) { console.error("[auth] bcrypt compare failed"); return null }
+        } else {
+          console.error("[auth] no password or otpToken")
+          return null
+        }
 
         return {
           id: user.id as string,

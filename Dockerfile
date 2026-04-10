@@ -39,6 +39,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV CHROMEDP_NO_SANDBOX=true
 ENV CHROME_PATH=/usr/bin/chromium
+ENV HOSTNAME=0.0.0.0
 
 WORKDIR /app
 
@@ -60,6 +61,7 @@ RUN chmod +x ./scraper/scraper ./scraper/parser ./resume/resumeParse_Claude
 # Static data
 COPY locations/US.txt ./locations/US.txt
 COPY db/schema.sql ./db/schema.sql
+COPY db/auth.sql ./db/auth.sql
 
 # Entrypoint
 COPY docker-entrypoint.sh ./

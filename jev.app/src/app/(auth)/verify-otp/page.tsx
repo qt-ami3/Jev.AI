@@ -68,9 +68,9 @@ function VerifyOTPForm() {
         router.push("/login")
       }
     } else {
-      const res = await signIn("otp", {
+      const res = await signIn("credentials", {
         email,
-        token,
+        otpToken: token,
         redirect: false,
       })
       setLoading(false)

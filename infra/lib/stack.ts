@@ -53,6 +53,19 @@ export class LinkedInScraperStack extends cdk.Stack {
       secretStringValue: cdk.SecretValue.unsafePlainText("REPLACE_ME"),
     });
 
+    const authSecret = new secretsmanager.Secret(this, "AuthSecret", {
+      description: "Auth.js JWT signing secret",
+      generateSecretString: {
+        excludePunctuation: false,
+        passwordLength: 44,
+      },
+    });
+
+    const smtpSecret = new secretsmanager.Secret(this, "SmtpSecret", {
+      description: "SMTP credentials for email — update after first deploy",
+      secretStringValue: cdk.SecretValue.unsafePlainText("REPLACE_ME"),
+    });
+
     // ── RDS MariaDB ─────────────────────────────────────────────
     const db = new rds.DatabaseInstance(this, "Db", {
       engine: rds.DatabaseInstanceEngine.mariaDb({
@@ -123,15 +136,23 @@ export class LinkedInScraperStack extends cdk.Stack {
         DB_NAME: "linkedin_scraper",
         RESUME_BUCKET: resumeBucket.bucketName,
         NODE_ENV: "production",
+        AUTH_TRUST_HOST: "true",
+        HOSTNAME: "0.0.0.0",
+        SMTP_HOST: "smtp.resend.com",
+        SMTP_PORT: "465",
+        SMTP_USER: "resend",
+        EMAIL_FROM: "onboarding@resend.dev",
       },
       secrets: {
         DB_PASSWORD: ecs.Secret.fromSecretsManager(dbPassword),
         CLAUDE_API_KEY: ecs.Secret.fromSecretsManager(claudeApiKey),
+        AUTH_SECRET: ecs.Secret.fromSecretsManager(authSecret),
+        SMTP_PASS: ecs.Secret.fromSecretsManager(smtpSecret),
       },
       healthCheck: {
         command: [
           "CMD-SHELL",
-          "curl -f http://localhost:3000/ || exit 1",
+          "curl -f http://localhost:3000/api/health || exit 1",
         ],
         interval: cdk.Duration.seconds(30),
         timeout: cdk.Duration.seconds(5),
@@ -161,7 +182,7 @@ export class LinkedInScraperStack extends cdk.Stack {
     const service = new ecs.FargateService(this, "Service", {
       cluster,
       taskDefinition: taskDef,
-      desiredCount: 0, // Start at 0 — scale to 1 after pushing a Docker image to ECR
+      desiredCount: 1,
       assignPublicIp: true,
       securityGroups: [taskSg],
       vpcSubnets: { subnetType: ec2.SubnetType.PUBLIC },
@@ -172,7 +193,7 @@ export class LinkedInScraperStack extends cdk.Stack {
       protocol: elbv2.ApplicationProtocol.HTTP,
       targets: [service],
       healthCheck: {
-        path: "/",
+        path: "/api/health",
         interval: cdk.Duration.seconds(60),
         healthyThresholdCount: 2,
       },

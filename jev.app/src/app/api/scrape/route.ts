@@ -23,12 +23,16 @@ export async function POST() {
       : null
     const today = new Date().toISOString().slice(0, 10)
 
+    // Skip if already scraped today AND user has jobs (if scrape failed, retry)
     if (lastLogin === today) {
-      return NextResponse.json({ scraped: false, reason: "already_scraped_today" })
+      const [jobRows] = await pool.query(
+        "SELECT COUNT(*) as cnt FROM jobs WHERE user_id = ?", [userId]
+      )
+      const jobCount = (jobRows as Record<string, unknown>[])[0]?.cnt as number
+      if (jobCount > 0) {
+        return NextResponse.json({ scraped: false, reason: "already_scraped_today" })
+      }
     }
-
-    // Update last_login to today
-    await pool.query("UPDATE config SET last_login = CURDATE() WHERE user_id = ?", [userId])
 
     // Run scraper binary (collects job URLs into output.txt)
     const scrapeResult = spawnSync(
@@ -62,6 +66,9 @@ export async function POST() {
 
     // Tag newly inserted jobs (those with NULL user_id) as belonging to this user
     await pool.query("UPDATE jobs SET user_id = ? WHERE user_id IS NULL", [userId])
+
+    // Only mark as scraped today after success
+    await pool.query("UPDATE config SET last_login = CURDATE() WHERE user_id = ?", [userId])
 
     return NextResponse.json({ scraped: true })
   } catch (err) {

@@ -15,20 +15,28 @@ import (
 )
 
 type Resume struct {
-	Name      string      `json:"name"`
-	Email     string      `json:"email"`
-	Phone     string      `json:"phone"`
-	LinkedIn  string      `json:"linkedin"`
-	GitHub    string      `json:"github"`
-	Education []Education `json:"education"`
-	Projects  []Project   `json:"projects"`
-	Skills    Skills      `json:"skills"`
+	Name       string       `json:"name"`
+	Email      string       `json:"email"`
+	Phone      string       `json:"phone"`
+	LinkedIn   string       `json:"linkedin"`
+	GitHub     string       `json:"github"`
+	Education  []Education  `json:"education"`
+	Experience []Experience `json:"experience"`
+	Projects   []Project    `json:"projects"`
+	Skills     Skills       `json:"skills"`
 }
 
 type Education struct {
 	School string `json:"school"`
 	Degree string `json:"degree"`
 	Date   string `json:"date"`
+}
+
+type Experience struct {
+	Company    string   `json:"company"`
+	Title      string   `json:"title"`
+	Dates      string   `json:"dates"`
+	Highlights []string `json:"highlights"`
 }
 
 type Project struct {
@@ -93,6 +101,7 @@ func main() {
   "linkedin": "string",
   "github": "string",
   "education": [{"school": "string", "degree": "string", "date": "string"}],
+  "experience": [{"company": "string", "title": "string", "dates": "string", "highlights": ["string"]}],
   "projects": [{"name": "string", "dates": "string", "highlights": ["string"]}],
   "skills": {"frontend": ["string"], "backend": ["string"], "soft": ["string"]}
 }

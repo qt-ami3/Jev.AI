@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState } from "react"
 
 interface Education { school: string; degree: string; date: string }
+interface Experience { company: string; title: string; dates: string; highlights: string[] }
 interface Project { name: string; dates: string; highlights: string[] }
 interface Skills { frontend: string[]; backend: string[]; soft: string[] }
 interface Resume {
   name: string; email: string; phone: string
   linkedin: string; github: string
-  education: Education[]; projects: Project[]; skills: Skills
+  education: Education[]; experience: Experience[]; projects: Project[]; skills: Skills
 }
 interface JobPrefs {
   keywords: string; location: string; distance: string
@@ -139,9 +140,11 @@ export default function Profiles() {
   const [saveError, setSaveError] = useState<string | null>(null)
 
   type EduForm = { idx: number | null; school: string; degree: string; date: string }
+  type ExpForm = { idx: number | null; company: string; title: string; dates: string; highlights: string[] }
   type ProjForm = { idx: number | null; name: string; dates: string; highlights: string[] }
   type ContactForm = { name: string; email: string; phone: string; linkedin: string; github: string }
   const [editEdu, setEditEdu] = useState<EduForm | null>(null)
+  const [editExp, setEditExp] = useState<ExpForm | null>(null)
   const [editProj, setEditProj] = useState<ProjForm | null>(null)
   const [editContact, setEditContact] = useState<ContactForm | null>(null)
 
@@ -196,6 +199,30 @@ export default function Profiles() {
       return next
     })
     setEditEdu(null)
+  }
+
+  // ── Experience ──
+  function deleteExperience(idx: number) {
+    setResume((prev) => {
+      if (!prev) return prev
+      const next = { ...prev, experience: prev.experience.filter((_, i) => i !== idx) }
+      patchResume({ experience: next.experience })
+      return next
+    })
+  }
+
+  function saveExperience(f: ExpForm) {
+    setResume((prev) => {
+      if (!prev) return prev
+      const entry = { company: f.company, title: f.title, dates: f.dates, highlights: f.highlights.filter(Boolean) }
+      const exp = f.idx === null
+        ? [...(prev.experience ?? []), entry]
+        : (prev.experience ?? []).map((e, i) => i === f.idx ? entry : e)
+      const next = { ...prev, experience: exp }
+      patchResume({ experience: next.experience })
+      return next
+    })
+    setEditExp(null)
   }
 
   // ── Projects ──
@@ -427,6 +454,35 @@ export default function Profiles() {
             </Section>
           )}
 
+          {resume?.experience && (
+            <Section title="Experience">
+              {resume.experience.map((e, i) => (
+                <div key={i} className="relative group/card">
+                  <Card>
+                    <div className="flex items-baseline justify-between gap-2 mb-1">
+                      <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50">{e.title}</span>
+                      {e.dates && <span className="text-xs text-zinc-400 dark:text-zinc-500 flex-shrink-0">{e.dates}</span>}
+                    </div>
+                    <span className="text-xs text-zinc-500 dark:text-zinc-400">{e.company}</span>
+                    {e.highlights.length > 0 && (
+                      <ul className="flex flex-col gap-1 mt-2">
+                        {e.highlights.map((h, j) => (
+                          <li key={j} className="text-xs text-zinc-600 dark:text-zinc-400 flex gap-2">
+                            <span className="text-zinc-300 dark:text-zinc-600 flex-shrink-0">—</span>
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </Card>
+                  <button onClick={() => deleteExperience(i)} className="absolute top-1.5 left-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity w-5 h-5 flex items-center justify-center rounded bg-red-100 dark:bg-red-950 hover:bg-red-200 dark:hover:bg-red-900 text-red-500 dark:text-red-400 text-xs">×</button>
+                  <button onClick={() => setEditExp({ idx: i, company: e.company, title: e.title, dates: e.dates, highlights: [...e.highlights] })} className="absolute top-1.5 right-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity w-5 h-5 flex items-center justify-center rounded bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-xs">✎</button>
+                </div>
+              ))}
+              <button onClick={() => setEditExp({ idx: null, company: "", title: "", dates: "", highlights: [""] })} className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors px-1">+ Add</button>
+            </Section>
+          )}
+
           {resume?.skills && (
             <Section title="Skills">
               <Card>
@@ -589,6 +645,41 @@ export default function Profiles() {
             <div className="flex gap-2 justify-end pt-1">
               <button onClick={() => setEditEdu(null)} className="px-4 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">Cancel</button>
               <button onClick={() => saveEducation(editEdu)} disabled={!editEdu.school} className="px-4 py-2 text-sm rounded-md bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 disabled:opacity-40">Save</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Experience modal ── */}
+      {editExp && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white dark:bg-zinc-900 rounded-lg p-6 w-96 shadow-xl flex flex-col gap-3 max-h-[90vh] overflow-y-auto">
+            <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">{editExp.idx === null ? "Add Experience" : "Edit Experience"}</h2>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Job Title</label>
+              <input type="text" value={editExp.title} onChange={(e) => setEditExp((p) => p && ({ ...p, title: e.target.value }))} className={inputCls} />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Company</label>
+              <input type="text" value={editExp.company} onChange={(e) => setEditExp((p) => p && ({ ...p, company: e.target.value }))} className={inputCls} />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Dates</label>
+              <input type="text" value={editExp.dates} onChange={(e) => setEditExp((p) => p && ({ ...p, dates: e.target.value }))} placeholder="e.g. Jun 2024 – Aug 2024" className={inputCls} />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Highlights</label>
+              {editExp.highlights.map((h, i) => (
+                <div key={i} className="flex gap-1.5">
+                  <input type="text" value={h} onChange={(e) => setEditExp((p) => { if (!p) return p; const hl = [...p.highlights]; hl[i] = e.target.value; return { ...p, highlights: hl } })} className={inputCls} />
+                  <button onClick={() => setEditExp((p) => { if (!p) return p; const hl = p.highlights.filter((_, j) => j !== i); return { ...p, highlights: hl.length ? hl : [""] } })} className="flex-shrink-0 w-7 flex items-center justify-center rounded-md bg-red-100 dark:bg-red-950 hover:bg-red-200 dark:hover:bg-red-900 text-red-500 dark:text-red-400 text-sm">×</button>
+                </div>
+              ))}
+              <button onClick={() => setEditExp((p) => p && ({ ...p, highlights: [...p.highlights, ""] }))} className="text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors text-left px-1">+ Add highlight</button>
+            </div>
+            <div className="flex gap-2 justify-end pt-1">
+              <button onClick={() => setEditExp(null)} className="px-4 py-2 text-sm rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">Cancel</button>
+              <button onClick={() => saveExperience(editExp)} disabled={!editExp.title || !editExp.company} className="px-4 py-2 text-sm rounded-md bg-zinc-900 dark:bg-zinc-50 text-white dark:text-zinc-900 disabled:opacity-40">Save</button>
             </div>
           </div>
         </div>
