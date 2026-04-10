@@ -42,33 +42,43 @@ export default function Jobs() {
   const [jobs, setJobs] = useState<Job[]>([])
   const [loading, setLoading] = useState(true)
   const [scraping, setScraping] = useState(false)
+  const [scrapeError, setScrapeError] = useState("")
   const [selected, setSelected] = useState<number | null>(null)
+
+  async function loadJobs() {
+    try {
+      const res = await fetch("/api/jobs")
+      const data = await res.json()
+      setJobs(data)
+    } catch {}
+    setLoading(false)
+  }
+
+  async function runScrape(force = false) {
+    setScraping(true)
+    setScrapeError("")
+    try {
+      const scrapeRes = await fetch("/api/scrape", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ force }),
+      })
+      const scrapeData = await scrapeRes.json()
+      if (scrapeData.error) setScrapeError(scrapeData.error)
+    } catch (e) {
+      setScrapeError("Scrape request failed")
+    }
+    setScraping(false)
+    await loadJobs()
+  }
 
   useEffect(() => {
     let cancelled = false
-
     async function init() {
-      // Check if we need to scrape today
       setScraping(true)
-      try {
-        const scrapeRes = await fetch("/api/scrape", { method: "POST" })
-        const scrapeData = await scrapeRes.json()
-        if (scrapeData.error) console.error("Scrape:", scrapeData.error)
-      } catch (e) {
-        console.error("Scrape check failed:", e)
-      }
-      if (cancelled) return
-      setScraping(false)
-
-      // Load jobs
-      try {
-        const res = await fetch("/api/jobs")
-        const data = await res.json()
-        if (!cancelled) setJobs(data)
-      } catch {}
+      await runScrape()
       if (!cancelled) setLoading(false)
     }
-
     init()
     return () => { cancelled = true }
   }, [])
@@ -78,9 +88,21 @@ export default function Jobs() {
   return (
     <div className="h-full flex flex-col">
 
-      <h1 className="flex-shrink-0 text-2xl font-semibold text-zinc-900 dark:text-zinc-50 pb-4">
-        Jobs
-      </h1>
+      <div className="flex-shrink-0 flex items-center justify-between pb-4">
+        <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+          Jobs
+        </h1>
+        <button
+          onClick={() => runScrape(true)}
+          disabled={scraping}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 disabled:opacity-40 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={scraping ? "animate-spin" : ""}>
+            <path d="M21 12a9 9 0 1 1-9-9" /><polyline points="21 3 21 12 12 12" />
+          </svg>
+          {scraping ? "Scraping..." : "Scrape again"}
+        </button>
+      </div>
 
       <div className="flex-1 min-h-0">
         <div className="h-full">
@@ -94,10 +116,14 @@ export default function Jobs() {
           )}
 
           {!scraping && !loading && jobs.length === 0 && (
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              No listings found. Run the parser to populate{" "}
-              <code className="font-mono text-xs">scraper/listings/</code>.
-            </p>
+            <div className="flex flex-col gap-2">
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                No listings found. Click &quot;Scrape again&quot; to retry.
+              </p>
+              {scrapeError && (
+                <p className="text-xs text-red-500 font-mono whitespace-pre-wrap">{scrapeError}</p>
+              )}
+            </div>
           )}
 
           {jobs.length > 0 && (

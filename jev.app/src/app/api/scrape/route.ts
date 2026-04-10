@@ -1,17 +1,20 @@
 import { spawnSync } from "child_process"
 import path from "path"
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import pool from "@/lib/db"
 import { requireAuth } from "@/lib/auth-helpers"
 
 const scraperDir = path.join(process.cwd(), "../scraper")
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const result = await requireAuth()
   if (result instanceof NextResponse) return result
   const { userId } = result
 
   try {
+    const body = await req.json().catch(() => ({}))
+    const force = (body as Record<string, unknown>)?.force === true
+
     // Check last_login
     const [rows] = await pool.query(
       "SELECT last_login FROM config WHERE user_id = ?",
@@ -23,8 +26,8 @@ export async function POST() {
       : null
     const today = new Date().toISOString().slice(0, 10)
 
-    // Skip if already scraped today AND user has jobs (if scrape failed, retry)
-    if (lastLogin === today) {
+    // Skip if already scraped today AND user has jobs (unless forced)
+    if (!force && lastLogin === today) {
       const [jobRows] = await pool.query(
         "SELECT COUNT(*) as cnt FROM jobs WHERE user_id = ?", [userId]
       )
