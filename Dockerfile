@@ -62,6 +62,7 @@ RUN chmod +x ./scraper/scraper ./scraper/parser ./resume/resumeParse_Claude
 COPY locations/US.txt ./locations/US.txt
 COPY db/schema.sql ./db/schema.sql
 COPY db/auth.sql ./db/auth.sql
+COPY db/jev.sql ./db/jev.sql
 
 # Entrypoint
 COPY docker-entrypoint.sh ./

@@ -22,6 +22,12 @@ if [ -n "$DB_HOST" ]; then
     mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/auth.sql
     echo "Auth migration complete."
   fi
+  # Apply jev migration (skip if jev_conversations table already exists)
+  if ! mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" -e "SELECT 1 FROM jev_conversations LIMIT 1" 2>/dev/null; then
+    echo "Running jev migration..."
+    mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/jev.sql
+    echo "Jev migration complete."
+  fi
 fi
 
 cd /app/jev.app
