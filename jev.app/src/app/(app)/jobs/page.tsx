@@ -134,14 +134,21 @@ export default function Jobs() {
                 {jobs.map((job) => (
                   <button
                     key={job.id}
-                    onClick={() => setSelected((prev) => (prev === job.id ? null : job.id))}
+                    onClick={() => {
+                      setSelected((prev) => (prev === job.id ? null : job.id))
+                      if (!job.read_at) {
+                        fetch("/api/jobs", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: job.id }) })
+                        setJobs((prev) => prev.map((j) => j.id === job.id ? { ...j, read_at: new Date().toISOString() } : j))
+                      }
+                    }}
                     className={`flex-shrink-0 snap-start w-full text-left rounded-lg border p-4 flex flex-col gap-1.5 transition-colors ${
                       selected === job.id
                         ? "border-zinc-500 dark:border-zinc-400 bg-zinc-100 dark:bg-zinc-800"
                         : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-600"
                     }`}
                   >
-                    <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50 leading-snug">
+                    <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50 leading-snug flex items-center gap-1.5">
+                      {!job.read_at && <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />}
                       {job.title}
                     </span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 truncate">

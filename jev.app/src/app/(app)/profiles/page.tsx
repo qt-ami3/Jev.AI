@@ -125,9 +125,9 @@ interface EditForm {
 }
 
 const WORK_TYPE_OPTIONS: [string, string][] = [["1", "On-site"], ["2", "Remote"], ["3", "Hybrid"]]
-const EXP_LEVEL_OPTIONS: [string, string][] = [["1", "Intern"], ["2", "Entry Level"]]
+const EXP_LEVEL_OPTIONS: [string, string][] = [["1", "Intern"], ["2", "Entry Level"], ["3", "Associate"], ["4", "Mid-Senior"]]
 const WORK_TYPE_LABELS: Record<string, string> = { "On-site": "1", "Remote": "2", "Hybrid": "3" }
-const EXP_LEVEL_LABELS: Record<string, string> = { "Intern": "1", "Entry Level": "2" }
+const EXP_LEVEL_LABELS: Record<string, string> = { "Intern": "1", "Entry Level": "2", "Associate": "3", "Mid-Senior": "4" }
 
 export default function Profiles() {
   const [resume, setResume] = useState<Resume | null>(null)
@@ -454,35 +454,6 @@ export default function Profiles() {
             </Section>
           )}
 
-          {resume?.experience && (
-            <Section title="Experience">
-              {resume.experience.map((e, i) => (
-                <div key={i} className="relative group/card">
-                  <Card>
-                    <div className="flex items-baseline justify-between gap-2 mb-1">
-                      <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50">{e.title}</span>
-                      {e.dates && <span className="text-xs text-zinc-400 dark:text-zinc-500 flex-shrink-0">{e.dates}</span>}
-                    </div>
-                    <span className="text-xs text-zinc-500 dark:text-zinc-400">{e.company}</span>
-                    {e.highlights.length > 0 && (
-                      <ul className="flex flex-col gap-1 mt-2">
-                        {e.highlights.map((h, j) => (
-                          <li key={j} className="text-xs text-zinc-600 dark:text-zinc-400 flex gap-2">
-                            <span className="text-zinc-300 dark:text-zinc-600 flex-shrink-0">—</span>
-                            {h}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </Card>
-                  <button onClick={() => deleteExperience(i)} className="absolute top-1.5 left-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity w-5 h-5 flex items-center justify-center rounded bg-red-100 dark:bg-red-950 hover:bg-red-200 dark:hover:bg-red-900 text-red-500 dark:text-red-400 text-xs">×</button>
-                  <button onClick={() => setEditExp({ idx: i, company: e.company, title: e.title, dates: e.dates, highlights: [...e.highlights] })} className="absolute top-1.5 right-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity w-5 h-5 flex items-center justify-center rounded bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-xs">✎</button>
-                </div>
-              ))}
-              <button onClick={() => setEditExp({ idx: null, company: "", title: "", dates: "", highlights: [""] })} className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors px-1">+ Add</button>
-            </Section>
-          )}
-
           {resume?.skills && (
             <Section title="Skills">
               <Card>
@@ -601,6 +572,35 @@ export default function Profiles() {
                   </div>
                 </button>
               </div>
+            </Section>
+          )}
+
+          {resume?.experience && (
+            <Section title="Experience">
+              {resume.experience.map((e, i) => (
+                <div key={i} className="relative group/card">
+                  <Card>
+                    <div className="flex items-baseline justify-between gap-2 mb-1">
+                      <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50">{e.title}</span>
+                      {e.dates && <span className="text-xs text-zinc-400 dark:text-zinc-500 flex-shrink-0">{e.dates}</span>}
+                    </div>
+                    <span className="text-xs text-zinc-500 dark:text-zinc-400">{e.company}</span>
+                    {e.highlights.length > 0 && (
+                      <ul className="flex flex-col gap-1 mt-2">
+                        {e.highlights.map((h, j) => (
+                          <li key={j} className="text-xs text-zinc-600 dark:text-zinc-400 flex gap-2">
+                            <span className="text-zinc-300 dark:text-zinc-600 flex-shrink-0">—</span>
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </Card>
+                  <button onClick={() => deleteExperience(i)} className="absolute top-1.5 left-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity w-5 h-5 flex items-center justify-center rounded bg-red-100 dark:bg-red-950 hover:bg-red-200 dark:hover:bg-red-900 text-red-500 dark:text-red-400 text-xs">×</button>
+                  <button onClick={() => setEditExp({ idx: i, company: e.company, title: e.title, dates: e.dates, highlights: [...e.highlights] })} className="absolute top-1.5 right-1.5 opacity-0 group-hover/card:opacity-100 transition-opacity w-5 h-5 flex items-center justify-center rounded bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-500 dark:text-zinc-400 text-xs">✎</button>
+                </div>
+              ))}
+              <button onClick={() => setEditExp({ idx: null, company: "", title: "", dates: "", highlights: [""] })} className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors px-1">+ Add</button>
             </Section>
           )}
         </div>

@@ -22,6 +22,10 @@ if [ -n "$DB_HOST" ]; then
     mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/auth.sql
     echo "Auth migration complete."
   fi
+  # Add read_at column to jobs (idempotent via IF NOT EXISTS)
+  mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/jobs_read.sql 2>/dev/null || true
+  # Seed authorized users (idempotent — INSERT IGNORE skips existing)
+  mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/seed_users.sql 2>/dev/null || true
   # Apply jev migration (skip if jev_conversations table already exists)
   if ! mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" -e "SELECT 1 FROM jev_conversations LIMIT 1" 2>/dev/null; then
     echo "Running jev migration..."

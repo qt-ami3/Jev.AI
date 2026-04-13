@@ -3,7 +3,7 @@ import pool from "@/lib/db"
 import { requireAuth } from "@/lib/auth-helpers"
 
 const WORK_TYPES: Record<string, string> = { "1": "On-site", "2": "Remote", "3": "Hybrid" }
-const EXP_LEVELS: Record<string, string> = { "1": "Intern", "2": "Entry Level" }
+const EXP_LEVELS: Record<string, string> = { "1": "Intern", "2": "Entry Level", "3": "Associate", "4": "Mid-Senior" }
 
 export async function GET() {
   const result = await requireAuth()

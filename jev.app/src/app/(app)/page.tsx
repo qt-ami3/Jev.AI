@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
 import { uploadResume } from "./TS/gettingStarted"
 
@@ -9,6 +10,12 @@ interface JobPrefsForm {
   distance: string
   workTypes: string[]
   expLevels: string[]
+}
+
+interface JobStats {
+  total: number
+  unread: number
+  recent: { id: number; title: string; url: string; scraped_at: string }[]
 }
 
 export default function Dashboard() {
@@ -30,6 +37,7 @@ export default function Dashboard() {
   const [locationError, setLocationError] = useState<string | null>(null)
   const [savingPrefs, setSavingPrefs] = useState(false)
   const [prefsError, setPrefsError] = useState<string | null>(null)
+  const [stats, setStats] = useState<JobStats | null>(null)
 
   // On mount: auto-open modal at the first incomplete step
   useEffect(() => {
@@ -43,6 +51,9 @@ export default function Dashboard() {
         const sub = config.progress?.subscription
         const subDone =
           sub === true || sub === "true" || sub === "n/a" || sub === undefined
+
+        // Fetch job stats
+        fetch("/api/jobs?stats=1").then(r => r.json()).then(setStats).catch(() => {})
 
         if (resumeDone && prefsDone && subDone) {
           setSetupComplete(true)
@@ -190,7 +201,50 @@ export default function Dashboard() {
         Dashboard
       </h1>
 
-      <br />
+      {/* ── Job Stats Widgets ── */}
+      {stats && stats.total > 0 && (
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4">
+            <p className="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Total Jobs</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">{stats.total}</p>
+          </div>
+          <Link href="/jobs" className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
+            <p className="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Unread</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-50 flex items-center gap-2">
+              {stats.unread}
+              {stats.unread > 0 && <span className="w-2 h-2 rounded-full bg-blue-500" />}
+            </p>
+          </Link>
+          <Link href="/jev" className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
+            <p className="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Jev Analysis</p>
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Get job recommendations →</p>
+          </Link>
+        </div>
+      )}
+
+      {/* ── Unread Jobs Preview ── */}
+      {stats && stats.recent.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">New Listings</h2>
+          <div className="flex flex-col gap-2">
+            {stats.recent.map((job) => (
+              <Link
+                key={job.id}
+                href="/jobs"
+                className="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                <span className="text-sm font-medium text-zinc-900 dark:text-zinc-50 truncate">{job.title}</span>
+                <span className="ml-auto text-xs text-zinc-400 dark:text-zinc-500 flex-shrink-0">
+                  {new Date(job.scraped_at).toLocaleDateString()}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="mt-6" />
 
       {!setupComplete && <button
         onClick={() => setShowModal(true)}
