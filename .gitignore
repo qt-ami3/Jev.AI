@@ -12,3 +12,5 @@ db/secrets.sql
 infra/node_modules/
 infra/dist/
 infra/cdk.out/
+.gitignore
+CLAUDE.md
