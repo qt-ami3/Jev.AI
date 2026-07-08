@@ -24,10 +24,14 @@ aws ecr get-login-password --region "$REGION" \
 echo "    Logged in."
 
 # ── Docker build & push ─────────────────────────────────────────
-echo "==> Building Docker image..."
-docker build -t "$ECR_URI:latest" .
+# Tag with the git SHA as well as :latest so every deploy has a rollback
+# target (retag the SHA as :latest and force a new deployment to roll back).
+GIT_SHA=$(git -C "$REPO_ROOT" rev-parse --short HEAD)
+echo "==> Building Docker image ($GIT_SHA)..."
+docker build -t "$ECR_URI:latest" -t "$ECR_URI:$GIT_SHA" .
 echo "==> Pushing to ECR..."
 docker push "$ECR_URI:latest"
+docker push "$ECR_URI:$GIT_SHA"
 
 # ── CDK deploy (if infra changed) ───────────────────────────────
 if [ "${SKIP_CDK:-}" != "1" ]; then

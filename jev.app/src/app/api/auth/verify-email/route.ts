@@ -14,7 +14,12 @@ export async function POST(req: NextRequest) {
     )
     const row = (rows as Record<string, unknown>[])[0]
     if (!row) {
+      // Count the failed guess against every outstanding code for this email
+      await pool.query("UPDATE verification_tokens SET attempts = attempts + 1 WHERE identifier = ?", [email])
       return NextResponse.json({ error: "Invalid or expired code" }, { status: 400 })
+    }
+    if ((row.attempts as number) >= 5) {
+      return NextResponse.json({ error: "Too many attempts — request a new code" }, { status: 400 })
     }
 
     const expires = new Date(row.expires as string)

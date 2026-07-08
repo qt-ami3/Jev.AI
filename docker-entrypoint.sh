@@ -24,6 +24,10 @@ if [ -n "$DB_HOST" ]; then
   fi
   # Add read_at column to jobs (idempotent via IF NOT EXISTS)
   mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/jobs_read.sql 2>/dev/null || true
+  # Per-user jobs dedupe index + unread index (idempotent via IF NOT EXISTS)
+  mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/jobs_dedupe.sql 2>/dev/null || true
+  # OTP attempt counter on verification_tokens (idempotent via IF NOT EXISTS)
+  mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/otp_attempts.sql 2>/dev/null || true
   # Seed authorized users (idempotent — INSERT IGNORE skips existing)
   mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/seed_users.sql 2>/dev/null || true
   # Apply jev migration (skip if jev_conversations table already exists)

@@ -6,7 +6,7 @@ export interface Job {
   id: number
   title: string
   url: string
-  description: string
+  preview: string
   read_at: string | null
 }
 
@@ -34,8 +34,21 @@ export async function GET(req: NextRequest) {
     })
   }
 
+  // ?id=N returns one job with its full description
+  const jobId = req.nextUrl.searchParams.get("id")
+  if (jobId) {
+    const [rows] = await pool.query(
+      "SELECT id, title, url, description, read_at FROM jobs WHERE id = ? AND user_id = ?",
+      [jobId, userId]
+    )
+    const job = (rows as unknown[])[0]
+    if (!job) return NextResponse.json({ error: "Not found" }, { status: 404 })
+    return NextResponse.json(job)
+  }
+
+  // List view ships a short preview instead of the full LONGTEXT description
   const [rows] = await pool.query(
-    "SELECT id, title, url, description, read_at FROM jobs WHERE user_id = ? ORDER BY id DESC",
+    "SELECT id, title, url, LEFT(description, 300) AS preview, read_at FROM jobs WHERE user_id = ? ORDER BY id DESC",
     [userId]
   )
   return NextResponse.json(rows)

@@ -16,13 +16,21 @@ import (
 )
 
 func dsn() string {
-	if v := os.Getenv("DB_DSN"); v != "" {
-		return v
+	v := os.Getenv("DB_DSN")
+	if v == "" {
+		fmt.Fprintln(os.Stderr, "DB_DSN not set, e.g. user:pass@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local")
+		os.Exit(1)
 	}
-	return "aval:Lol123456789!@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
+	return v
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Fprintln(os.Stderr, "usage: parser <user_id>")
+		os.Exit(1)
+	}
+	userID := os.Args[1]
+
 	db, err := sql.Open("mysql", dsn())
 	if err != nil {
 		fmt.Printf("Error connecting to database: %v\n", err)
@@ -30,9 +38,10 @@ func main() {
 	}
 	defer db.Close()
 
-	file, err := os.Open("output.txt")
+	inFile := "output_" + userID + ".txt"
+	file, err := os.Open(inFile)
 	if err != nil {
-		fmt.Printf("Error opening output.txt: %v\n", err)
+		fmt.Printf("Error opening %s: %v\n", inFile, err)
 		return
 	}
 	defer file.Close()
@@ -87,9 +96,9 @@ func main() {
 			return best;
 		})()`
 
-	// Load existing URLs so we only scrape new ones
+	// Load this user's existing URLs so we only scrape new ones
 	existingURLs := make(map[string]bool)
-	rows, err := db.Query("SELECT url FROM jobs")
+	rows, err := db.Query("SELECT url FROM jobs WHERE user_id = ?", userID)
 	if err != nil {
 		fmt.Printf("Error reading existing jobs: %v\n", err)
 		return
@@ -141,8 +150,8 @@ func main() {
 		}
 
 		_, err = db.Exec(
-			"INSERT INTO jobs (title, url, description) VALUES (?, ?, ?)",
-			title, jobURL, description,
+			"INSERT IGNORE INTO jobs (user_id, title, url, description) VALUES (?, ?, ?, ?)",
+			userID, title, jobURL, description,
 		)
 		if err != nil {
 			fmt.Printf("  Error inserting job: %v\n", err)
@@ -153,15 +162,15 @@ func main() {
 	}
 
 	fmt.Println("Compiling listings into parse.txt...")
-	if err := compile(db); err != nil {
+	if err := compile(db, userID); err != nil {
 		fmt.Printf("Error compiling: %v\n", err)
 		return
 	}
 	fmt.Println("Done. Written to parse.txt")
 }
 
-func compile(db *sql.DB) error {
-	rows, err := db.Query("SELECT title, url, description FROM jobs ORDER BY id")
+func compile(db *sql.DB, userID string) error {
+	rows, err := db.Query("SELECT title, url, description FROM jobs WHERE user_id = ? ORDER BY id", userID)
 	if err != nil {
 		return err
 	}

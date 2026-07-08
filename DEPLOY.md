@@ -2,12 +2,17 @@
 
 ## Local Development Setup
 
-### 1. Run the Auth Schema Migration
+### 1. Run the Schema Migrations
 
-This creates the `users`, `accounts`, and `verification_tokens` tables, then adds `user_id` columns to existing tables for multi-user support.
+Apply in this order (the Docker entrypoint does the same thing idempotently in production):
 
 ```bash
-mariadb -u aval -p linkedin_scraper < db/auth.sql
+mariadb -u aval -p < db/schema.sql
+mariadb -u aval -p linkedin_scraper < db/auth.sql          # users/accounts/verification_tokens + user_id columns
+mariadb -u aval -p linkedin_scraper < db/jev.sql           # jev_conversations / jev_messages
+mariadb -u aval -p linkedin_scraper < db/jobs_read.sql     # jobs.read_at
+mariadb -u aval -p linkedin_scraper < db/jobs_dedupe.sql   # jobs.url_hash + UNIQUE(user_id,url_hash) + unread index
+mariadb -u aval -p linkedin_scraper < db/otp_attempts.sql  # verification_tokens.attempts (OTP brute-force cap)
 ```
 
 ### 2. Configure Environment Variables
@@ -37,6 +42,12 @@ AUTH_GOOGLE_ID=
 AUTH_GOOGLE_SECRET=
 AUTH_GITHUB_ID=
 AUTH_GITHUB_SECRET=
+```
+
+**Running the Go binaries outside Docker** additionally requires `DB_DSN` (there is no fallback credential):
+
+```fish
+set -x DB_DSN "user:pass@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
 ```
 
 **Generating AUTH_SECRET** (fish shell):
@@ -122,25 +133,13 @@ aws secretsmanager create-secret \
 
 Then reference these in the CDK stack's task container environment/secrets, or pass them directly as ECS task definition environment variables.
 
-### Update the Docker Entrypoint for Auth Migration
+### Database Migrations in Production
 
-The current `docker-entrypoint.sh` only runs `schema.sql`. For the auth migration, you need to also run `auth.sql` once on first deploy with auth. Add `db/auth.sql` to the Docker image and run it after `schema.sql`:
-
-```dockerfile
-# In Dockerfile, add:
-COPY db/auth.sql ./db/auth.sql
-```
-
-```bash
-# In docker-entrypoint.sh, add after schema.sql initialization:
-if ! mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" -e "SELECT 1 FROM users LIMIT 1" 2>/dev/null; then
-  echo "Running auth migration..."
-  mariadb -h "$DB_HOST" -P "${DB_PORT:-3306}" -u "$DB_USER" -p"$DB_PASSWORD" "$DB_NAME" < /app/db/auth.sql
-  echo "Auth migration complete."
-fi
-```
+`docker-entrypoint.sh` applies every migration on container start: `schema.sql` and `auth.sql`/`jev.sql` are guarded by sentinel-table checks, while `jobs_read.sql`, `jobs_dedupe.sql`, `otp_attempts.sql`, and `seed_users.sql` run unconditionally because they're idempotent (`IF NOT EXISTS` / `INSERT IGNORE`). New migrations must follow one of those two patterns and be `COPY`'d into the image in the Dockerfile.
 
 ### Push a New Image
+
+The easy path is `./deploy.sh` from the repo root — it builds, tags the image as both `:latest` and `:<git-sha>` (the SHA tag is your rollback target), pushes, optionally runs CDK, and forces a new ECS deployment. The manual equivalent:
 
 ```bash
 # 1. Log in to ECR
@@ -204,6 +203,18 @@ aws secretsmanager put-secret-value \
 ```
 
 After updating a secret, force a new deployment (step 5 above) so ECS picks it up.
+
+## Roll Back a Deploy
+
+Every `deploy.sh` run pushes the image under its git SHA as well as `:latest`. To roll back, retag a known-good SHA as `:latest` and force a new deployment:
+
+```bash
+ECR=655790570067.dkr.ecr.us-east-1.amazonaws.com/linkedin-scraper
+docker pull "$ECR:<good-sha>"
+docker tag "$ECR:<good-sha>" "$ECR:latest"
+docker push "$ECR:latest"
+aws ecs update-service --cluster <cluster> --service <service> --force-new-deployment
+```
 
 ## Update Infrastructure
 

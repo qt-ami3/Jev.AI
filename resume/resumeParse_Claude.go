@@ -52,10 +52,12 @@ type Skills struct {
 }
 
 func dbDSN() string {
-	if v := os.Getenv("DB_DSN"); v != "" {
-		return v
+	v := os.Getenv("DB_DSN")
+	if v == "" {
+		fmt.Fprintln(os.Stderr, "DB_DSN not set, e.g. user:pass@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local")
+		os.Exit(1)
 	}
-	return "aval:Lol123456789!@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
+	return v
 }
 
 func main() {
@@ -72,22 +74,25 @@ func main() {
 	}
 	defer db.Close()
 
-	apiKey := os.Getenv("CLAUDE_API_KEY")
+	// Prefer the user's own key; fall back to the server-wide env key
+	var apiKey string
+	err = db.QueryRow("SELECT claude_api_key FROM config WHERE user_id = ?", userID).Scan(&apiKey)
+	if err != nil && err != sql.ErrNoRows {
+		fmt.Fprintf(os.Stderr, "failed to read API key from database: %v\n", err)
+		os.Exit(1)
+	}
 	if apiKey == "" {
-		err = db.QueryRow("SELECT claude_api_key FROM config WHERE user_id = ?", userID).Scan(&apiKey)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "failed to read API key from database: %v\n", err)
-			os.Exit(1)
-		}
-		if apiKey == "" {
-			fmt.Fprintln(os.Stderr, "claude_api_key is empty in database — run db/secrets.sql first")
-			os.Exit(1)
-		}
+		apiKey = os.Getenv("CLAUDE_API_KEY")
+	}
+	if apiKey == "" || apiKey == "REPLACE_ME" {
+		fmt.Fprintln(os.Stderr, "no Claude API key: set config.claude_api_key for the user or CLAUDE_API_KEY in the environment")
+		os.Exit(1)
 	}
 
-	resumeText, err := os.ReadFile("resume.txt")
+	resumeFile := "resume_" + userID + ".txt"
+	resumeText, err := os.ReadFile(resumeFile)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to read resume.txt: %v\n", err)
+		fmt.Fprintf(os.Stderr, "failed to read %s: %v\n", resumeFile, err)
 		os.Exit(1)
 	}
 
@@ -110,7 +115,7 @@ Resume text:
 %s`, string(resumeText))
 
 	msg, err := client.Messages.New(context.Background(), anthropic.MessageNewParams{
-		Model:     anthropic.ModelClaudeSonnet4_6,
+		Model:     "claude-sonnet-5",
 		MaxTokens: 2048,
 		Messages: []anthropic.MessageParam{
 			anthropic.NewUserMessage(anthropic.NewTextBlock(prompt)),

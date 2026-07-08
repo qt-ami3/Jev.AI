@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import type { Job } from "../../api/jobs/route"
 
-function JobDetail({ job, onClose }: { job: Job; onClose: () => void }) {
+function JobDetail({ job, description, onClose }: { job: Job; description: string | null; onClose: () => void }) {
   return (
     <div className="h-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 flex flex-col">
       <div className="flex items-start justify-between gap-3 mb-3 flex-shrink-0">
@@ -32,7 +32,7 @@ function JobDetail({ job, onClose }: { job: Job; onClose: () => void }) {
         </button>
       </div>
       <pre className="flex-1 min-h-0 text-xs text-zinc-700 dark:text-zinc-300 whitespace-pre-wrap font-mono leading-relaxed overflow-y-auto">
-        {job.description || "(no description)"}
+        {description === null ? "Loading..." : description || "(no description)"}
       </pre>
     </div>
   )
@@ -44,6 +44,17 @@ export default function Jobs() {
   const [scraping, setScraping] = useState(false)
   const [scrapeError, setScrapeError] = useState("")
   const [selected, setSelected] = useState<number | null>(null)
+  const [descriptions, setDescriptions] = useState<Record<number, string>>({})
+
+  async function loadDescription(id: number) {
+    if (descriptions[id] !== undefined) return
+    try {
+      const res = await fetch(`/api/jobs?id=${id}`)
+      if (!res.ok) return
+      const data = await res.json()
+      setDescriptions((prev) => ({ ...prev, [id]: data.description ?? "" }))
+    } catch {}
+  }
 
   async function loadJobs() {
     try {
@@ -136,6 +147,7 @@ export default function Jobs() {
                     key={job.id}
                     onClick={() => {
                       setSelected((prev) => (prev === job.id ? null : job.id))
+                      loadDescription(job.id)
                       if (!job.read_at) {
                         fetch("/api/jobs", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: job.id }) })
                         setJobs((prev) => prev.map((j) => j.id === job.id ? { ...j, read_at: new Date().toISOString() } : j))
@@ -155,7 +167,7 @@ export default function Jobs() {
                       {job.url ? new URL(job.url).hostname : ""}
                     </span>
                     <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2 leading-relaxed">
-                      {job.description}
+                      {job.preview}
                     </p>
                   </button>
                 ))}
@@ -168,7 +180,7 @@ export default function Jobs() {
                 <div className={`lg:hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${selectedJob ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                   <div className="overflow-hidden">
                     <div className="pt-2">
-                      {selectedJob && <JobDetail job={selectedJob} onClose={() => setSelected(null)} />}
+                      {selectedJob && <JobDetail job={selectedJob} description={descriptions[selectedJob.id] ?? null} onClose={() => setSelected(null)} />}
                     </div>
                   </div>
                 </div>
@@ -176,7 +188,7 @@ export default function Jobs() {
                 {/* Desktop: fills remaining space */}
                 <div className="hidden lg:flex flex-col h-full">
                   {selectedJob ? (
-                    <JobDetail job={selectedJob} onClose={() => setSelected(null)} />
+                    <JobDetail job={selectedJob} description={descriptions[selectedJob.id] ?? null} onClose={() => setSelected(null)} />
                   ) : (
                     <div className="flex-1 flex items-center justify-center rounded-lg border border-dashed border-zinc-200 dark:border-zinc-800 text-sm text-zinc-400 dark:text-zinc-600">
                       select a listing

@@ -64,10 +64,12 @@ func min(a, b int) int {
 }
 
 func dsn() string {
-	if v := os.Getenv("DB_DSN"); v != "" {
-		return v
+	v := os.Getenv("DB_DSN")
+	if v == "" {
+		fmt.Fprintln(os.Stderr, "DB_DSN not set, e.g. user:pass@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local")
+		os.Exit(1)
 	}
-	return "aval:Lol123456789!@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
+	return v
 }
 
 func main() {
@@ -186,9 +188,10 @@ func main() {
 		return
 	}
 
-	err = os.WriteFile("output.txt", []byte(strings.Join(lines, "\n")+"\n"), 0644)
+	outFile := "output_" + userID + ".txt"
+	err = os.WriteFile(outFile, []byte(strings.Join(lines, "\n")+"\n"), 0644)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("Wrote %d job links to output.txt\n", len(lines))
+	fmt.Printf("Wrote %d job links to %s\n", len(lines), outFile)
 }

@@ -64,6 +64,8 @@ COPY db/schema.sql ./db/schema.sql
 COPY db/auth.sql ./db/auth.sql
 COPY db/jev.sql ./db/jev.sql
 COPY db/jobs_read.sql ./db/jobs_read.sql
+COPY db/jobs_dedupe.sql ./db/jobs_dedupe.sql
+COPY db/otp_attempts.sql ./db/otp_attempts.sql
 COPY db/seed_users.sql ./db/seed_users.sql
 
 # Entrypoint

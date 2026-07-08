@@ -1,3 +1,4 @@
+import crypto from "crypto"
 import bcrypt from "bcryptjs"
 import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
@@ -48,7 +49,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             [email, otpToken],
           )
           const tokenRow = (tokens as Record<string, unknown>[])[0]
-          if (!tokenRow) { console.error("[auth] OTP token not found"); return null }
+          if (!tokenRow) {
+            // Count the failed guess against every outstanding code for this email
+            await pool.query("UPDATE verification_tokens SET attempts = attempts + 1 WHERE identifier = ?", [email])
+            console.error("[auth] OTP token not found")
+            return null
+          }
+          if ((tokenRow.attempts as number) >= 5) { console.error("[auth] too many OTP attempts"); return null }
           const expires = new Date(tokenRow.expires as string)
           if (expires < new Date()) { console.error("[auth] OTP expired"); return null }
           await pool.query("DELETE FROM verification_tokens WHERE identifier = ? AND token = ?", [email, otpToken])
@@ -89,7 +96,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       from: process.env.EMAIL_FROM ?? "noreply@jev.app",
       maxAge: 10 * 60, // 10 minutes
       async generateVerificationToken() {
-        return String(Math.floor(100000 + Math.random() * 900000))
+        return String(crypto.randomInt(100000, 1000000))
       },
       async sendVerificationRequest({ identifier: email, token }) {
         await sendOTPEmail(email, token)

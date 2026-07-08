@@ -1,12 +1,16 @@
 import pool from "./db"
 
 export async function getClaudeApiKey(userId: string): Promise<string | null> {
+  // Prefer the user's own key so their usage bills to them; the server-wide
+  // env key is only a fallback.
+  const [rows] = await pool.query("SELECT claude_api_key FROM config WHERE user_id = ?", [userId])
+  const row = (rows as Record<string, unknown>[])[0]
+  const userKey = (row?.claude_api_key as string) || ""
+  if (userKey) return userKey
   if (process.env.CLAUDE_API_KEY && process.env.CLAUDE_API_KEY !== "REPLACE_ME") {
     return process.env.CLAUDE_API_KEY
   }
-  const [rows] = await pool.query("SELECT claude_api_key FROM config WHERE user_id = ?", [userId])
-  const row = (rows as Record<string, unknown>[])[0]
-  return (row?.claude_api_key as string) || null
+  return null
 }
 
 interface ClaudeMessage {
@@ -27,9 +31,11 @@ export async function streamClaude(
       "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-5",
       max_tokens: 4096,
-      system,
+      // The system prompt (resume + job listings) is identical across turns of
+      // a conversation — cache it so follow-ups bill it at cache-read rates.
+      system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages,
       stream: true,
     }),

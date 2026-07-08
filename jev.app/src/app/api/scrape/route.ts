@@ -1,9 +1,11 @@
-import { spawnSync } from "child_process"
+import { execFile } from "child_process"
 import path from "path"
+import { promisify } from "util"
 import { NextRequest, NextResponse } from "next/server"
 import pool from "@/lib/db"
 import { requireAuth } from "@/lib/auth-helpers"
 
+const execFileAsync = promisify(execFile)
 const scraperDir = path.join(process.cwd(), "../scraper")
 
 export async function POST(req: NextRequest) {
@@ -37,14 +39,14 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Run scraper binary (collects job URLs into output.txt)
-    const scrapeResult = spawnSync(
-      path.join(scraperDir, "scraper"),
-      [userId],
-      { cwd: scraperDir, timeout: 60000 }
-    )
-    if (scrapeResult.status !== 0) {
-      const stderr = scrapeResult.stderr?.toString() ?? ""
+    // Run scraper binary (collects job URLs into output_<userId>.txt)
+    try {
+      await execFileAsync(path.join(scraperDir, "scraper"), [userId], {
+        cwd: scraperDir,
+        timeout: 60000,
+      })
+    } catch (err) {
+      const stderr = (err as { stderr?: string }).stderr ?? String(err)
       console.error("Scraper error:", stderr)
       return NextResponse.json(
         { error: `Scraper failed: ${stderr}` },
@@ -52,23 +54,20 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Run parser binary (scrapes each job page, inserts into DB)
-    const parseResult = spawnSync(
-      path.join(scraperDir, "parser"),
-      [],
-      { cwd: scraperDir, timeout: 300000 }
-    )
-    if (parseResult.status !== 0) {
-      const stderr = parseResult.stderr?.toString() ?? ""
+    // Run parser binary (scrapes each job page, inserts rows owned by this user)
+    try {
+      await execFileAsync(path.join(scraperDir, "parser"), [userId], {
+        cwd: scraperDir,
+        timeout: 300000,
+      })
+    } catch (err) {
+      const stderr = (err as { stderr?: string }).stderr ?? String(err)
       console.error("Parser error:", stderr)
       return NextResponse.json(
         { error: `Parser failed: ${stderr}` },
         { status: 500 }
       )
     }
-
-    // Tag newly inserted jobs (those with NULL user_id) as belonging to this user
-    await pool.query("UPDATE jobs SET user_id = ? WHERE user_id IS NULL", [userId])
 
     // Only mark as scraped today after success
     await pool.query("UPDATE config SET last_login = CURDATE() WHERE user_id = ?", [userId])

@@ -1,7 +1,9 @@
-import { execFileSync } from "child_process"
+import { execFile } from "child_process"
 import { NextRequest, NextResponse } from "next/server"
 import path from "path"
+import { promisify } from "util"
 
+const execFileAsync = promisify(execFile)
 const US_TXT = path.join(process.cwd(), "../locations/US.txt")
 
 const STATE_MAP: Record<string, string> = {
@@ -45,8 +47,8 @@ export async function GET(req: NextRequest) {
 
   try {
     // grep -iF searches for the literal tab-delimited city name in the name column.
-    // execFileSync avoids shell interpretation — the tab chars are passed literally.
-    const output = execFileSync(
+    // execFile avoids shell interpretation — the tab chars are passed literally.
+    const { stdout: output } = await execFileAsync(
       "grep",
       ["-iFm", "200", `\t${city}\t`, US_TXT],
       { encoding: "utf-8", timeout: 30000 }
@@ -67,12 +69,12 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({ valid: found })
   } catch (err: unknown) {
-    // grep exits with status 1 when no matches found — that means city doesn't exist
+    // grep exits with code 1 when no matches found — that means city doesn't exist
     if (
       typeof err === "object" &&
       err !== null &&
-      "status" in err &&
-      (err as { status?: number }).status === 1
+      "code" in err &&
+      (err as { code?: number }).code === 1
     ) {
       return NextResponse.json({ valid: false })
     }

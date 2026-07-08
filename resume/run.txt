@@ -1,3 +1,5 @@
-set -x ANTHROPIC_API_KEY keyhere
+set -x CLAUDE_API_KEY keyhere
+set -x DB_DSN "user:pass@tcp(127.0.0.1:3306)/linkedin_scraper?charset=utf8mb4&parseTime=True&loc=Local"
 
-go run -tags claude resumeParse_Claude.go
+# needs resume_<user_id>.txt in this directory
+go run -tags claude resumeParse_Claude.go <user_id>

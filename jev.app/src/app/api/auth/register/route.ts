@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     if (existingUser) {
       if (!existingUser.email_verified) {
         // Unverified user re-registering — resend verification
-        const code = String(Math.floor(100000 + Math.random() * 900000))
+        const code = String(crypto.randomInt(100000, 1000000))
         const expires = new Date(Date.now() + 10 * 60 * 1000)
         await pool.query("DELETE FROM verification_tokens WHERE identifier = ?", [email])
         await pool.query(
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
     await pool.query("INSERT IGNORE INTO resume (user_id) VALUES (?)", [id])
 
     // Send verification email
-    const code = String(Math.floor(100000 + Math.random() * 900000))
+    const code = String(crypto.randomInt(100000, 1000000))
     const expires = new Date(Date.now() + 10 * 60 * 1000)
     await pool.query(
       "INSERT INTO verification_tokens (identifier, token, expires) VALUES (?, ?, ?)",

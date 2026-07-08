@@ -86,9 +86,9 @@ export class LinkedInScraperStack extends cdk.Stack {
       allocatedStorage: 20,
       storageType: rds.StorageType.GP3,
       multiAz: false,
-      deletionProtection: false,
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
-      backupRetention: cdk.Duration.days(1),
+      deletionProtection: true,
+      removalPolicy: cdk.RemovalPolicy.SNAPSHOT,
+      backupRetention: cdk.Duration.days(7),
     });
 
     // ── S3 — Resume Uploads ─────────────────────────────────────

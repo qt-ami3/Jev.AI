@@ -1,3 +1,4 @@
+import crypto from "crypto"
 import { NextRequest, NextResponse } from "next/server"
 import pool from "@/lib/db"
 import { sendVerificationEmail } from "@/lib/email"
@@ -16,7 +17,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true })
     }
 
-    const code = String(Math.floor(100000 + Math.random() * 900000))
+    const code = String(crypto.randomInt(100000, 1000000))
     const expires = new Date(Date.now() + 10 * 60 * 1000)
     await pool.query("DELETE FROM verification_tokens WHERE identifier = ?", [email])
     await pool.query(

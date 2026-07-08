@@ -111,14 +111,24 @@ ${jobs.map((j, i) => `${i + 1}. ${j.title} — ${j.url}`).join("\n")}`
         if (done) break
         await writer.write(value)
       }
-      await pool.query(
-        "INSERT INTO jev_messages (conversation_id, role, content) VALUES (?, 'assistant', ?)",
-        [id, fullResponse],
-      )
-      await writer.close()
     } catch {
-      await writer.close()
+      // Client disconnected — keep draining Claude's stream so the full
+      // response still lands in the conversation history.
+      try {
+        while (!(await reader.read()).done) { /* drain */ }
+      } catch {}
     }
+    try {
+      if (fullResponse) {
+        await pool.query(
+          "INSERT INTO jev_messages (conversation_id, role, content) VALUES (?, 'assistant', ?)",
+          [id, fullResponse],
+        )
+      }
+    } catch (err) {
+      console.error("Failed to persist assistant message:", err)
+    }
+    await writer.close().catch(() => {})
   })()
 
   return new Response(readable, {
