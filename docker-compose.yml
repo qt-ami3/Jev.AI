@@ -1,0 +1,42 @@
+# Local demo — NOT the production setup (that's AWS ECS via deploy.sh / infra/).
+#
+#   docker compose up --build
+#
+# Then open http://localhost:3000, register an account (email verification is
+# skipped via DEMO_MODE), and paste your Claude API key in Settings.
+
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_ROOT_PASSWORD: demo-root
+      MARIADB_DATABASE: linkedin_scraper
+      MARIADB_USER: jev
+      MARIADB_PASSWORD: jev-demo
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_USER: jev
+      DB_PASSWORD: jev-demo
+      DB_NAME: linkedin_scraper
+      AUTH_SECRET: demo-secret-do-not-use-in-production
+      AUTH_TRUST_HOST: "true"
+      DEMO_MODE: "1"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db-data:

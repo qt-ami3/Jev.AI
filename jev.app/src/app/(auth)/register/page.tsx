@@ -31,6 +31,12 @@ export default function RegisterPage() {
       return
     }
 
+    if (data.verified) {
+      // Demo mode: email verification is skipped, go straight to login
+      router.push("/login")
+      return
+    }
+
     router.push(`/verify-otp?email=${encodeURIComponent(email)}&type=verify`)
   }
 
